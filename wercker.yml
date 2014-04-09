@@ -31,7 +31,7 @@ deploy:
           # Initialize new repository and add everything
           git init
           git add .
-          git commit -m 'Deploy commit'
+          git commit -m 'Deploy commit [trigger:composer]'
 
           # Add fortrabbit remote
           git remote add fortrabbit $FORTRABBIT_GIT_REMOTE
