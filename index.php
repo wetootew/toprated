@@ -19,25 +19,17 @@ function toggle(obj) {
 </script>
 
 <style>
-#login {float:right;}
-#logo {float:left;}
-h1 {margin:0;padding:0;}
-body > header{position:fixed;width:100%;}
-.topBar {height:36px;margin:2px;padding:2px;}
+.bar{position:fixed; width:10%;}
+.bar > * {margin-left:auto; margin-right:auto;}
 .category {border:2px solid yellow; float:left;}
-header {background-color: orange;}
+header {background-color: blue;}
 </style>
 
-<header class=topBar>
-  <h1 id=logo><a href=index.php>TopRated</a></h1>
+<div class=bar>
+  <img src=https://www.dropbox.com/s/we902iy3r6jz758/logocorona.png>
 
-  <div id=login>
-    <form action=# method=post>
-      <input type=text name=usr value="user"><br>
-      <input type=password name=pw value="password">
-    </form>
-  </div>
-</header>        
+  <?php include("php/fb-login"); ?>
+</div>        
   <div class=topBar></div>
   <div class=category>
       <header><h1>Sport</h1></header>
