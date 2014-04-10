@@ -17,11 +17,13 @@ function toggle(obj) {
 </script>
 
 <style>
-.bar{position:fixed; width:10%; height:100%;}
+.bar{position:fixed; width:15%; min-width:2000px; height:100%;}
+.desk{position:fixed; left:15%; height:100%;}
 .underBar{float:lefte; width:10%;height:100%;}
 .bar > * {margin-left:auto; margin-right:auto;}
 .category {border:2px solid blue; float:left;}
 header {background-color: blue;}
+* {font:bold 16px/30px "Times New Roman", Times, serif;}
 </style>
 
 <div class=bar>
