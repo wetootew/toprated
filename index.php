@@ -1,6 +1,4 @@
-<?php
-include('db.php');
-?>
+<?php include('db.php'); ?>
 <!DOCTYPE html> 
 <title>TopRated</title>
 <link rel="stylesheet" type="text/css" href="trstyle.css">
@@ -28,10 +26,9 @@ header {background-color: blue;}
 
 <div class=bar>
   <img src=https://www.dropbox.com/s/we902iy3r6jz758/logocorona.png>
-
-  <?php include("php/fb-login"); ?>
+  <?php include('php/fb-login.php'); ?>
 </div>        
-  <div class=underBar></div>
+<div class=desk>
   <div class=category>
       <header><h1>Sport</h1></header>
           <ol>
@@ -53,4 +50,4 @@ header {background-color: blue;}
             <li>sito 2: ***** <input type=button value=vota!>
             <li>sito 3: ***** <input type=button value=vota!>
   </div>
-
+</div>
