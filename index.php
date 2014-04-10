@@ -19,9 +19,10 @@ function toggle(obj) {
 </script>
 
 <style>
-.bar{position:fixed; width:10%;}
+.bar{position:fixed; width:10%; height:100%;}
+.underBar{float:lefte; width:10%;height:100%;}
 .bar > * {margin-left:auto; margin-right:auto;}
-.category {border:2px solid yellow; float:left;}
+.category {border:2px solid blue; float:left;}
 header {background-color: blue;}
 </style>
 
@@ -30,7 +31,7 @@ header {background-color: blue;}
 
   <?php include("php/fb-login"); ?>
 </div>        
-  <div class=topBar></div>
+  <div class=underBar></div>
   <div class=category>
       <header><h1>Sport</h1></header>
           <ol>
