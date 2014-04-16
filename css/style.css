@@ -1,7 +1,7 @@
 * {font:bold 16px "Times New Roman"; /*border:1px solid red;*/}
 
 body {padding-left:230px; }
-.bar {position:fixed; left:0; height:100%; width:200px;}
+.bar {position:fixed; left:0; top:0; height:100%; width:200px;}
 .bar * {margin-left:auto; margin-right:auto; max-width:100%;}
 
 .category {margin:8px; border:2px solid blue; float:left;}
