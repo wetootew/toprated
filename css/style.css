@@ -1,9 +1,23 @@
+/* generico */
 * {font:bold 16px "Times New Roman"; /*border:1px solid red;*/}
 
+/* menu laterale*/
 body {padding-left:230px; }
 .bar {position:fixed; left:0; top:0; height:100%; width:200px;}
 .bar * {margin-left:auto; margin-right:auto; max-width:100%;}
-
-.category {margin:8px; border:2px solid blue; float:left;}
-header, .bar {background-color:blue; color:yellow; text-align: center;}
 menu {list-style-type: none; padding:0;}
+
+#logo {max-width:70%; margin:30px}
+#sottologo {
+  background:url(https://cloud.githubusercontent.com/assets/7316633/2725210/ddad696a-c5aa-11e3-9242-d946b172d4f6.png);
+  background-repeat:repeat; 
+border-width:5px;	
+border-style:groove ridge groove ridge ;
+border-color:gold;
+}
+
+/*titoli*/
+header, .bar {background-color:blue; text-align: center; color: gold;}
+
+/*riquadri categorie*/
+.category {margin:8px; border:2px solid blue; float:left;}
