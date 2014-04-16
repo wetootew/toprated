@@ -27,7 +27,7 @@ header {background-color: blue;}
 </style>
 
 <div class=bar>
-  <img src=https://www.dropbox.com/s/we902iy3r6jz758/logocorona.png>
+  <img src=https://cloud.githubusercontent.com/assets/789446/2718078/af4b14de-c549-11e3-89ad-00339c03e7fa.png>
   <?php include('php/fb-login.php'); ?>
 </div>        
 <div class=desk>
