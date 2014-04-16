@@ -1,7 +1,7 @@
 <?php include('db.php'); ?>
 <!DOCTYPE html> 
 <title>TopRated</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script>
 function fitResize(t) {
