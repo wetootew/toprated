@@ -34,9 +34,8 @@
      gapi.auth.signIn(additionalParams); // Will use page level configuration
    });
  }
-</script>
-<button id="signinButton">Sign in with Google</button>
-function signinCallback(authResult) {
+ 
+ function signinCallback(authResult) {
   if (authResult['status']['signed_in']) {
     // Update the app to reflect a signed in user
     // Hide the sign-in button now that the user is authorized, for example:
@@ -50,3 +49,6 @@ function signinCallback(authResult) {
     console.log('Sign-in state: ' + authResult['error']);
   }
 }
+</script>
+<button id="signinButton">Sign in with Google</button>
+
