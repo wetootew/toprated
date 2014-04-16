@@ -17,7 +17,7 @@ function toggle(obj) {
 </script>
 
 <div class=bar>
-  <img src=https://cloud.githubusercontent.com/assets/789446/2718078/af4b14de-c549-11e3-89ad-00339c03e7fa.png>
+  <img src=https://cloud.githubusercontent.com/assets/7316633/2724800/9fc4af64-c5a5-11e3-9b49-1abf4bd28ccb.png>
   <?php include('php/fb-login.php'); ?>
   <?php include('php/g-login.php'); ?>
   <menu>
