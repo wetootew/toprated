@@ -7,13 +7,13 @@ body {padding-left:230px; background:beige;}
 .bar * {margin-left:auto; margin-right:auto; max-width:100%;}
 menu {list-style-type: none; padding:0;}
 
-#logo {max-width:70%; margin:30px}
-#sottologo {
+#logo {max-width:45%; margin:5px}
+#sottologo { 
   background:url(https://cloud.githubusercontent.com/assets/7316633/2725210/ddad696a-c5aa-11e3-9242-d946b172d4f6.png);
   background-repeat:repeat; 
-border-width:5px;	
-border-style:groove ridge groove ridge ;
-border-color:gold;
+  border-width:5px;	
+  border-style:groove ridge groove ridge ;
+  border-color:gold;
 }
 
 /*titoli*/
@@ -21,6 +21,4 @@ header, .bar {background-color:blue; text-align: center; color: gold;}
 
 /*riquadri categorie*/
 .category {margin:8px; border:2px solid gold; float:left; background:navy; color:gold;}
-
-
 
