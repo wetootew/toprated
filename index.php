@@ -1,7 +1,7 @@
 <?php include('db.php'); ?>
 <!DOCTYPE html> 
 <title>TopRated</title>
-<link rel="stylesheet" type="text/css" href="trstyle.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script>
 function fitResize(t) {
@@ -16,40 +16,36 @@ function toggle(obj) {
 }
 </script>
 
-<style>
-.bar{position:fixed; width:15%; min-width:2000px; height:100%;}
-.desk{position:fixed; left:15%; height:100%;}
-.underBar{float:lefte; width:10%;height:100%;}
-.bar > * {margin-left:auto; margin-right:auto;}
-.category {border:2px solid blue; float:left;}
-header {background-color: blue;}
-* {font:bold 16px/30px "Times New Roman", Times, serif;}
-</style>
-
 <div class=bar>
   <img src=https://cloud.githubusercontent.com/assets/789446/2718078/af4b14de-c549-11e3-89ad-00339c03e7fa.png>
   <?php include('php/fb-login.php'); ?>
-</div>        
-<div class=desk>
-  <div class=category>
-      <header><h1>Sport</h1></header>
-          <ol>
-            <li>sito 1: ***** <input type=button value=vota!>
-            <li>sito 2: ***** <input type=button value=vota!>
-            <li>sito 3: ***** <input type=button value=vota!>
-  </div>
-  <div class=category>
-      <header><h1>Sport</h1></header>
-          <ol>
-              <li>sito 1: ***** <input type=button value=vota!>
-            <li>sito 2: ***** <input type=button value=vota!>
-            <li>sito 3: ***** <input type=button value=vota!>
-  </div>
-  <div class=category>
-      <header><h1>Sport</h1></header>
-          <ol>
-            <li>sito 1: ***** <input type=button value=vota!>
-            <li>sito 2: ***** <input type=button value=vota!>
-            <li>sito 3: ***** <input type=button value=vota!>
-  </div>
+  <menu>
+    <li>Profilo
+    <li>Messaggi
+    <li>Cronologia
+    <li>Amici
+    <li>proponi un sito
+    <li>proponi una sezione
+    <li>segnala un problema
+</div>
+<div class=category>
+  <header><h1>Sport</h1></header>
+  <ol>
+  <li>sito 1: ***** <input type=button value=vota!>
+  <li>sito 2: ***** <input type=button value=vota!>
+  <li>sito 3: ***** <input type=button value=vota!>
+</div>
+<div class=category>
+  <header><h1>Sport</h1></header>
+  <ol>
+  <li>sito 1: ***** <input type=button value=vota!>
+  <li>sito 2: ***** <input type=button value=vota!>
+  <li>sito 3: ***** <input type=button value=vota!>
+</div>
+<div class=category>
+  <header><h1>Sport</h1></header>
+  <ol>
+  <li>sito 1: ***** <input type=button value=vota!>
+  <li>sito 2: ***** <input type=button value=vota!>
+  <li>sito 3: ***** <input type=button value=vota!>
 </div>
