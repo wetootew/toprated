@@ -2,7 +2,7 @@
 * {font:bold 16px "Times New Roman"; /*border:1px solid red;*/}
 
 /* menu laterale*/
-body {padding-left:230px; }
+body {padding-left:230px; background:beige;}
 .bar {position:fixed; left:0; top:0; height:100%; width:200px;}
 .bar * {margin-left:auto; margin-right:auto; max-width:100%;}
 menu {list-style-type: none; padding:0;}
@@ -20,4 +20,7 @@ border-color:gold;
 header, .bar {background-color:blue; text-align: center; color: gold;}
 
 /*riquadri categorie*/
-.category {margin:8px; border:2px solid blue; float:left;}
+.category {margin:8px; border:2px solid gold; float:left; background:navy; color:gold;}
+
+
+
