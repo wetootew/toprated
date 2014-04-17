@@ -1,0 +1,80 @@
+<?php include('db.php'); ?>
+<!DOCTYPE html> 
+<title>TopRated</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+function fitResize(t) {
+  t.style.height = 'auto';
+  t.style.height = (t.scrollHeight  + t.offsetHeight - t.clientHeight ) + 'px';    
+}
+   // t.addEventListener && t.addEventListener('input', function(event) { resize(t); });
+   // t['attachEvent']  && t.attachEvent('onkeyup', function() { resize(t); });
+function toggle(obj) {
+        var el = document.getElementById(obj);
+        el.style.display = (el.style.display == 'none' ? '' : 'none' );
+}
+</script>
+
+<div class=bar>
+ <div id=logo>
+  <img id=logo src=https://cloud.githubusercontent.com/assets/7316633/2730374/10dc69c2-c618-11e3-88f9-c737b0ad0a63.png>
+ </div>
+  <?php include('php/fb-login.php'); ?>
+  <?php include('php/g-login.php'); ?>
+  <menu>
+    <li>Profilo
+    <li>Messaggi
+    <li>Cronologia
+    <li>Amici
+    <li>proponi un sito
+    <li>proponi una sezione
+    <li>segnala un problema
+</div>
+<div class=category>
+  <header><h1>Sport</h1></header>
+  <ol>
+  <li>sito 1: ***** <input type=button value=vota!>
+  <li>sito 2: ***** <input type=button value=vota!>
+  <li>sito 3: ***** <input type=button value=vota!>
+</div>
+<div class=category>
+  <header><h1>Sport</h1></header>
+  <ol>
+  <li>sito 1: ***** <input type=button value=vota!>
+  <li>sito 2: ***** <input type=button value=vota!>
+  <li>sito 3: ***** <input type=button value=vota!>
+</div>
+<div class=category>
+  <header><h1>Sport</h1></header>
+  <ol>
+  <li>sito 1: ***** <input type=button value=vota!>
+  <li>sito 2: ***** <input type=button value=vota!>
+  <li>sito 3: ***** <input type=button value=vota!>
+</div>
+
+
+
+
+
+
+
+
+
+
+/* generico */
+* {font:bold 16px "Times New Roman"; /*border:1px solid red;*/}
+
+/* menu laterale*/
+body {padding-left:230px; background:beige;}
+.bar {position:fixed; left:0; top:0; height:100%; width:200px;}
+.bar * {margin-left:auto; margin-right:auto; max-width:100%;}
+menu {list-style-type: none; padding:0;}
+
+#logo {max-width:95%; margin-top:5px;}
+
+/*titoli*/
+header, .bar {background-color:navy; text-align: center; color: gold;}
+
+/*riquadri categorie*/
+.category {margin:8px; border:2px solid gold; float:left; background:navy; color:gold;}
