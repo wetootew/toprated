@@ -63,7 +63,7 @@ function toggle(obj) {
 
 
 /* generico */
-* {font:bold 16px "Times New Roman"; /*border:1px solid red;*/}
+* {font:bold 16px "georgia"; /*border:1px solid red;*/}
 
 /* menu laterale*/
 body {padding-left:230px; background:beige;}
@@ -78,3 +78,4 @@ header, .bar {background-color:navy; text-align: center; color: gold;}
 
 /*riquadri categorie*/
 .category {margin:8px; border:2px solid gold; float:left; background:navy; color:gold;}
+
