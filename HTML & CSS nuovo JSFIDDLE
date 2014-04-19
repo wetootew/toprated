@@ -18,7 +18,8 @@ function toggle(obj) {
 
 <div class=bar>
  <div id=logo>
-  <img id=logo src=https://cloud.githubusercontent.com/assets/7316633/2730374/10dc69c2-c618-11e3-88f9-c737b0ad0a63.png>
+  <img id=logo src=
+https://cloud.githubusercontent.com/assets/7316633/2740836/e7893158-c6db-11e3-9609-672202d3baf6.png>
  </div>
   <?php include('php/fb-login.php'); ?>
   <?php include('php/g-login.php'); ?>
@@ -63,19 +64,18 @@ function toggle(obj) {
 
 
 /* generico */
-* {font:bold 16px "georgia"; /*border:1px solid red;*/}
+* {font:bold 15px "georgia"; /*border:1px solid red;*/}
 
 /* menu laterale*/
 body {padding-left:230px; background:beige;}
-.bar {position:fixed; left:0; top:0; height:100%; width:200px;}
-.bar * {margin-left:auto; margin-right:auto; max-width:100%;}
+.bar {position:fixed; left:0; top:0; height:100%; width:180px; box-shadow: 10px 0px 25px navy, 10px 0px 25px navy, 10px 0px 5px navy, -10px  10px 5px navy; }
+.bar * {margin-left:5px; margin-right:auto; max-width:100%;}
 menu {list-style-type: none; padding:0;}
 
-#logo {max-width:95%; margin-top:5px;}
+#logo {max-width:65%; margin-top:5px; margin-right: -58px}
 
 /*titoli*/
 header, .bar {background-color:navy; text-align: center; color: gold;}
 
 /*riquadri categorie*/
 .category {margin:8px; border:2px solid gold; float:left; background:navy; color:gold;}
-
