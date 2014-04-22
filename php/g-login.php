@@ -20,10 +20,10 @@
    // Additional params including the callback, the rest of the params will
    // come from the page-level configuration.
    var additionalParams = {
-      'callback': 'signinCallback'
-      'clientid' : '40565096477.apps.googleusercontent.com'
-      'scope' : 'https://www.googleapis.com/auth/plus.login'
-      'requestvisibleactions' : 'http://schemas.google.com/AddActivity'
+      'callback': 'signinCallback',
+      'clientid' : '40565096477.apps.googleusercontent.com',
+      'scope' : 'https://www.googleapis.com/auth/plus.login',
+      'requestvisibleactions' : 'http://schemas.google.com/AddActivity',
       'cookiepolicy' : 'single_host_origin'
    };
 
