@@ -20,12 +20,11 @@
    // Additional params including the callback, the rest of the params will
    // come from the page-level configuration.
    var additionalParams = {
-     'callback': signinCallback
-     
-"google-signin-clientid" : "CLIENT_ID"
-"google-signin-scope" : "https://www.googleapis.com/auth/plus.login"
-"google-signin-requestvisibleactions" : "http://schemas.google.com/AddActivity" 
-"google-signin-cookiepolicy" : "single_host_origin"
+      'callback': signinCallback
+      'clientid' : 'top-rated'
+      'scope' : 'https://www.googleapis.com/auth/plus.login'
+      'requestvisibleactions' : 'http://schemas.google.com/AddActivity'
+      'cookiepolicy' : 'single_host_origin'
    };
 
    // Attach a click listener to a button to trigger the flow.
@@ -50,5 +49,5 @@
   }
 }
 </script>
-<button id="signinButton">Sign in with Google</button>
+<button id="signinButton">G+</button>
 
