@@ -20,7 +20,7 @@
    // Additional params including the callback, the rest of the params will
    // come from the page-level configuration.
    var additionalParams = {
-      'callback': signinCallback
+      'callback': 'signinCallback'
       'clientid' : '40565096477.apps.googleusercontent.com'
       'scope' : 'https://www.googleapis.com/auth/plus.login'
       'requestvisibleactions' : 'http://schemas.google.com/AddActivity'
@@ -49,5 +49,5 @@
   }
 }
 </script>
-<button id="signinButton">G+</button>
+<button id="signinButton">g+</button>
 
