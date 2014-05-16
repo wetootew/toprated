@@ -94,11 +94,10 @@ class Oauth {
                 }
                 
                 // return json decoded array or plain response
-                if($returnType == 'json'){
+                if($returnType == 'json')
                         return json_decode($response, true);
-                } else {
+                else
                         return $response;
-                }
         }
         
         public function validateAccessToken(){
