@@ -30,4 +30,17 @@ function statusChangeCallback(response) {
   js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&appId=1439231382984557&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+<?php
+$helper = new FacebookJavaScriptLoginHelper();
+try {
+    $session = $helper->getSession();
+} catch(FacebookRequestException $ex) {
+    // When Facebook returns an error
+} catch(\Exception $ex) {
+    // When validation fails or other local issues
+}
+if ($session) {
+  echo "logged in!";
+}
+?>
 <div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="icon" data-show-faces="false" data-auto-logout-link="false"></div>
