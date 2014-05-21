@@ -31,6 +31,8 @@ function statusChangeCallback(response) {
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <?php
+use Facebook\FacebookJavaScriptLoginHelper;
+use Facebook\FacebookSession;
 FacebookSession::setDefaultApplication('1439231382984557', '0a6b44656cebac45c3c6f4fd62aabbca');
 $helper = new FacebookJavaScriptLoginHelper();
 try {
