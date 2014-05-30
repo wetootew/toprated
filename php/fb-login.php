@@ -34,6 +34,12 @@ function statusChangeCallback(response) {
 echo 'we';
 use Facebook\FacebookJavaScriptLoginHelper;
 use Facebook\FacebookSession;
+use Facebook\FacebookRequest;
+use Facebook\FacebookResponse;
+use Facebook\FacebookSDKException;
+use Facebook\FacebookRequestException;
+use Facebook\FacebookAuthorizationException;
+use Facebook\GraphObject;
 echo 'we';
 FacebookSession::setDefaultApplication('1439231382984557', '0a6b44656cebac45c3c6f4fd62aabbca');
 echo 'we';
