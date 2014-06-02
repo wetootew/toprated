@@ -1,4 +1,3 @@
----
 version: 1
 composer:
     # make sure composer runs after each push
