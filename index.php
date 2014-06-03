@@ -10,7 +10,7 @@ use Facebook\GraphUser;
 use Facebook\FacebookRequestException;
 use Facebook\FacebookRedirectLoginHelper;
 
-echo file_get_contents (__DIR__ . '/vendor/autoload.php');
+echo file_get_contents (__DIR__ . '/composer' . '/autoload_real.php');
 
 session_start();
 
