@@ -10,6 +10,8 @@ use Facebook\GraphUser;
 use Facebook\FacebookRequestException;
 use Facebook\FacebookRedirectLoginHelper;
 
+echo file_get_contents (__DIR__ . '/vendor/autoload.php');
+
 session_start();
 
 FacebookSession::setDefaultApplication('1439231382984557', '0a6b44656cebac45c3c6f4fd62aabbca');
