@@ -4,12 +4,15 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require_once __DIR__ . '/vendor/autoload.php';
 
+require_once __DIR__ . '/composer' . '/autoload_real.php';
+
 use Facebook\FacebookSession;
 use Facebook\FacebookRequest;
 use Facebook\GraphUser;
 use Facebook\FacebookRequestException;
 use Facebook\FacebookRedirectLoginHelper;
 
+echo file_get_contents (__DIR__ . '/vendor/autoload.php');
 echo file_get_contents (__DIR__ . '/composer' . '/autoload_real.php');
 
 session_start();
