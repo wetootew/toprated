@@ -3,17 +3,7 @@ include('db.php');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require_once __DIR__ . '/vendor/autoload.php';
-echo '----------------------------------------------';
 require_once __DIR__ . '/vendor' . '/composer' . '/autoload_real.php';
-
-echo '----------------------------------------------';
-require_once __DIR__ . '/vendor' . '/composer' . '/autoload_namespaces.php';
-
-echo '----------------------------------------------';
-require_once __DIR__ . '/vendor' . '/composer' . '/autoload_psr4.php';
-
-echo '----------------------------------------------';
-require_once __DIR__ . '/vendor' . '/composer' . '/autoload_classmap.php';
 
 use Facebook\FacebookSession;
 use Facebook\FacebookRequest;
@@ -23,6 +13,15 @@ use Facebook\FacebookRedirectLoginHelper;
 
 echo file_get_contents (__DIR__ . '/vendor/autoload.php');
 echo file_get_contents (__DIR__ . '/vendor' . '/composer' . '/autoload_real.php');
+
+echo '----------------------------------------------';
+echo file_get_contents ( __DIR__ . '/vendor' . '/composer' . '/autoload_namespaces.php');
+
+echo '----------------------------------------------';
+echo file_get_contents ( __DIR__ . '/vendor' . '/composer' . '/autoload_psr4.php');
+
+echo '----------------------------------------------';
+echo file_get_contents ( __DIR__ . '/vendor' . '/composer' . '/autoload_classmap.php');
 
 session_start();
 
