@@ -1,58 +1,7 @@
 <?php 
 include('db.php'); 
 error_reporting(E_ALL);
-ini_set('display_errors', 1);
-require_once __DIR__ . '/vendor/autoload.php';
-require_once __DIR__ . '/vendor' . '/composer' . '/autoload_real.php';
-
-use Facebook\FacebookSession;
-use Facebook\FacebookRequest;
-use Facebook\GraphUser;
-use Facebook\FacebookRequestException;
-use Facebook\FacebookRedirectLoginHelper;
-
-echo file_get_contents (__DIR__ . '/vendor/autoload.php');
-echo file_get_contents (__DIR__ . '/vendor' . '/composer' . '/autoload_real.php');
-
-echo '----------------------------------------------';
-echo file_get_contents ( __DIR__ . '/vendor' . '/composer' . '/autoload_namespaces.php');
-
-echo '----------------------------------------------';
-echo file_get_contents ( __DIR__ . '/vendor' . '/composer' . '/autoload_psr4.php');
-
-echo '----------------------------------------------';
-echo file_get_contents ( __DIR__ . '/vendor' . '/composer' . '/autoload_classmap.php');
-
-session_start();
-
-FacebookSession::setDefaultApplication('1439231382984557', '0a6b44656cebac45c3c6f4fd62aabbca');
-
-// Use one of the helper classes to get a FacebookSession object.
-//   FacebookRedirectLoginHelper
-//   FacebookCanvasLoginHelper
-//   FacebookJavaScriptLoginHelper
-// or create a FacebookSession with a valid access token:
-$helper = new FacebookJavaScriptLoginHelper();
-try {
-    $session = $helper->getSession();
-} catch(FacebookRequestException $ex) {
-    // When Facebook returns an error
-} catch(\Exception $ex) {
-    // When validation fails or other local issues
-}
-// Get the GraphUser object for the current user:
-
-try {
-  $me = (new FacebookRequest(
-    $session, 'GET', '/me'
-  ))->execute()->getGraphObject(GraphUser::className());
-  echo $me->getName();
-} catch (FacebookRequestException $e) {
-  // The Graph API returned an error
-} catch (\Exception $e) {
-  // Some other error occurred
-}
-?>
+ini_set('display_errors', 1);?>
 
 <!DOCTYPE html> 
 <title>TopRated</title>
