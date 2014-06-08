@@ -3,6 +3,12 @@ include('db.php');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+echo file_get_contents (__DIR__ . '/vendor/autoload.php');
+
+echo '-------------------------------';
+echo file_get_contents (__DIR__ . '/vendor' . '/composer' . '/autoload_real.php');
+
+echo '-------------------------------';
 echo file_get_contents ( __DIR__ . '/vendor' . '/composer' . '/autoload_namespaces.php');
 
 echo '-------------------------------';
