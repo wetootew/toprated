@@ -3,15 +3,13 @@ include('db.php');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once __DIR__ . '/vendor' . '/composer' . '/autoload_namespaces.php';
+echo file_get_contents ( __DIR__ . '/vendor' . '/composer' . '/autoload_namespaces.php');
 
 echo '----------------------------------------------';
-require_once __DIR__ . '/vendor' . '/composer' . '/autoload_psr4.php';
+echo file_get_contents ( __DIR__ . '/vendor' . '/composer' . '/autoload_psr4.php');
 
 echo '----------------------------------------------';
-require_once __DIR__ . '/vendor' . '/composer' . '/autoload_classmap.php';
-
-
+echo file_get_contents ( __DIR__ . '/vendor' . '/composer' . '/autoload_classmap.php');
 ?>
 
 <!DOCTYPE html> 
