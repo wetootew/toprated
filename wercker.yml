@@ -10,10 +10,10 @@ build:
         code: |
           echo "php version $(php --version) running"
           echo "from location $(which php)"
-    # Add more steps here:
-    #- script:
-    # name: run unit tests
-    # code: phpunit
+    - script:
+        name: install dependencies
+        code: |-
+            composer install --no-interaction
 deploy:
   steps:
     - add-to-known_hosts:
