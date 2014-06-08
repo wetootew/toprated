@@ -5,10 +5,10 @@ ini_set('display_errors', 1);
 
 echo file_get_contents ( __DIR__ . '/vendor' . '/composer' . '/autoload_namespaces.php');
 
-echo '----------------------------------------------';
+echo '-------------------------------';
 echo file_get_contents ( __DIR__ . '/vendor' . '/composer' . '/autoload_psr4.php');
 
-echo '----------------------------------------------';
+echo '-------------------------------------';
 echo file_get_contents ( __DIR__ . '/vendor' . '/composer' . '/autoload_classmap.php');
 ?>
 
