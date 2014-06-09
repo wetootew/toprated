@@ -40,19 +40,13 @@ use Facebook\FacebookSDKException;
 use Facebook\FacebookRequestException;
 use Facebook\FacebookAuthorizationException;
 use Facebook\GraphObject;
-echo 'we';
 FacebookSession::setDefaultApplication('1439231382984557', '0a6b44656cebac45c3c6f4fd62aabbca');
-echo 'we';
 $helper = new FacebookJavaScriptLoginHelper();
-echo 'we';
 try {
     $session = $helper->getSession();
-echo 'we';
 } catch(FacebookRequestException $ex) {
-echo 'wexx';
     // When Facebook returns an error
 } catch(\Exception $ex) {
-echo 'wex';
     // When validation fails or other local issues
 }
 echo 'we';
