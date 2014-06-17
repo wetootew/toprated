@@ -88,10 +88,15 @@ h1 {
  margin-right:2%;
 }
 
-ul.menu, ul.menu ul { position: absolute }
-ul.menu ul { display: none }
-ul.menu li { position: relative }
-ul.menu li:hover > ul { display: block; top: 0em; margin-left: 100% }
-ul.flatop > li  , ul.flatop > li:hover > ul { float: left; margin-left: auto; top: auto }
+
+.FlyOut menu {display: none; padding: 0; margin: 0}
+.FlyOut li:hover>menu {position: absolute; display: inline}
+.DropDown>li, .DropDown>li:hover>menu {float: left ; display: block}
+.ShowPath li:hover {background-color: red}
+
+menu { 
+  list-style-type: none;
+  white-space: nowrap;
+}
 
 
