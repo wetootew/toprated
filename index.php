@@ -6,7 +6,7 @@
 <div id=topbar>
  <img width=200px height=80px id=logo src="logo.jpg">
  <div class="registered center">
-  <a href="#"> <img class=bottone src="Bottoni/Profilo/prof1stat.png" onmouseover=src="Bottoni/Profilo/prof1mouse.png" onmousedown=src="Bottoni/Profilo/prof1stat.png" onmouseout=src="Bottoni/Profilo/prof1stat.png">  </a> 
+  <a href="#"> <img class=bottone src="Bottoni/profilo/prof1stat.png" onmouseover=src="Bottoni/profilo/prof1mouse.png" onmousedown=src="Bottoni/profilo/prof1stat.png" onmouseout=src="Bottoni/profilo/prof1stat.png">  </a> 
 	<a href="#"> <img class=bottone src="Bottoni/contatti/contatti1stat.png" onmouseover=src="Bottoni/contatti/contatti1mouse.png" onmousedown=src="Bottoni/contatti/contatti1stat.png" onmouseout=src="Bottoni/contatti/contatti1stat.png">  </a>
   <a href="#"> <img class=bottone src="Bottoni/messaggi/mess1stat.png" onmouseover=src="Bottoni/messaggi/mess1mouse.png" onmousedown=src="Bottoni/messaggi/mess1stat.png" onmouseout=src="Bottoni/messaggi/mess1stat.png">  </a>
 	<a href="#"> <img class=bottone src="Bottoni/eventi/evento1stat.png" onmouseover=src="Bottoni/eventi/evento1mouse.png" onmousedown=src="Bottoni/eventi/evento1stat.png" onmouseout=src="Bottoni/eventi/evento1stat.png">  </a>
