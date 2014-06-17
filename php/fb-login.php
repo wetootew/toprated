@@ -49,7 +49,6 @@ try {
 } catch(\Exception $ex) {
     // When validation fails or other local issues
 }
-echo 'we';
 if ($session) {
   echo "logged in!";
 }
