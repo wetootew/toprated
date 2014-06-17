@@ -32,7 +32,6 @@ function statusChangeCallback(response) {
 }(document, 'script', 'facebook-jssdk'));</script>
 <?php
 session_start(); 
-require_once '../vendor/autoload.php';
 use Facebook\FacebookJavaScriptLoginHelper;
 use Facebook\FacebookSession;
 use Facebook\FacebookRequest;
