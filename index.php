@@ -42,8 +42,11 @@ require_once __DIR__ . '/vendor/autoload.php';
   <h2> Community Board </h2>
 	<div class="center comandi">
 	<img src=rigasolaCB.png><br>
-	<a href=#> Ordina </a>
-	<a href=#> Filtra </a>
+	<ul class=menu>
+	 <li><a href=#> Ordina </a>
+	  <ul><li><img src=fumettoordina.png></li></ul>
+	 <li><a href=#> Filtra </a>
+	  <ul><li><img src=fumettofiltra.png></li></ul>
 	<br>
   <img src=rigasolaCB.png>	
 	</div>
@@ -53,8 +56,11 @@ require_once __DIR__ . '/vendor/autoload.php';
   <h1>Bacheca Eventi</h1>
 	<div class="center comandi">
 	<img src=rigasolaB.png><br>
-	<a href=#> Ordina </a>
-	<a href=#> Filtra </a>
+	<ul class=menu>
+	 <li><a href=#> Ordina </a>
+	  <ul><li><img src=fumettoordinaCB.png></li></ul>
+	 <li><a href=#> Filtra </a>
+	  <ul><li><img src=fumettofiltraCB.png></li></ul>
 	<br>
   <img src=rigasolaB.png>	
 	</div>
