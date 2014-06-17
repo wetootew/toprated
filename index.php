@@ -44,9 +44,9 @@ require_once __DIR__ . '/vendor/autoload.php';
 	<img src=rigasolaCB.png><br>
 	<ul class="FlyOut DropDown">
 	 <li><a href=#> Ordina </a>
-	  <ul><li><img src=fumettoordina.png></li></ul>
+	  <ul><li><img src=fumettoordinaCB.png></li></ul>
 	 <li><a href=#> Filtra </a>
-	  <ul><li><img src=fumettofiltra.png></li></ul>
+	  <ul><li><img src=fumettofiltraCB.png></li></ul>
 	<br>
   <img src=rigasolaCB.png>	
 	</div>
@@ -56,11 +56,12 @@ require_once __DIR__ . '/vendor/autoload.php';
   <h1>Bacheca Eventi</h1>
 	<div class="center comandi">
 	<img src=rigasolaB.png><br>
-	<ul class=menu>
+	<ul class="FlyOut DropDown">
 	 <li><a href=#> Ordina </a>
-	  <ul><li><img src=fumettoordinaCB.png></li></ul>
+	  <ul><li><img src=fumettoordina.png></li></ul>
 	 <li><a href=#> Filtra </a>
-	  <ul><li><img src=fumettofiltraCB.png></li></ul>
+	  <ul><li><img src=fumettofiltra.png></li></ul>
+	<br>
 	<br>
   <img src=rigasolaB.png>	
 	</div>
