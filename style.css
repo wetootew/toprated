@@ -1,0 +1,138 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: georgia;
+	vertical-align: baseline;
+	
+}
+
+html, body {height:100%}
+
+#titoletto {
+ font:12px georgia; 
+}
+
+.bottone {
+ margin-top:20px;
+ height:50px;
+ width:60px;
+ }
+
+.registered a {
+ text-decoration:none;
+}
+
+.registered { 
+ /* display:none; */
+ width:390px;
+}
+
+.unregistered { 
+ display:none;
+}
+
+.comandi{
+ margin-top: 20px; 
+ text-align:center;
+}
+ .comandi a {
+ text-decoration: none;
+ font: bold 18px georgia;
+}
+
+.comandi a:hover {cursor:pointer}
+
+#bacheca .comandi a {  margin:20px; color:#997f64;}
+#bacheca .comandi a:hover { color:#005826;}
+
+#board .comandi { margin-top:23px;}
+#board .comandi a { font: bold 12px georgia; margin:10px; color:#fae2c9;}
+#board .comandi a:hover { color:#997f64;}
+
+
+.comandi img { 
+ vertical-align: middle;
+}
+ 
+.comandi img  { 
+ width:75%;
+}
+ 
+.center p { 
+ margin-top:6px;
+ margin-bottom:2px; 
+}
+
+.center { 
+ margin-left:auto; 
+ margin-right:auto;
+}
+ 
+#topbar {
+ background-color:#005826;
+ color:#fae2c9;
+ text-align:center;
+ padding-top:15px;
+ padding-bottom: 10px;
+ height: 90px;
+}
+
+#page{height:100%;}
+
+#logo {
+ float:left;
+ margin-left:2%;
+}
+ 
+body { background-color:#fae2c9;}
+
+.login  p {
+ margin: 6px;
+}
+
+.login * {
+ margin: 2px;
+}
+
+.login {
+  font:bold 12px georgia; 
+	margin-right:2%;
+ 	float:right;
+	text-align:center;
+	width:200px;
+}
+
+h1 {
+ padding-top: 15px;
+ font:bolder 36px georgia;
+ font-variant:small-caps;
+}
+
+#bacheca {
+ text-align: center;
+ color:#997f64;
+ margin-left:calc(2% + 200px);
+ margin-right:calc(2% + 200px);
+}
+
+.sidebar {
+ background-color:#005826;
+ color:#fae2c9;
+ width:200px;
+ height:100%;
+ margin-top:10px;
+ padding-top: 20px;
+ font:bolder 18px georgia;
+ text-align:center; 
+}
+
+#sponsor {
+ float:left;
+ margin-left:2%;
+}
+
+#board {
+ float:right;
+ margin-right:2%;
+}
