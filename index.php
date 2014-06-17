@@ -22,6 +22,8 @@
  </div>
  <div  id=titoletto class="center unregistered">
   <img src="Registrati.png"><br>
+  <?php include('php/fb-login.php'); ?>
+  <?php include('php/g-login.php'); ?>
   <p> Scopri tutti i vantaggi per utenti ed associazioni! </p>
  </div>
 </div>
