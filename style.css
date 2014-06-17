@@ -24,12 +24,12 @@ html, body {height:100%}
 }
 
 .registered { 
- /* display:none; */
+ display:none;
  width:390px;
 }
 
 .unregistered { 
- display:none;
+ /*display:none;*/
 }
 
 .comandi{
