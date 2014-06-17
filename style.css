@@ -1,46 +1,22 @@
 * {
-	margin: 0;
-	padding: 0;
-	font-size: 100%;
-	font: georgia;
-	vertical-align: baseline;
-	
+ margin: 0;
+ padding: 0;
+ font-size: 100%;
+ font-family:georgia;
+ vertical-align: baseline;
 }
 
-html, body {height:100%}
+html, body, #page {height:100%}
+body { background-color:#fae2c9;}
 
-#titoletto {
- font:12px georgia; 
-}
+.bottone { margin-top:20px; height:50px; width:60px; }
 
-.bottone {
- margin-top:20px;
- height:50px;
- width:60px;
- }
+.registered a { text-decoration:none; }
+.registered { display:none; width:390px;}
+.unregistered {  /*display:none;*/}
 
-.registered a {
- text-decoration:none;
-}
-
-.registered { 
- display:none;
- width:390px;
-}
-
-.unregistered { 
- /*display:none;*/
-}
-
-.comandi{
- margin-top: 20px; 
- text-align:center;
-}
- .comandi a {
- text-decoration: none;
- font: bold 18px georgia;
-}
-
+.comandi{ margin-top: 20px;  text-align:center;}
+.comandi a { text-decoration: none; font: bold 18px georgia;}
 .comandi a:hover {cursor:pointer}
 
 #bacheca .comandi a {  margin:20px; color:#997f64;}
@@ -50,24 +26,11 @@ html, body {height:100%}
 #board .comandi a { font: bold 12px georgia; margin:10px; color:#fae2c9;}
 #board .comandi a:hover { color:#997f64;}
 
-
-.comandi img { 
- vertical-align: middle;
-}
+.comandi img {  vertical-align: middle;}
+.comandi img {  width:75%;}
  
-.comandi img  { 
- width:75%;
-}
- 
-.center p { 
- margin-top:6px;
- margin-bottom:2px; 
-}
-
-.center { 
- margin-left:auto; 
- margin-right:auto;
-}
+.center p {  margin-top:6px; margin-bottom:2px; }
+.center {  margin-left:auto;  margin-right:auto;}
  
 #topbar {
  background-color:#005826;
@@ -78,23 +41,11 @@ html, body {height:100%}
  height: 90px;
 }
 
-#page{height:100%;}
+#logo { float:left; margin-left:2%;}
+#titoletto { font-size:12px;}
 
-#logo {
- float:left;
- margin-left:2%;
-}
- 
-body { background-color:#fae2c9;}
-
-.login  p {
- margin: 6px;
-}
-
-.login * {
- margin: 2px;
-}
-
+.login * { margin: 2px;}
+.login  p { margin: 6px;}
 .login {
   font:bold 12px georgia; 
 	margin-right:2%;
@@ -136,3 +87,11 @@ h1 {
  float:right;
  margin-right:2%;
 }
+
+ul.menu, ul.menu ul { position: absolute }
+ul.menu ul { display: none }
+ul.menu li { position: relative }
+ul.menu li:hover > ul { display: block; top: 0em; margin-left: 100% }
+ul.flatop > li  , ul.flatop > li:hover > ul { float: left; margin-left: auto; top: auto }
+
+
