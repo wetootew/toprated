@@ -47,6 +47,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 	  <ul><li><img src=fumettoordinaCB.png></li></ul>
 	 <li><a href=#> Filtra </a>
 	  <ul><li><img src=fumettofiltraCB.png></li></ul>
+	</ul>
 	<br>
   <img src=rigasolaCB.png>	
 	</div>
@@ -61,6 +62,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 	  <ul><li><img src=fumettoordina.png></li></ul>
 	 <li><a href=#> Filtra </a>
 	  <ul><li><img src=fumettofiltra.png></li></ul>
+	</ul>
 	<br>
 	<br>
   <img src=rigasolaB.png>	
