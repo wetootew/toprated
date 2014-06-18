@@ -90,7 +90,7 @@ h1 {
 
 .FlyOut ul {display: none; padding: 0; margin: 0; list-style-type: none; white-space: nowrap;}
 .FlyOut li:hover>ul {position: absolute; display: inline;}
-.DropDown>li, .DropDown>li:hover>ul {display: inline;}
+.DropDown>li, .DropDown>li:hover>ul {display: block; float: left;}
 .ShowPath li:hover {background-color: red;}
 
 
