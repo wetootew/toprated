@@ -30,7 +30,14 @@ body { background-color:#fae2c9;}
 .comandi img {  width:75%;}
  
 .center p {  margin-top:6px; margin-bottom:2px; }
-.center {  margin-left:auto;  margin-right:auto;}
+.center {  
+ margin-left:auto;
+ margin-right:auto;
+ display:-moz-inline-stack;
+ display:inline-block;
+ zoom:1;
+*display:inline;
+}
  
 #topbar {
  background-color:#005826;
