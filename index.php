@@ -42,7 +42,7 @@ require_once __DIR__ . '/vendor/autoload.php';
   <h2> Community Board </h2>
 	<div class="center comandi">
 	<img src=rigasolaCB.png><br>
-	<ul class="FlyOut DropDown">
+	<ul class="center FlyOut DropDown">
 	 <li><a href=#> Ordina </a>
 	  <ul><li><img src=fumettoordinaCB.png></li></ul>
 	 <li><a href=#> Filtra </a>
@@ -57,7 +57,7 @@ require_once __DIR__ . '/vendor/autoload.php';
   <h1>Bacheca Eventi</h1>
 	<div class="center comandi">
 	<img src=rigasolaB.png><br>
-	<ul class="FlyOut DropDown">
+	<ul class="center FlyOut DropDown">
 	 <li><a href=#> Ordina </a>
 	  <ul><li><img src=fumettoordina.png></li></ul>
 	 <li><a href=#> Filtra </a>
