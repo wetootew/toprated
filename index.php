@@ -26,10 +26,10 @@ require_once __DIR__ . '/vendor/autoload.php';
   <input type=text name=pwd value=Password><br> <!--da asterischizzare quando l'utente digita-->
 	<img src="login.png">
  </div>
- <div id=titoletto class=center>
-  <ul class="FlyOut DropDown unregistered">
+ <div id=titoletto class="center unregistered">
+  <ul class="FlyOut DropDown">
    <li><img src="Registrati.png">
-    <ul><li><?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?></ul>
+    <ul><li><?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?></li></ul>
   </ul>
  <p> Scopri tutti i vantaggi per utenti ed associazioni! </p>
  </div>
