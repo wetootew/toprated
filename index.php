@@ -62,7 +62,6 @@ require_once __DIR__ . '/vendor/autoload.php';
 	  <ul><li><img src=fumettofiltra.png></li></ul>
 	</ul>
 	<br>
-	<br>
   <img src=rigasolaB.png>	
 	</div>
  </div>
