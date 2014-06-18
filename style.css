@@ -12,8 +12,8 @@ body { background-color:#fae2c9;}
 .bottone { margin-top:20px; height:50px; width:60px; }
 
 .registered a { text-decoration:none; }
-.registered { display:none; width:390px;}
-.unregistered {  /*display:none;*/}
+.registered { display:none !important; width:390px;}
+.unregistered {  /*display:none !important;*/}
 
 .comandi{ margin-top: 20px;  text-align:center;}
 .comandi a { text-decoration: none; font: bold 18px georgia;}
