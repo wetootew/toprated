@@ -42,9 +42,9 @@ require_once __DIR__ . '/vendor/autoload.php';
 	<img src=rigasolaCB.png><br>
 	<ul class="center FlyOut DropDown">
 	 <li><a href=#> Ordina </a>
-	  <ul><li><img src=fumettoordinaCB.png></li></ul>
+	  <ul><li class=bubble><a href=#>per data</a></li></ul>
 	 <li><a href=#> Filtra </a>
-	  <ul><li><img src=fumettofiltraCB.png></li></ul>
+	  <ul><li class=bubble><a href=#>per data</a></li></ul>
 	</ul>
 	<br>
   <img src=rigasolaCB.png>	
@@ -57,9 +57,9 @@ require_once __DIR__ . '/vendor/autoload.php';
 	<img src=rigasolaB.png><br>
 	<ul class="center FlyOut DropDown">
 	 <li><a href=#> Ordina </a>
-	  <ul><li><img src=fumettoordina.png></li></ul>
+	  <ul><li class=bubble><a href=#>per data</a></li></ul>
 	 <li><a href=#> Filtra </a>
-	  <ul><li><img src=fumettofiltra.png></li></ul>
+	  <ul><li class=bubble><a href=#>per data</a></li></ul>
 	</ul>
 	<br>
   <img src=rigasolaB.png>	
