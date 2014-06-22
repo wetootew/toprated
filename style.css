@@ -100,6 +100,45 @@ h1 {
 .DropDown>li, .DropDown>li:hover>ul {display: block; float: left;}
 .ShowPath li:hover {background-color: red;}
 
+.bubble 
+{
+position: relative;
+width: 155px;
+height: 120px;
+padding: 5px;
+background: #997f64;
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+border: #005826 solid 5px;
+}
 
+.bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0 12px 25px;
+border-color: #997f64 transparent;
+display: block;
+width: 0;
+z-index: 1;
+top: -25px;
+left: 34px;
+}
+
+.bubble:before 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0 16px 29px;
+border-color: #005826 transparent;
+display: block;
+width: 0;
+z-index: 0;
+top: -34px;
+left: 30px;
+}
 
 
