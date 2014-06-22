@@ -15,18 +15,20 @@ body { background-color:#fae2c9;}
 .registered { display:none !important; width:390px;}
 .unregistered {  /*display:none !important;*/}
 
-.comandi{ margin-top: 20px;  text-align:center;}
-.comandi a { text-decoration: none; font: bold 18px georgia;}
+.comandi{ margin-top: 20px;  text-align:center; width:100%;}
+.comandi a { text-decoration: none; }
 .comandi a:hover {cursor:pointer}
 
-#bacheca .comandi a {  margin:20px; color:#997f64;}
+#bacheca .comandi ul {  margin:3px;}
+#bacheca .comandi a {  margin:10px ; font: bold 18px georgia; color:#997f64;}
 #bacheca .comandi a:hover { color:#005826;}
 
 #board .comandi { margin-top:23px;}
-#board .comandi a { font: bold 12px georgia; margin:10px; color:#fae2c9;}
+#board .comandi ul {  margin:1px;}
+#board .comandi a { font: bold 12px georgia; margin: 10px; color:#fae2c9;}
 #board .comandi a:hover { color:#997f64;}
 
-.comandi img {  vertical-align: middle;}
+.comandi * {  vertical-align: middle;}
 .comandi img {  width:85%;}
  
 .center p {  margin-top:6px; margin-bottom:2px; }
@@ -101,22 +103,18 @@ h1 {
 .DropDown>li, .DropDown>li:hover>ul {display: block; float: left;}
 .ShowPath li:hover {background-color: red;}
 
-.bubble 
-{
+.bubble {
 position: relative;
-width: 155px;
-height: 120px;
 padding: 5px;
 background: #997f64;
 -webkit-border-radius: 20px;
 -moz-border-radius: 20px;
-border-radius: 20px;
+border-radius: 15px;
 border: #005826 solid 5px;
 margin-top: 29px;
 }
 
-.bubble:after 
-{
+.bubble:after {
 content: '';
 position: absolute;
 border-style: solid;
@@ -126,11 +124,10 @@ display: block;
 width: 0;
 z-index: 1;
 top: -25px;
-left: 34px;
+left: 24px;
 }
 
-.bubble:before 
-{
+.bubble:before {
 content: '';
 position: absolute;
 border-style: solid;
@@ -140,7 +137,7 @@ display: block;
 width: 0;
 z-index: 0;
 top: -34px;
-left: 30px;
+left: 0px;
 }
 
 
