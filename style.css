@@ -9,7 +9,7 @@
 html, body, #page {height:100%}
 body { background-color:#fae2c9;}
 
-.bottone { margin-top:20px; height:50px; width:60px; }
+.bottone { margin-top:20px; height:50px; width:60px; padding:5px;}
 
 .registered a { text-decoration:none; }
 .registered { display:none !important; width:390px;}
@@ -27,7 +27,7 @@ body { background-color:#fae2c9;}
 #board .comandi a:hover { color:#997f64;}
 
 .comandi img {  vertical-align: middle;}
-.comandi img {  width:75%;}
+.comandi img {  width:85%;}
  
 .center p {  margin-top:6px; margin-bottom:2px; }
 .center {  
@@ -63,7 +63,7 @@ body { background-color:#fae2c9;}
 
 h1 {
  padding-top: 15px;
- font:bolder 36px georgia;
+ font:bold 36px georgia;
  font-variant:small-caps;
 }
 
@@ -83,6 +83,7 @@ h1 {
  padding-top: 20px;
  font:bolder 18px georgia;
  text-align:center; 
+ border-radius:20px; 
 }
 
 #sponsor {
@@ -111,6 +112,7 @@ background: #997f64;
 -moz-border-radius: 20px;
 border-radius: 20px;
 border: #005826 solid 5px;
+margin-top: 29px;
 }
 
 .bubble:after 
