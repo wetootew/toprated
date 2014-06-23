@@ -1,4 +1,5 @@
 * {
+ text-shadow: 0 0 0.083em #fae2c9;
  margin: 0;
  padding: 0;
  font-size: 100%;
@@ -19,9 +20,13 @@ body { background-color:#fae2c9;}
 .comandi a { text-decoration: none; }
 .comandi a:hover {cursor:pointer}
 
-#bacheca .comandi ul {  margin:3px;}
-#bacheca .comandi a {  margin:10px ; font: bold 18px georgia; color:#997f64;}
-#bacheca .comandi a:hover { color:#005826;}
+#bacheca * { text-shadow: 0 0 0.083em #997f64;}
+#bacheca .comandi ul { margin:3px;}
+#bacheca .comandi a { margin: 10px;font: bold 18px georgia; color:#997f64;}
+#bacheca .comandi a:hover, #bacheca .comandi a.click{
+ color:#005826;
+ text-shadow: 0 0 0.3em #005826; 
+}
 
 #board .comandi { margin-top:23px;}
 #board .comandi ul {  margin:1px;}
@@ -85,7 +90,8 @@ h1 {
  padding-top: 20px;
  font:bolder 18px georgia;
  text-align:center; 
- border-radius:20px; 
+ border-top-left-radius:20px;
+ border-top-right-radius:20px;
 }
 
 #sponsor {
@@ -99,9 +105,8 @@ h1 {
 }
 
 .FlyOut ul {display: none; padding: 0; margin: 0; list-style-type: none; white-space: nowrap;}
-.FlyOut li:hover>ul {position: absolute; display: inline;}
-.DropDown>li, .DropDown>li:hover>ul {display: block; float: left;}
-.ShowPath li:hover {background-color: red;}
+.FlyOut li:hover>ul, .FlyOut li.click>ul {position: absolute; display: inline;}
+.DropDown>li, .DropDown>li:hover>ul , .DropDown>li.click>ul {display: block; float: left;}
 
 .bubble {
 position: relative;
@@ -111,33 +116,33 @@ background: #997f64;
 -moz-border-radius: 20px;
 border-radius: 15px;
 border: #005826 solid 5px;
-margin-top: 29px;
+margin-top: 24px;
 }
 
 .bubble:after {
 content: '';
 position: absolute;
 border-style: solid;
-border-width: 0 12px 25px;
+border-width: 0 8px 22px;
 border-color: #997f64 transparent;
 display: block;
 width: 0;
 z-index: 1;
-top: -25px;
-left: 24px;
+top: -22px;
+left: 17px;
 }
 
 .bubble:before {
 content: '';
 position: absolute;
 border-style: solid;
-border-width: 0 16px 29px;
+border-width: 0 12px 26px;
 border-color: #005826 transparent;
 display: block;
 width: 0;
 z-index: 0;
-top: -34px;
-left: 0px;
+top: -31px;
+left: 13px;
 }
 
 
