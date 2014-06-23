@@ -7,7 +7,19 @@ require_once __DIR__ . '/vendor/autoload.php';
 <!DOCTYPE html> 
 <title>Boh</title>
 <link rel="stylesheet" type="text/css" href="style.css">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+jQuery(function($) {
+    $("li").click(function(event ) {
+				//event.stopPropagation();
+        $(this).toggleClass("click");
+				
+		$("li").not(this).removeClass('click');
+    });
+});
+</script>
+
 
 <div id=topbar>
  <img width=200px height=80px id=logo src="logo.jpg">
