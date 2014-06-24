@@ -108,6 +108,12 @@ h1 {
 .FlyOut li:hover>ul, .FlyOut li.click>ul {position: absolute; display: inline;}
 .DropDown>li, .DropDown>li:hover>ul , .DropDown>li.click>ul {display: block; float: left;}
 
+#bacheca .bubble a {color:#fae2c9; text-shadow: 0 0 0.083em #fae2c9;}
+#board .bubble a { color:#005826;  text-shadow: 0 0 0.083em #005826;}
+#board .bubble {background: #fae2c9; border-color: #997f64;}
+#board .bubble:after {border-color: #fae2c9 transparent;}
+#board .bubble:before {border-color: #997f64 transparent;}
+
 .bubble {
 position: relative;
 padding: 5px;
