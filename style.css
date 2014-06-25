@@ -31,7 +31,10 @@ body { background-color:#fae2c9;}
 #board .comandi { margin-top:23px;}
 #board .comandi ul {  margin:1px;}
 #board .comandi a { font: bold 12px georgia; margin: 10px; color:#fae2c9;}
-#board .comandi a:hover { color:#997f64;}
+#board .comandi a:hover, #board .comandi a.click {
+ color:#997f64;
+ text-shadow: 0 0 0.3em #997f64;
+ }
 
 .comandi * {  vertical-align: middle;}
 .comandi img {  width:85%;}
@@ -56,7 +59,7 @@ body { background-color:#fae2c9;}
 }
 
 #logo { float:left; margin-left:2%;}
-#titoletto { font-size:12px;}
+#titoletto { font-size:12px; margin-top:3px;}
 
 .login * { margin: 2px;}
 .login  p { margin: 6px;}
@@ -108,8 +111,16 @@ h1 {
 .FlyOut li:hover>ul, .FlyOut li.click>ul {position: absolute; display: inline;}
 .DropDown>li, .DropDown>li:hover>ul , .DropDown>li.click>ul {display: block; float: left;}
 
-#bacheca .bubble a {color:#fae2c9; text-shadow: 0 0 0.083em #fae2c9;}
-#board .bubble a { color:#005826;  text-shadow: 0 0 0.083em #005826;}
+#bacheca .bubble a{
+color:#997f64; 
+text-shadow: 0 0 0.083em #997f64;
+font: 14px georgia;
+}
+#board .bubble a{ 
+color:#005826;  
+text-shadow: 0 0 0.083em #005826;
+font: 12px georgia;
+}
 #board .bubble {background: #fae2c9; border-color: #997f64;}
 #board .bubble:after {border-color: #fae2c9 transparent;}
 #board .bubble:before {border-color: #997f64 transparent;}
@@ -117,9 +128,9 @@ h1 {
 .bubble {
 position: relative;
 padding: 5px;
-background: #997f64;
--webkit-border-radius: 20px;
--moz-border-radius: 20px;
+background: #fae2c9;
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
 border-radius: 15px;
 border: #005826 solid 5px;
 margin-top: 24px;
@@ -130,7 +141,7 @@ content: '';
 position: absolute;
 border-style: solid;
 border-width: 0 8px 22px;
-border-color: #997f64 transparent;
+border-color: #fae2c9 transparent;
 display: block;
 width: 0;
 z-index: 1;
