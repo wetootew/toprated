@@ -14,9 +14,13 @@ jQuery(function($) {
     $("li").click(function(event ) {
 				//event.stopPropagation();
         $(this).toggleClass("click");
-				
 		$("li").not(this).removeClass('click');
     });
+		
+		//$("div:(.sidebar)").click(function(event ) {
+		//event.stopPropagation();
+		//$("li").removeClass('click');
+    //});
 });
 </script>
 
@@ -54,9 +58,17 @@ jQuery(function($) {
 	<img src=rigasolaCB.png>
 	<ul class="center FlyOut DropDown">
 	 <li><a href=#> Ordina </a>
-	  <ul><li class=bubble><a href=#>per data</a></li></ul>
+	  <ul><li class=bubble><a href=#>Per data</a><a href=#>Per nome</a><br>
+		<a href=#>Pi&#249 visti</a><a href=#>Meno visti</a><br>
+		<a href=#>Voti alti</a><a href=#>Voti bassi</a><br><br>
+		<a href=#>[Chiudi]</a></li></ul>
+		
 	 <li><a href=#> Filtra </a>
-	  <ul><li class=bubble><a href=#>per data</a></li></ul>
+	  <ul><li class=bubble><a href=#>Nessun filtro</a><br>
+		<a href=#>Filtra per voto</a><br>
+		<!-- <input type=text name=voto value=Min size="3"><input type=text name=voto value=Max size="3"><br> -->
+		
+		</li></ul>
 	</ul>
   <img src=rigasolaCB.png>	
 	</div>
@@ -68,9 +80,18 @@ jQuery(function($) {
 	<img src=rigasolaB.png>
 	<ul class="center FlyOut DropDown">
 	 <li><a href=#> Ordina </a>
-	  <ul><li class=bubble><a href=#>per data</a></li></ul>
+	  <ul><li class=bubble><a href=#>Per data</a><a href=#>Per nome</a><br>
+		<a href=#>Pi&#249 visti</a><a href=#>Meno visti</a><br>
+		<a href=#>Voti alti</a><a href=#>Voti bassi</a><br><br>
+		<a href=#>[Chiudi]</a></li></ul>
+		
 	 <li><a href=#> Filtra </a>
-	  <ul><li class=bubble><a href=#>per data</a></li></ul>
+	  <ul><li class=bubble><a href=#>Nessun filtro</a><br>
+		<a href=#>Per voto</a> <!-- <br>
+		<input type=text name=voto value=Min size="3"><input type=text name=voto value=Max size="3"> --><br>
+		<a href=#>Per data</a><br>
+		
+		</li></ul>
 	</ul>
   <img src=rigasolaB.png>	
 	</div>
