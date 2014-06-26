@@ -1,8 +1,8 @@
 <?php
-if (!mysql_select_db('toprated', $link = mysql_connect('toprated.mysql.eu1.frbit.com', 'toprated', 'aTSRmyHGo0xqrzDV')))
-    echo '<p> db error ' . mysql_errno() . ": " . mysql_error() . '</p>';
-    
-    class MySQL 
+//if (!mysql_select_db('toprated', $link = mysql_connect('toprated.mysql.eu1.frbit.com', 'toprated', 'aTSRmyHGo0xqrzDV')))
+//    echo '<p> db error ' . mysql_errno() . ": " . mysql_error() . '</p>';
+
+class DB 
 { 
     // SET THESE VALUES TO MATCH YOUR DATA CONNECTION 
     private $db_pcon    = false;      // use persistent connection? 
@@ -37,7 +37,7 @@ if (!mysql_select_db('toprated', $link = mysql_connect('toprated.mysql.eu1.frbit
      */ 
     public $ThrowExceptions = false; 
 
-    public function __construct($db = null, $host = null, $usr = null, $pw = null, $permcon, $charset = "utf8") { 
+    public function __construct($dbname = null, $host = null, $usr = null, $pw = null, $permcon, $charset = "utf8") { 
         $this->ResetError(); 
         $this->active_row = -1; 
 
@@ -51,7 +51,7 @@ if (!mysql_select_db('toprated', $link = mysql_connect('toprated.mysql.eu1.frbit
             return false; 
         }
         
-        $this->SelectDatabase($db, $charset)
+        $this->SelectDatabase($dbname, $charset)
     } 
 
     public function __destruct() { 
@@ -1651,5 +1651,22 @@ if (!mysql_select_db('toprated', $link = mysql_connect('toprated.mysql.eu1.frbit
         } 
     } 
 } 
-?>
+
+$db = new DB('toprated', 'toprated.mysql.eu1.frbit.com', 'toprated', 'aTSRmyHGo0xqrzDV');
+$sql = "
+CREATE TABLE `test` ( 
+  `TestID` int(10)     NOT NULL auto_increment, 
+  `Color`  varchar(15) default NULL, 
+  `Age`    int(10)     default NULL, 
+  PRIMARY KEY  (`TestID`) 
+) ENGINE=InnoDB DEFAULT CHARSET=latin1; "; 
+if (! $db->Query($sql)) { 
+    $db->Kill(); 
+} 
+$sql = "INSERT INTO Test (Color, Age) Values ('Red', 7)"; 
+if (! $db->Query($sql)) { 
+    $db->Kill(); 
+} 
+
+echo "Last ID inserted was: " . $db->GetLastInsertID(); 
 ?>
