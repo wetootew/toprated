@@ -61,7 +61,7 @@ jQuery(function($) {
 	  <ul><li class=bubble><a href=#>Per data</a><a href=#>Per nome</a><br>
 		<a href=#>Pi&#249 visti</a><a href=#>Meno visti</a><br>
 		<a href=#>Voti alti</a><a href=#>Voti bassi</a><br><br>
-		<a href=#>[Chiudi]</a></li></ul>
+		<a href="#" class="bottonechiudi">Chiudi</a></li></ul>
 		
 	 <li><a href=#> Filtra </a>
 	  <ul><li class=bubble><a href=#>Nessun filtro</a><br>
@@ -83,7 +83,7 @@ jQuery(function($) {
 	  <ul><li class=bubble><a href=#>Per data</a><a href=#>Per nome</a><br>
 		<a href=#>Pi&#249 visti</a><a href=#>Meno visti</a><br>
 		<a href=#>Voti alti</a><a href=#>Voti bassi</a><br><br>
-		<a href=#>[Chiudi]</a></li></ul>
+		<a href="#" class="bottonechiudi">Chiudi</a></li></ul>
 		
 	 <li><a href=#> Filtra </a>
 	  <ul><li class=bubble><a href=#>Nessun filtro</a><br>
