@@ -1660,7 +1660,7 @@ CREATE TABLE `test` (
   `Age`    int(10)     default NULL, 
   PRIMARY KEY  (`TestID`) 
 )"; 
-$sql = "INSERT INTO Test (Color, Age) Values ('Red', 7)"; 
+$sql = "INSERT INTO test (Color, Age) Values ('Red', 7)"; 
 if (! $db->Query($sql)) { 
     $db->Kill(); 
 } 
