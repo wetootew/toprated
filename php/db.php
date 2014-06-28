@@ -316,7 +316,7 @@ class DB
             $this->SetError("No connection"); 
             return false; 
         }  
-        return $this->active_row >= ($this->RowCount())
+        return $this->active_row >= ($this->RowCount());
     } 
 
     /** 
