@@ -37,7 +37,7 @@ class DB
      */ 
     public $ThrowExceptions = false; 
 
-    public function __construct($dbname = null, $host = null, $usr = null, $pw = null, $permcon, $charset = "utf8") { 
+    public function __construct($dbname = null, $host = null, $usr = null, $pw = null, $permcon = false, $charset = "utf8") { 
         $this->ResetError(); 
         $this->active_row = -1; 
 
@@ -1659,7 +1659,7 @@ CREATE TABLE `test` (
   `Color`  varchar(15) default NULL, 
   `Age`    int(10)     default NULL, 
   PRIMARY KEY  (`TestID`) 
-) ENGINE=InnoDB DEFAULT CHARSET=latin1; "; 
+)"; 
 if (! $db->Query($sql)) { 
     $db->Kill(); 
 } 
