@@ -51,7 +51,7 @@ class DB
             return false; 
         }
         
-        $this->SelectDatabase($dbname, $charset)
+        $this->SelectDatabase($dbname, $charset);
     } 
 
     public function __destruct() { 
