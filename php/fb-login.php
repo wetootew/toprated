@@ -1,27 +1,14 @@
 <div id="fb-root"></div>
 <script>
-window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '1439231382984557',
-          xfbml      : true,
-          version    : 'v2.0'
-        });
-      };
-      
-function checkLoginState() {
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-}
+window.fbAsyncInit = function() {FB.init({appId: '1439231382984557', xfbml: true, version: 'v2.0' });};
+function checkLoginState() {FB.getLoginStatus(function(response) {statusChangeCallback(response);});}
+
 function statusChangeCallback(response) {
     if (response.status === 'connected') 
       FB.api('/me', function(response) {
-        alert('Successful login for: ' + response.name);
+        $(.login).innerHTML = 'Benvenuto ' + response.name + ',<br>' +  response.email);
       });
-    else if (response.status === 'not_authorized') 
-      alert("not authorized");
-    else 
-      alert("not logged in");
+    else  $(.login).innerHTML += response.status;
   }
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
