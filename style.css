@@ -13,8 +13,8 @@ body { background-color:#fae2c9;}
 .bottone { margin-top:20px; height:50px; width:60px; padding:5px;}
 
 .registered a { text-decoration:none; }
-.registered { display:none !important; width:390px;}
-.unregistered {  /*display:none !important;*/}
+.registered { /*display:none !important; width:390px;*/}
+.unregistered {  display:none !important;}
 
 .comandi{ margin-top: 20px;  text-align:center; width:100%;}
 .comandi a { text-decoration: none; }
@@ -110,7 +110,9 @@ h1 {
 .FlyOut ul {display: none; padding: 0; margin: 0; list-style-type: none; white-space: nowrap;}
 .FlyOut li:hover>ul, .FlyOut li.click>ul {position: absolute; display: inline;}
 .DropDown>li, .DropDown>li:hover>ul , .DropDown>li.click>ul {display: block; float: left;}
+.DropDown>li {position:relative;}
 
+#bacheca .bubble {top:calc(100% + 22px);}
 #bacheca .bubble a{
 color:#997f64; 
 text-shadow: 0 0 0.083em #997f64;
@@ -121,7 +123,7 @@ color:#005826;
 text-shadow: 0 0 0.083em #005826;
 font: 12px georgia;
 }
-#board .bubble {background: #fae2c9; border-color: #997f64;}
+#board .bubble {background: #fae2c9; border-color: #997f64; top:calc(100% + 24px); left: -8px;}
 #board .bubble:after {border-color: #fae2c9 transparent;}
 #board .bubble:before {border-color: #997f64 transparent;}
 
@@ -162,7 +164,7 @@ top: -31px;
 left: 13px;
 }
 
-.bottonechiudi {
+/* .bottonechiudi {
 	background-color:#005826;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
@@ -184,5 +186,6 @@ left: 13px;
 
 #board .bottonechiudi:hover {
  background-color:#005826;
-}
+}*/
+.
 
