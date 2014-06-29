@@ -6,7 +6,7 @@ function checkLoginState() {FB.getLoginStatus(function(response) {statusChangeCa
 function statusChangeCallback(response) {
     if (response.status === 'connected') 
       FB.api('/me', function(response) {
-        $(.login).innerHTML = 'Benvenuto ' + response.name + ',<br>' +  response.email);
+        $(".login").innerHTML = 'Benvenuto ' + response.name + ',<br>' +  response.email);
       });
     else  $(.login).innerHTML += response.status;
   }
