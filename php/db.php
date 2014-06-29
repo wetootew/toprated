@@ -1665,5 +1665,5 @@ if (! $db->Query($sql)) {
     $db->Kill(); 
 } 
 
-echo "Last ID inserted was: " . $db->GetLastInsertID(); 
+//echo "Last ID inserted was: " . $db->GetLastInsertID(); 
 ?>
