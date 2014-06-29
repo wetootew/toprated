@@ -1,7 +1,7 @@
 <?php 
+include('db.php'); 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require_once __DIR__ . '/php/db.php'; 
 require_once __DIR__ . '/vendor/autoload.php';
 ?>
 <!DOCTYPE html> 
@@ -11,16 +11,27 @@ require_once __DIR__ . '/vendor/autoload.php';
 <script type="text/javascript">
 
 jQuery(function($) {
-    $("li").click(function(event ) {
-				//event.stopPropagation();
-        $(this).toggleClass("click");
-		$("li").not(this).removeClass('click');
-    });
+  $(".FlyOut li").click(function(event) {
+	  event.stopPropagation();
+    $(this).toggleClass("click");
+		$(".FlyOut li").not(this).not($(this).parents()).removeClass('click');
+  });
 		
-		//$("div:(.sidebar)").click(function(event ) {
-		//event.stopPropagation();
-		//$("li").removeClass('click');
-    //});
+	$("div").click(function(event) {
+	  event.stopPropagation();
+		$(".FlyOut li").removeClass('click');
+  });
+			
+		
+		
+	/*$( ".slider-range" ).after(document.createElement('div').slider({
+		range: true, min: 0, max: 5, values: [ 0, 5],
+    slide: function( event, ui ) {
+      $( ui.prev() ).val(ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+    }
+  }));*/
+	
+
 });
 </script>
 
@@ -38,8 +49,8 @@ jQuery(function($) {
  
  <div class="login unregistered">
   <p> Sei registrato? </p>
-  <input type=text name=usr value=Username><br>
-  <input type=text name=pwd value=Password><br> <!--da asterischizzare quando l'utente digita-->
+  <input type=text name=usr placeholder=Username><br>
+  <input type=password name=pwd placeholder=Password ><br>
 	<img src="login.png">
  </div>
  <ul id=titoletto class="center unregistered FlyOut DropDown">
@@ -58,17 +69,18 @@ jQuery(function($) {
 	<img src=rigasolaCB.png>
 	<ul class="center FlyOut DropDown">
 	 <li><a href=#> Ordina </a>
-	  <ul><li class=bubble><a href=#>Per data</a><a href=#>Per nome</a><br>
-		<a href=#>Pi&#249 visti</a><a href=#>Meno visti</a><br>
-		<a href=#>Voti alti</a><a href=#>Voti bassi</a><br><br>
-		<a href="#" class="bottonechiudi">Chiudi</a></li></ul>
+	  <ul class=bubble>
+		  <li><a href=#>Per data</a><a href=#>Per nome</a>
+		  <li><a href=#>Pi&#249 visti</a><a href=#>Meno visti</a>
+		  <li><a href=#>Voti alti</a><a href=#>Voti bassi</a>
+		</ul>
 		
 	 <li><a href=#> Filtra </a>
-	  <ul><li class=bubble><a href=#>Nessun filtro</a><br>
-		<a href=#>Filtra per voto</a><br>
-		<!-- <input type=text name=voto value=Min size="3"><input type=text name=voto value=Max size="3"><br> -->
-		
-		</li></ul>
+	  <ul class=bubble>
+			<li><a href=#>Nessun filtro</a>
+		  <li><a href=#>Per voto</a>
+		  <li><a href=#>Per data</a>
+		</ul>
 	</ul>
   <img src=rigasolaCB.png>	
 	</div>
@@ -80,18 +92,18 @@ jQuery(function($) {
 	<img src=rigasolaB.png>
 	<ul class="center FlyOut DropDown">
 	 <li><a href=#> Ordina </a>
-	  <ul><li class=bubble><a href=#>Per data</a><a href=#>Per nome</a><br>
-		<a href=#>Pi&#249 visti</a><a href=#>Meno visti</a><br>
-		<a href=#>Voti alti</a><a href=#>Voti bassi</a><br><br>
-		<a href="#" class="bottonechiudi">Chiudi</a></li></ul>
+	  <ul class=bubble>
+		  <li><a href=#>Per data</a><a href=#>Per nome</a>
+		  <li><a href=#>Pi&#249 visti</a><a href=#>Meno visti</a>
+		  <li><a href=#>Voti alti</a><a href=#>Voti bassi</a>
+		</ul>
 		
 	 <li><a href=#> Filtra </a>
-	  <ul><li class=bubble><a href=#>Nessun filtro</a><br>
-		<a href=#>Per voto</a> <!-- <br>
-		<input type=text name=voto value=Min size="3"><input type=text name=voto value=Max size="3"> --><br>
-		<a href=#>Per data</a><br>
-		
-		</li></ul>
+	  <ul class=bubble>
+			<li><a href=#>Nessun filtro</a>
+		  <li><a href=#>Per voto</a><ul><li><input type=text class=slider-range></ul>
+		  <li><a href=#>Per data</a>
+		</ul>
 	</ul>
   <img src=rigasolaB.png>	
 	</div>
