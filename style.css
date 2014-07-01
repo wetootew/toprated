@@ -16,6 +16,18 @@ body { background-color:#fae2c9;}
 .registered { /*display:none !important; width:390px;*/}
 .unregistered {  display:none !important;}
 
+#bacheca tr {width:25%;}
+#bacheca td {display:block;}
+#bacheca td:first-child {width:100%;}
+#bacheca tr,td {
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+border:1px solid black;
+padding:2px;
+float:left;
+}
+
 .comandi{ margin-top: 20px;  text-align:center; width:100%;}
 .comandi a { text-decoration: none; }
 .comandi a:hover {cursor:pointer}
@@ -35,7 +47,7 @@ body { background-color:#fae2c9;}
  color:#997f64;
  text-shadow: 0 0 0.3em #997f64;
  }
-
+ 
 .comandi * {  vertical-align: middle;}
 .comandi img {  width:85%;}
  
