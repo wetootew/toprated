@@ -11,7 +11,12 @@ html, body, #page {height:100%}
 body { background-color:#fae2c9;}
 
 .bottone { margin-top:20px; height:50px; width:60px; padding:5px;}
-#topbar .bubble { margin-top:18px; border-color: #997f64; left: 5px;}
+
+#topbar .bubble { 
+ margin-top:18px; 
+ border-color: #997f64; 
+ left: 5px;
+ }
 #topbar .bubble:after { border-color: #fae2c9 transparent;}
 #topbar .bubble:before { border-color: #997f64 transparent;}
 
@@ -22,6 +27,8 @@ body { background-color:#fae2c9;}
 .comandi{ margin-top: 20px;  text-align:center; width:100%;}
 .comandi a { text-decoration: none; }
 .comandi a:hover {cursor:pointer}
+
+.rigadimensione {height:2px;}
 
 #bacheca * { text-shadow: 0 0 0.083em #997f64;}
 #bacheca .comandi ul { margin:3px;}
@@ -40,7 +47,7 @@ body { background-color:#fae2c9;}
  }
 
 .comandi * {  vertical-align: middle;}
-.comandi img {  width:85%;}
+.comandi img { width:85%;}
  
 .center p {  margin-top:6px; margin-bottom:2px; }
 .center {  
