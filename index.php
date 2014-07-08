@@ -74,7 +74,7 @@ jQuery(function($) {
  <div class=sidebar id=board>
   <h2> Community Board </h2>
 	<div class="center comandi">
-	<img src=rigasolaCB.png>
+	<img src=rigasolaCB.png><br>
 	<ul class="center FlyOut DropDown">
 	 <li><a href=#> Ordina </a>
 	  <ul class=bubble>
@@ -90,14 +90,14 @@ jQuery(function($) {
 		  <li><a href=#>Per data</a>
 		</ul>
 	</ul>
-  <img src=rigasolaCB.png>	
+  <img src=rigasolaCB.png><br>
 	</div>
  </div>
 
  <div id=bacheca> 
   <h1>Bacheca Eventi</h1>
 	<div class="center comandi">
-	<img src=rigasolaB.png>
+	<img src=rigasolaB.png><br>
 	<ul class="center FlyOut DropDown">
 	 <li><a href=#> Ordina </a>
 	  <ul id=bachecaul class=bubble>
@@ -114,7 +114,7 @@ jQuery(function($) {
 		  <li><a href=#>Per data</a>
 		</ul>
 	</ul>
-  <img src=rigasolaB.png>	
+  <img src=rigasolaB.png><br>	
 	</div>
  </div>
 
