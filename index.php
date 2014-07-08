@@ -8,6 +8,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 <title>Boh</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="script.js" type="text/javascript"></script>
 <script type="text/javascript">
 
 jQuery(function($) {
@@ -37,24 +38,24 @@ jQuery(function($) {
 
 
 <div id=topbar>
- <img width=200px height=80px id=logo src="logo.jpg">
+ <img alt=img width=200 height=80 id=logo src=logo.jpg>
  <div class="registered center">
-  <a href="#"> <img class=bottone src="Bottoni/prof1stat.png" onmouseover=src="Bottoni/prof1mouse.png" onmousedown=src="Bottoni/prof1stat.png" onmouseout=src="Bottoni/prof1stat.png">  </a> 
-  <a href="#"> <img class=bottone src="Bottoni/contatti1stat.png" onmouseover=src="Bottoni/contatti1mouse.png" onmousedown=src="Bottoni/contatti1stat.png" onmouseout=src="Bottoni/contatti1stat.png">  </a>
-  <a href="#"> <img class=bottone src="Bottoni/mess1stat.png" onmouseover=src="Bottoni/mess1mouse.png" onmousedown=src="Bottoni/mess1stat.png" onmouseout=src="Bottoni/mess1stat.png">  </a>
-  <a href="#"> <img class=bottone src="Bottoni/evento1stat.png" onmouseover=src="Bottoni/evento1mouse.png" onmousedown=src="Bottoni/evento1stat.png" onmouseout=src="Bottoni/evento1stat.png">  </a>
-  <a href="#"> <img class=bottone src="Bottoni/associaz1disatt.png">  </a>
-  <a href="#"> <img class=bottone src="Bottoni/sponsor1disatt.png">  </a>
+  <a href="#"> <img alt=img class=bottone src="Bottoni/prof1stat.png" onmouseover="src='Bottoni/prof1stat.png'" onmousedown="src='Bottoni/prof1stat.png'" onmouseout="src='Bottoni/prof1stat.png'">  </a> 
+  <a href="#"> <img alt=img class=bottone src="Bottoni/contatti1stat.png" onmouseover="src='Bottoni/contatti1stat.png'" onmousedown="src='Bottoni/contatti1stat.png'" onmouseout="src='Bottoni/contatti1stat.png'">  </a>
+  <a href="#"> <img alt=img class=bottone src="Bottoni/mess1stat.png" onmouseover="src='Bottoni/mess1stat.png'" onmousedown="src='Bottoni/mess1stat.png'" onmouseout="src='Bottoni/mess1stat.png'">  </a>
+  <a href="#"> <img alt=img class=bottone src="Bottoni/evento1stat.png" onmouseover="src='Bottoni/evento1stat.png'" onmousedown="src='Bottoni/evento1stat.png'" onmouseout="src='Bottoni/evento1stat.png'">  </a>
+  <a href="#"> <img alt=img class=bottone src="Bottoni/associaz1disatt.png">  </a>
+  <a href="#"> <img alt=img class=bottone src="Bottoni/sponsor1disatt.png">  </a>
  </div>
  
  <div class="login unregistered">
   <p> Sei registrato? </p>
   <input type=text name=usr placeholder=Username><br>
   <input type=password name=pwd placeholder=Password ><br>
-	<img src="login.png">
+	<img alt=img src="login.png">
  </div>
  <ul id=titoletto class="center unregistered FlyOut DropDown">
-  <li><img src="Registrati.png"><br>Scopri tutti i vantaggi per utenti ed associazioni! 
+  <li><img alt=img src="Registrati.png"><br>Scopri tutti i vantaggi per utenti ed associazioni! 
    <ul><li><?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?></li></ul>
  </ul>
 </div>
@@ -66,12 +67,12 @@ jQuery(function($) {
  <div class=sidebar id=board>
   <h2> Community Board </h2>
 	<div class="center comandi">
-	<img src=rigasolaCB.png>
+	<img alt=img src=rigasolaCB.png>
 	<ul class="center FlyOut DropDown">
 	 <li><a href=#> Ordina </a>
 	  <ul class=bubble>
 		  <li><a href=#>Per data</a><a href=#>Per nome</a>
-		  <li><a href=#>Pi&#249 visti</a><a href=#>Meno visti</a>
+		  <li><a href=#>Pi&#249; visti</a><a href=#>Meno visti</a>
 		  <li><a href=#>Voti alti</a><a href=#>Voti bassi</a>
 		</ul>
 		
@@ -82,19 +83,19 @@ jQuery(function($) {
 		  <li><a href=#>Per data</a>
 		</ul>
 	</ul>
-  <img src=rigasolaCB.png>	
+  <img alt=img src=rigasolaCB.png>	
 	</div>
  </div>
 
  <div id=bacheca> 
   <h1>Bacheca Eventi</h1>
 	<div class="center comandi">
-	<img src=rigasolaB.png>
+	<img alt=img src=rigasolaB.png>
 	<ul class="center FlyOut DropDown">
 	 <li><a href=#> Ordina </a>
 	  <ul class=bubble>
 		  <li><a href=#>Per data</a><a href=#>Per nome</a>
-		  <li><a href=#>Pi&#249 visti</a><a href=#>Meno visti</a>
+		  <li><a href=#>Pi&#249; visti</a><a href=#>Meno visti</a>
 		  <li><a href=#>Voti alti</a><a href=#>Voti bassi</a>
 		</ul>
 		
@@ -105,7 +106,13 @@ jQuery(function($) {
 		  <li><a href=#>Per data</a>
 		</ul>
 	</ul>
-  <img src=rigasolaB.png>	
+  <img alt=img src=rigasolaB.png>	
+  <table class=sortable>
+    <thead>
+      <tr><th>Per data<th>Per nome<th>Pi&#249; visti<th>Meno visti<th>Voti alti<th>Voti bassi
+    <tbody>
+      <tr><td>Per data<td>Per nome<td>Pi&#249; visti<td>Meno visti<td>Voti alti<td>Voti bassi
+  </table>
 	</div>
  </div>
 
