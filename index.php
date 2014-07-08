@@ -22,6 +22,8 @@ jQuery(function($) {
 	  event.stopPropagation();
 		$(".FlyOut li").removeClass('click');
   });
+		
+	$(".sortable th").click(new Function('sortable.work(this)'));
 			
 		
 		
@@ -30,7 +32,7 @@ jQuery(function($) {
     slide: function( event, ui ) {
       $( ui.prev() ).val(ui.values[ 0 ] + " - " + ui.values[ 1 ] );
     }
-  }));*/
+  }));<!-- funzionalità da implementare -->*/ 
 	
 
 });
@@ -42,7 +44,14 @@ jQuery(function($) {
  <div class="registered center">
  <ul class="FlyOut DropDown">
   <li><a href="#"> <img alt="" class=bottone src="Bottoni/prof1stat.png" onmouseover="src='Bottoni/prof1mouse.png'" onmousedown="src='Bottoni/prof1stat.png'" onmouseout="src='Bottoni/prof1stat.png'">  </a>
-	<ul class=bubble> <li>21212121212122121</ul> 
+	<ul class=bubble> 
+	  <li style=float:right><img src=barba.jpg>
+	  <br> Mario Rossi
+	  <br> Camaiore
+	  <br> idraulico
+	  <br> licenza media
+	  <br> <a href=#>Privacy...</a><!-- funzionalità da implementare -->
+	</ul> 
   <li><a href="#"> <img alt="" class=bottone src="Bottoni/contatti1stat.png" onmouseover="src='Bottoni/contatti1mouse.png'" onmousedown="src='Bottoni/contatti1stat.png'" onmouseout="src='Bottoni/contatti1stat.png'">  </a>
   <ul class=bubble> <li>21212121212122121</ul> 
 	<li><a href="#"> <img alt="" class=bottone src="Bottoni/mess1stat.png" onmouseover="src='Bottoni/mess1mouse.png'" onmousedown="src='Bottoni/mess1stat.png'" onmouseout="src='Bottoni/mess1stat.png'">  </a>
@@ -120,10 +129,9 @@ jQuery(function($) {
 	</div>
 	<table class=sortable>
     <thead>
-      <tr><th>Per data<th>Per nome<th>Pi&#249; visti<th>Meno visti<th>Voti alti<th>Voti bassi
+      <tr><th>Per nome<th>Per data<th>visti<th>Voti
     <tbody>
-      <tr><td>Per data<td>Per nome<td>Pi&#249; visti<td>Meno visti<td>Voti alti<td>Voti bassi
-      <tr><td>er data<td>er nome<td>i&#249; visti<td>eno visti<td>oti alti<td>oti bassi
+      <tr><td>nome1<td>12/12/2212<td>visto 3000 volte<td>voto medio 30
   </table>
  </div>
 
