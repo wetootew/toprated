@@ -89,8 +89,8 @@ jQuery(function($) {
 		  <li><a href=#>Per voto</a>
 		  <li><a href=#>Per data</a>
 		</ul>
-	</ul>
-  <img src=rigasolaCB.png><br>
+	</ul><br>
+  <img src=rigasolaCB.png>
 	</div>
  </div>
 
@@ -113,8 +113,8 @@ jQuery(function($) {
 		  <li><a href=#>Per voto</a><ul><li><input type=text class=slider-range></ul>
 		  <li><a href=#>Per data</a>
 		</ul>
-	</ul>
-  <img src=rigasolaB.png><br>	
+	</ul><br>
+  <img src=rigasolaB.png>	
 	</div>
  </div>
 
