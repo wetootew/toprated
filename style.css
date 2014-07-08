@@ -16,7 +16,11 @@ body { background-color:#fae2c9;}
  margin-top:18px; 
  border-color: #997f64; 
  left: 5px;
+ padding:5px;
+ color: #005826;
+ font: bold 14px georgia;
  }
+#topbar .bubble *{text-shadow: 0 0 0.1em #005826;}
 #topbar .bubble:after { border-color: #fae2c9 transparent;}
 #topbar .bubble:before { border-color: #997f64 transparent;}
 
@@ -125,7 +129,7 @@ h1 {
 
 #bacheca .bubble {top:calc(100% + 22px);}
 
-#bachecaul li {padding-right:12px; margin: 5px 0 5px 0;}
+.bachecaul li {padding-right:12px; margin: 5px 0 5px 0;}
 
 #bacheca .bubble a{
 color: #997f64; 
@@ -136,6 +140,18 @@ font: 14px georgia;
 #bacheca .frecciasu {background: #997f64;}
 #bacheca .frecciasu:after {border-color: #997f64 transparent;}
 #bacheca .frecciasu:before {border-color: #997f64 transparent;}
+
+#bacheca tr {width:25%;}
+#bacheca td {display:block;}
+#bacheca td:first-child {width:100%;}
+#bacheca tr,td {
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+border:1px solid black;
+padding:2px;
+float:left;
+}
 
 #board .bubble a{ 
 color:#005826;  
