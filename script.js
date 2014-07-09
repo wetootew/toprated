@@ -19,3 +19,26 @@ sortable.work=function(h){
   sortable.dir*=-1;
 }
 sortable.compare=function(f,c) { return sortable.dir * (f.v > c.v ? 1 : -1) }
+
+function init() { //da rivedere
+    var els = document.getElementsByTagName("table");
+    re = new RegExp('\\b' + 'sortable' + '\\b');
+    for(var i = 0, j = els.length; i < j; i++)
+        if (re.test(els[i].className))
+            sortable.init(els[i]);
+}
+
+function addEvents(event,func) {
+  var old = event;
+  if (typeof old != 'function')
+    event = func;
+  else
+    event = function() {
+      if (old)
+        old();
+      func();
+    }
+    return event;
+}
+window.onload=addEvents(window.onload,init);
+
