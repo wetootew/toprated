@@ -132,6 +132,7 @@ jQuery(function($) {
       <tr><th>Per nome<th>Per data<th>visti<th>Voti
     <tbody>
       <tr><td>nome1<td>12/12/2212<td>visto 3000 volte<td>voto medio 30
+      <tr><td>nome21<td>22/12/2212<td>visto 200 volte<td>voto medio 320
   </table>
  </div>
 
