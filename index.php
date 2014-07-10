@@ -30,7 +30,7 @@ jQuery(function($) {
         a[i]={o: b.rows[i], v: isNaN(f = parseFloat((t = b.rows[i].cells[c].textContent).replace(/(\$|\,)/g,''))) ? t:f};
      a.sort(function(a,b) { return sortabledir * (a.v > b.v ? 1 : -1) });
      for (i = 0; i < l; i++) b.appendChild(a[i].o);
-     sortabledir*=-1;  
+     sortabledir*=-1;
   })});		
 		
 		
@@ -75,7 +75,7 @@ jQuery(function($) {
   <p> Sei registrato? </p>
   <input type=text name=usr placeholder=Username><br>
   <input type=password name=pwd placeholder=Password ><br>
-	<img alt="" src="login.png">
+  <img alt="" src="login.png">
  </div>
  <ul id=titoletto class="center unregistered FlyOut DropDown">
   <li><img alt="" src="Registrati.png"><br>Scopri tutti i vantaggi per utenti ed associazioni! 
@@ -112,17 +112,18 @@ jQuery(function($) {
 	</div>
  </div>
 
- <div id=bacheca> 
-  <h1>Bacheca Eventi</h1>
-	<div class="center comandi">
+ <table id=bacheca class=sortable> 
+  <caption class="center comandi"><h1>Bacheca Eventi</h1>
 	<img alt="" class=rigadimensione src=rigasolaB.png><br>
 	<ul class="center FlyOut DropDown">
 	 <li><a href=#> Ordina </a>
 	  <ul class="bubble bachecaul">
-		  <li><a href=#>Per data</a><a class=frecciasu> </a>
-			<li><a href=#>Per nome</a><a class=frecciasu> </a>
-		  <li><a href=#>Per visite</a><a class=frecciasu> </a>
-		  <li><a href=#>Per voto</a><a class=frecciasu> </a>
+		  <li><table><thead><tr>
+        <th>Per nome<a class=freccia> </a>
+        <th>Per data<a class=freccia> </a>
+        <th>visti<a class=freccia> </a>
+        <th>Voti<a class=freccia> </a>
+      </table>
 		</ul>
 		
 	 <li><a href=#> Filtra </a>
@@ -133,14 +134,9 @@ jQuery(function($) {
 		</ul>
 	</ul><br>
   <img alt="" class=rigadimensione src=rigasolaB.png>	
-	</div>
-	<table class=sortable>
-    <thead>
-      <tr><th>Per nome<th>Per data<th>visti<th>Voti
-    <tbody>
-      <tr><td>nome1<td>12/12/2212<td>visto 3000 volte<td>voto medio 30
-      <tr><td>nome21<td>22/12/2212<td>visto 200 volte<td>voto medio 320
+	<tbody>
+      <tr><td>nome1<td>12/12/2212<td>visto 3000 volte<td>voto medio 30<td>altri campi<td><img alt=barbone src=barba.jpg>
+      <tr><td>nome21<td>22/12/2212<td>visto 200 volte<td>voto medio 320<td>more<td>fields<td><img alt=barbone src=barba.jpg>
   </table>
- </div>
 
 </div>
