@@ -87,7 +87,7 @@ body { background-color:#fae2c9;}
 }
 
 h1 {
- padding-top: 15px;
+ padding-top: 13px;
  font:bold 36px georgia;
  font-variant:small-caps;
 }
@@ -131,7 +131,7 @@ h1 {
 
 .bachecaul li {padding-right:12px; margin: 5px 0 5px 0;}
 
-#bacheca .bubble a{
+#bacheca .bubble *{
 color: #997f64; 
 text-shadow: 0 0 0.083em #997f64;
 font: 14px georgia;
@@ -141,17 +141,16 @@ font: 14px georgia;
 #bacheca .frecciasu:after {border-color: #997f64 transparent;}
 #bacheca .frecciasu:before {border-color: #997f64 transparent;}
 
-#bacheca table, #bacheca tbody {width:100%;}
-#bacheca tr {width:25%;}
+#bacheca table, #bacheca tbody, #bacheca td:first-child  {width:100%;}
+#bacheca tr{width:25%;float:left;}
 #bacheca td {display:block;}
-#bacheca td:first-child {width:100%;}
-#bacheca tr,td {
+#bacheca tr,td,th {
 -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
         box-sizing: border-box;
-border:1px solid black;
 padding:2px;
 float:left;
+
 }
 
 #board .bubble a{ 
@@ -200,8 +199,7 @@ top: -31px;
 left: 13px;
 }
 
-.frecciasu 
-{
+.freccia{
 position: absolute;
 float:right;
 right:0px;
@@ -214,8 +212,7 @@ background: #FFFFFF;
 border-radius: 0px;
 }
 
-.frecciasu:after 
-{
+.freccia:after {
 content: '';
 position: absolute;
 border-style: solid;
@@ -228,8 +225,7 @@ top: -4px;
 left: -2px;
 }
 
-.frecciasu:before 
-{
+.freccia:before {
 content: '';
 position: absolute;
 border-style: solid;
