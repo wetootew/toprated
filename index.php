@@ -23,8 +23,15 @@ jQuery(function($) {
 		$(".FlyOut li").removeClass('click');
   });
 		
-	$(".sortable th").click(new Function('sortable.work(this)'));
-			
+  sortabledir = 1;
+  $(".sortable").each(function (i,e) {$(e).find('th').click(function() {
+     var b = $(e).find('tbody')[0], l = b.rows.length, c = this.cellIndex, a = [], f, t;
+     for (i = 0; i < l; i++) // .v makes comparisons faster
+        a[i]={o: b.rows[i], v: isNaN(f = parseFloat((t = b.rows[i].cells[c].textContent).replace(/(\$|\,)/g,''))) ? t:f};
+     a.sort(function(a,b) { return sortabledir * (a.v > b.v ? 1 : -1) });
+     for (i = 0; i < l; i++) b.appendChild(a[i].o);
+     sortabledir*=-1;  
+  })});		
 		
 		
 	/*$( ".slider-range" ).after(document.createElement('div').slider({
