@@ -135,8 +135,13 @@ jQuery(function($) {
 	</ul><br>
   <img alt="" class=rigadimensione src=rigasolaB.png>	
 	<tbody>
-      <tr><td>nome1<td>12/12/2212<td>visto 3000 volte<td>voto medio 30<td>altri campi<td><img alt=barbone src=barba.jpg>
-      <tr><td>nome21<td>22/12/2212<td>visto 200 volte<td>voto medio 320<td>more<td>fields<td><img alt=barbone src=barba.jpg>
+      <tr>
+	<td>Argomento
+	<td class=titolopost>Titolo del post
+	<td><img width=178 height=90 src=foto.jpg>
+	<td>Prime righe della descrizione dell'evento o breve sintesi dell'evento
+	<td>Organizzatore
+	<td>12/12/12<td>235 <img alt="" width=20 height=13 src=visualverde.png><td>voto 30
   </table>
 
 </div>
