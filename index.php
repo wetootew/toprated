@@ -95,10 +95,10 @@ jQuery(function($) {
 	<ul class="center FlyOut DropDown">
 	 <li><a href=#> Ordina </a>
 	  <ul class=bubble>
-		  <li><a href=#>Per data</a><a class=frecciasu> </a>
-			<li><a href=#>Per nome</a><a class=frecciasu> </a>
-		  <li><a href=#>Per visite</a><a class=frecciasu> </a>
-		  <li><a href=#>Per voto</a><a class=frecciasu> </a>
+		  <li><a href=#>Per data</a><a class=freccia> </a>
+			<li><a href=#>Per nome</a><a class=freccia> </a>
+		  <li><a href=#>Per visite</a><a class=freccia> </a>
+		  <li><a href=#>Per voto</a><a class=freccia> </a>
 		</ul>
 		
 	 <li><a href=#> Filtra </a>
@@ -135,13 +135,12 @@ jQuery(function($) {
 	</ul><br>
   <img alt="" class=rigadimensione src=rigasolaB.png>	
 	<tbody>
-      <tr>
-	<td>Argomento
+<tr><td>Argomento
 	<td class=titolopost>Titolo del post
 	<td><img width=178 height=90 src=foto.jpg>
 	<td>Prime righe della descrizione dell'evento o breve sintesi dell'evento
 	<td>Organizzatore
 	<td>12/12/12<td>235 <img alt="" width=20 height=13 src=visualverde.png><td>voto 30
-  </table>
+</table>
 
 </div>
