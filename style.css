@@ -137,14 +137,14 @@ text-shadow: 0 0 0.083em #997f64;
 font: 14px georgia;
 }
 
-#bacheca .freccia {background: #997f64;}
+#bacheca .freccia{background: #997f64;}
 #bacheca .freccia:after {border-color: #997f64 transparent;}
 #bacheca .freccia:before {border-color: #997f64 transparent;}
 
 #bacheca table, #bacheca tbody, #bacheca td:first-child  {width:100%;}
-#bacheca tbody tr {width:190px; height: 268px;}
+#bacheca tr{width:25%;float:left;}
+#bacheca td:first-child{font: bold 14px georgia;}
 #bacheca td {display:block;}
-#bacheca td:first-child{width:100%; font: bold 14px georgia;}
 #bacheca tr,td,th {
 -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
@@ -240,4 +240,3 @@ z-index: 1;
 bottom: -4px;
 left: -2px;
 }
-
