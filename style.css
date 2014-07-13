@@ -128,7 +128,7 @@ font: 14px georgia;
 #bacheca .freccia:before {border-color: #997f64 transparent;}
 
 #bacheca table, #bacheca tbody, #bacheca td:first-child  {width:100%;}
-#bacheca tr{width:25%;float:left;}
+#bacheca tr{width:190px;float:left;}
 #bacheca td:first-child{font: bold 14px georgia;}
 #bacheca td {display:block;}
 #bacheca tr,td,th {
