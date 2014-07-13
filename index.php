@@ -141,6 +141,12 @@ jQuery(function($) {
 	<td>Prime righe della descrizione dell'evento o breve sintesi dell'evento
 	<td>Organizzatore
 	<td>12/12/12<td>235 <img alt="" width=20 height=13 src=visualverde.png><td>voto 30
+<tr><td>Argomento
+	<td class=titolopost>Titolo del post2
+	<td><img width=178 height=90 src=foto.jpg>
+	<td>Prime righe della descrizione dell'evento o breve sintesi dell'evento
+	<td>Organizzatore
+	<td>12/12/12<td>235 <img alt="" width=20 height=13 src=visualverde.png><td>voto 30
 </table>
 
 </div>
