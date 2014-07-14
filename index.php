@@ -137,7 +137,7 @@ jQuery(function($) {
 	<tbody>
 <tr><td>Argomento
 	<td class=titolopost><a>Titolo del post</a>
-	<td><img width=178 height=90 src=foto.jpg>
+	<td><img class=fotopost width=180 height=90 src=foto.jpg>
 	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
 	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
 	<td class=voto>*****
@@ -145,7 +145,7 @@ jQuery(function($) {
 
 <tr><td>Argomento
 	<td class=titolopost><a>Titolo del post</a>
-	<td><img width=178 height=90 src=foto.jpg>
+	<td><img class=fotopost width=180 height=90 src=foto.jpg>
 	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
 	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
 	<td class=voto>*****
