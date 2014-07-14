@@ -128,19 +128,27 @@ font: 14px georgia;
 #bacheca .freccia:before {border-color: #997f64 transparent;}
 
 #bacheca table, #bacheca tbody, #bacheca td:first-child  {width:100%;}
-#bacheca tbody tr{width:190px;float:left;}
-#bacheca td:first-child{font: bold 14px georgia;}
+#bacheca tbody tr{width:190px; margin:10px; border: 5px solid;}
+#bacheca td:first-child{font: bold 14px georgia; text-align:center;}
 #bacheca td {display:block;}
-#bacheca tr,td,th {
+#bacheca tr, th, td {
 -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
         box-sizing: border-box;
 padding:2px;
 float:left;
-
 }
-
-.titolopost {width:100%; font: bold 16px georgia; font-variant: small-caps; border-color:transparent;}
+.voto {float:right; padding-top:10px;}
+.descrizione {text-align:justify;}
+.visite {float:left; padding: 10px 0 10px 0;}
+.nomedata {float:right; font: italic 12px georgia;}
+.titolopost {
+width:100%; 
+font: bold 16px georgia; 
+font-variant: small-caps; 
+border-color:transparent;
+text-align:center;
+}
 
 #board .bubble a{ 
 color:#005826;  
