@@ -140,7 +140,7 @@ jQuery(function($) {
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
 	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
 	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
-	<td class=voto>*****
+	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 
 <tr><td>Argomento
@@ -148,7 +148,7 @@ jQuery(function($) {
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
 	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
 	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
-	<td class=voto>*****
+	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 </table>
 
