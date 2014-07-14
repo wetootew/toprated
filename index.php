@@ -136,17 +136,20 @@ jQuery(function($) {
   <img alt="" class=rigadimensione src=rigasolaB.png>	
 	<tbody>
 <tr><td>Argomento
-	<td class=titolopost>Titolo del post
+	<td class=titolopost><a>Titolo del post</a>
 	<td><img width=178 height=90 src=foto.jpg>
-	<td>Prime righe della descrizione dell'evento o breve sintesi dell'evento
-	<td>Organizzatore
-	<td>12/12/12<td>235 <img alt="" width=20 height=13 src=visualverde.png><td>voto 30
+	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
+	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
+	<td class=voto>*****
+	<td class=nomedata>Organizzatore - 12/12/12
+
 <tr><td>Argomento
-	<td class=titolopost>Titolo del post2
+	<td class=titolopost><a>Titolo del post</a>
 	<td><img width=178 height=90 src=foto.jpg>
-	<td>Prime righe della descrizione dell'evento o breve sintesi dell'evento
-	<td>Organizzatore
-	<td>12/12/12<td>235 <img alt="" width=20 height=13 src=visualverde.png><td>voto 30
+	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
+	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
+	<td class=voto>*****
+	<td class=nomedata>Organizzatore - 12/12/12
 </table>
 
 </div>
