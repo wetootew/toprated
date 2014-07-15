@@ -135,7 +135,7 @@ jQuery(function($) {
 	</ul><br>
   <img alt="" class=rigadimensione src=rigasolaB.png>	
 	<tbody>
-<tr><td class=argomento>Argomento
+<tr><td class="argomento salutepost">Salute
 	<td class=titolopost><a>Titolo del post</a>
 	<td class=periodo> 01/01/01 - 02/02/02
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
@@ -144,7 +144,7 @@ jQuery(function($) {
 	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 
-<tr><td class=argomento>Argomento
+<tr><td class="argomento ambientepost">Ambiente
 	<td class=titolopost><a>Titolo del post</a>
 	<td class=periodo> 01/01/01 - 02/02/02
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
@@ -153,7 +153,7 @@ jQuery(function($) {
 	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 
-<tr><td class=argomento>Argomento
+<tr><td class="argomento culturapost">Cultura
 	<td class=titolopost><a>Titolo del post</a>
 	<td class=periodo> 01/01/01 - 02/02/02
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
@@ -162,7 +162,43 @@ jQuery(function($) {
 	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 
-<tr><td class=argomento>Argomento
+<tr><td class="argomento sportpost">Sport
+	<td class=titolopost><a>Titolo del post</a>
+	<td class=periodo> 01/01/01 - 02/02/02
+	<td><img class=fotopost width=180 height=90 src=foto.jpg>
+	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
+	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
+	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
+	<td class=nomedata>Organizzatore - 12/12/12
+	
+<tr><td class="argomento donnapost">Donna
+	<td class=titolopost><a>Titolo del post</a>
+	<td class=periodo> 01/01/01 - 02/02/02
+	<td><img class=fotopost width=180 height=90 src=foto.jpg>
+	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
+	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
+	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
+	<td class=nomedata>Organizzatore - 12/12/12
+
+<tr><td class="argomento intrattenimentopost">Intrattenimento
+	<td class=titolopost><a>Titolo del post</a>
+	<td class=periodo> 01/01/01 - 02/02/02
+	<td><img class=fotopost width=180 height=90 src=foto.jpg>
+	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
+	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
+	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
+	<td class=nomedata>Organizzatore - 12/12/12
+
+<tr><td class="argomento gastronomiapost">Gastronomia
+	<td class=titolopost><a>Titolo del post</a>
+	<td class=periodo> 01/01/01 - 02/02/02
+	<td><img class=fotopost width=180 height=90 src=foto.jpg>
+	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
+	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
+	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
+	<td class=nomedata>Organizzatore - 12/12/12
+	
+<tr><td class="argomento socialepost">Sociale
 	<td class=titolopost><a>Titolo del post</a>
 	<td class=periodo> 01/01/01 - 02/02/02
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
