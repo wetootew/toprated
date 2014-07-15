@@ -104,8 +104,7 @@ h1 {
  padding-top: 20px;
  font:bolder 18px georgia;
  text-align:center; 
- border-top-left-radius:20px;
- border-top-right-radius:20px;
+ border-radius:20px;
 }
 
 .FlyOut ul {display: none; padding: 0; margin: 0; list-style-type: none; white-space: nowrap;}
@@ -144,12 +143,15 @@ padding:2px;
 float:left;
 }
 
-#bacheca .argomento {
-font: bold 14px georgia; 
-text-align:center; 
-color: #005826; 
-text-shadow: 0 0 0.09em #005826;
-}
+#bacheca .argomento { font: bold 14px georgia; text-align:center; }
+#bacheca .salutepost { color: #46B505; text-shadow: 0 0 0.09em #46B505;}
+#bacheca .ambientepost { color: #005826; text-shadow: 0 0 0.09em #005826;}
+#bacheca .culturapost { color: #855304; text-shadow: 0 0 0.09em #855304;}
+#bacheca .sportpost { color: #1500FC; text-shadow: 0 0 0.09em #1500FC;}
+#bacheca .donnapost { color: #FF85D2; text-shadow: 0 0 0.09em #FF85D2;}
+#bacheca .intrattenimentopost { color: #00B1FC; text-shadow: 0 0 0.09em #00B1FC;}
+#bacheca .gastronomiapost { color: #BA3902; text-shadow: 0 0 0.09em #BA3902;}
+#bacheca .socialepost { color: #FFFFFF; text-shadow: 0 0 0.09em #FFFFFF;}
 .voto {float:right; padding-top:10px;}
 .descrizione { height: 45px; text-align:justify; font: 12px georgia;}
 .visite { padding: 10px 0 10px 0;}
