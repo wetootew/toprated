@@ -134,7 +134,6 @@ font: 14px georgia;
  border: 5px solid; 
  border-radius:8px;
  }
-#bacheca td:first-child{font: bold 14px georgia; text-align:center;}
 #bacheca td {display:block;}
 #bacheca tr, th, td {
 -webkit-box-sizing: border-box;
@@ -143,11 +142,18 @@ font: 14px georgia;
 padding:2px;
 float:left;
 }
+#bacheca .argomento {
+font: bold 14px georgia; 
+text-align:center; 
+color: #005826; 
+text-shadow: 0 0 0.09em #005826;
+}
 .voto {float:right; padding-top:10px;}
 .descrizione {text-align:justify; font: 14px georgia;}
-.visite {float:left; padding: 10px 0 10px 0;}
+.visite { padding: 10px 0 10px 0;}
 .nomedata {float:right; font: italic 12px georgia;}
 .fotopost {margin-left:-4px;}
+.periodo {text-align:center; font: 12px georgia; width:100%;}
 .titolopost {
 width:100%; 
 font: bold 16px georgia; 
