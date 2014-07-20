@@ -1,9 +1,9 @@
 <!DOCTYPE html> 
 <!--<?php 
+include('db.php'); 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require_once __DIR__ . '/vendor/autoload.php';
-include('db.php'); 
 ?>-->
 <title>Boh</title>
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -112,7 +112,7 @@ jQuery(function($) {
 	</div>
  </div>
 
- <table id=bacheca class=sortable> 
+ <table id=bacheca class="sortable center">
   <caption class="center comandi"><h1>Bacheca Eventi</h1>
 	<img alt="" class=rigadimensione src=rigasolaB.png><br>
 	<ul class="center FlyOut DropDown">
@@ -207,5 +207,7 @@ jQuery(function($) {
 	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 </table>
-
+<div class=popup>
+<p> icchéttipare
+</div>
 </div>
