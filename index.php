@@ -1,9 +1,9 @@
 <!DOCTYPE html> 
 <!--<?php 
-include('db.php'); 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require_once __DIR__ . '/vendor/autoload.php';
+include('db.php'); 
 ?>-->
 <title>Boh</title>
 <link rel="stylesheet" type="text/css" href="style.css">
