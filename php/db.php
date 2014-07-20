@@ -1653,17 +1653,11 @@ class DB
 } 
 
 $db = new DB('toprated', 'toprated.mysql.eu1.frbit.com', 'toprated', 'aTSRmyHGo0xqrzDV');
-$sql = "
-CREATE TABLE `test` ( 
-  `TestID` int(10)     NOT NULL auto_increment, 
-  `Color`  varchar(15) default NULL, 
-  `Age`    int(10)     default NULL, 
-  PRIMARY KEY  (`TestID`) 
-)"; 
 $sql = "INSERT INTO test (Color, Age) Values ('Red', 7)"; 
 if (! $db->Query($sql)) { 
+echo "query failed"; 
     $db->Kill(); 
 } 
 
-//echo "Last ID inserted was: " . $db->GetLastInsertID(); 
+echo "Last ID inserted was: " . $db->GetLastInsertID(); 
 ?>
