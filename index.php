@@ -22,6 +22,11 @@ jQuery(function($) {
 	  event.stopPropagation();
 		$(".FlyOut li").removeClass('click');
   });
+	
+	$("div").click(function(event) {
+	  event.stopPropagation();
+		$(".FlyOut li").removeClass('click');
+  });
 		
   sortabledir = 1;
   $(".sortable").each(function (i,e) {$(e).find('th').click(function() {
@@ -51,8 +56,8 @@ jQuery(function($) {
  <div class="registered center">
  <ul class="FlyOut DropDown">
   <li><a href="#"> <img alt="" class=bottone src="Bottoni/prof1stat.png" onmouseover="src='Bottoni/prof1mouse.png'" onmousedown="src='Bottoni/prof1stat.png'" onmouseout="src='Bottoni/prof1stat.png'">  </a>
-	<ul class=bubble> 
-	  <li style=float:right><img src=barba.jpg>
+	<ul> 
+	  <li><img style=margin:auto; src=barba.jpg  width=280 height=280>
 	  <br> Mario Rossi
 	  <br> Camaiore
 	  <br> idraulico
@@ -60,11 +65,11 @@ jQuery(function($) {
 	  <br> <a href=#>Privacy...</a><!-- funzionalità da implementare -->
 	</ul> 
   <li><a href="#"> <img alt="" class=bottone src="Bottoni/contatti1stat.png" onmouseover="src='Bottoni/contatti1mouse.png'" onmousedown="src='Bottoni/contatti1stat.png'" onmouseout="src='Bottoni/contatti1stat.png'">  </a>
-  <ul class=bubble> <li>21212121212122121</ul> 
+  <ul> <li>21212121212122121</ul> 
 	<li><a href="#"> <img alt="" class=bottone src="Bottoni/mess1stat.png" onmouseover="src='Bottoni/mess1mouse.png'" onmousedown="src='Bottoni/mess1stat.png'" onmouseout="src='Bottoni/mess1stat.png'">  </a>
-  <ul class=bubble> <li>21212121212122121</ul> 
+  <ul> <li>21212121212122121</ul> 
 	<li><a href="#"> <img alt="" class=bottone src="Bottoni/evento1stat.png" onmouseover="src='Bottoni/evento1mouse.png'" onmousedown="src='Bottoni/evento1stat.png'" onmouseout="src='Bottoni/evento1stat.png'">  </a>
-  <ul class=bubble> <li>21212121212122121</ul> 
+  <ul> <li>21212121212122121</ul> 
 	<li><a href="#"> <img alt="" class=bottone src="Bottoni/associaz1disatt.png">  </a>
   <li><a href="#"> <img alt="" class=bottone src="Bottoni/sponsor1disatt.png">  </a>
  </ul>
