@@ -1,5 +1,6 @@
 <!DOCTYPE html> 
 <!--<?php 
+session_start(); 
 include('db.php'); 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
