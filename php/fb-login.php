@@ -29,14 +29,18 @@ use Facebook\GraphObject;
 FacebookSession::setDefaultApplication('1439231382984557', '0a6b44656cebac45c3c6f4fd62aabbca');
 $helper = new FacebookJavaScriptLoginHelper();
 try {
+    echo 'getsession';
     $session = $helper->getSession();
 } catch(FacebookRequestException $ex) {
+    echo 'facebook error';
     // When Facebook returns an error
 } catch(\Exception $ex) {
     // When validation fails or other local issues
+    echo 'login error';
 }
 if ($session) {
   echo "logged in!";
-}
+} else
+  echo "not logged in!";
 ?>
 <div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="icon" data-show-faces="false" data-auto-logout-link="true"></div>
