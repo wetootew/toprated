@@ -1652,7 +1652,7 @@ class DB
     } 
 } 
 
-$db = new DB('toprated', 'toprated.mysql.eu1.frbit.com', 'toprated', 'aTSRmyHGo0xqrzDV');
+$db = new DB('toprated', 'toprated.mysql.eu1.frbit.com', 'toprated', '0AvbH5SIH186Bn6Q');
 $sql = "INSERT INTO test (Color, Age) Values ('Red', 7)"; 
 if (! $db->Query($sql)) { 
 echo "query failed"; 
