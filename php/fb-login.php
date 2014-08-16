@@ -8,7 +8,7 @@ function statusChangeCallback(response) {
       FB.api('/me', function(response) {
         $(".login").innerHTML = 'Benvenuto ' + response.name + ',<br>' +  response.email);
       });
-    else  $(.login).innerHTML += response.status;
+    else  $(".login").innerHTML += response.status;
   }
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
