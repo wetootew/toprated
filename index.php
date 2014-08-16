@@ -57,20 +57,33 @@ jQuery(function($) {
  <div class="registered center">
  <ul class="FlyOut DropDown">
   <li><a href="#"> <img alt="" class=bottone src="Bottoni/prof1stat.png" onmouseover="src='Bottoni/prof1mouse.png'" onmousedown="src='Bottoni/prof1stat.png'" onmouseout="src='Bottoni/prof1stat.png'">  </a>
-	<ul> 
+	<ul class=scheda id=profilo>
+		<li><ol id=dati>
 	  <li><img style=margin:auto; src=barba.jpg  width=280 height=280>
-	  <br> Mario Rossi
-	  <br> Camaiore
-	  <br> idraulico
-	  <br> licenza media
-	  <br> <a href=#>Privacy...</a><!-- funzionalità da implementare -->
+	  <li> Mario Rossi
+	  <li> Camaiore
+	  <li> idraulico
+	  <li> licenza media
+		</ol>
+		<li><ol id=log>
+	  <li> 12/12/2112: ha partecipato a sdfg sdfs
+	  <li> 12/12/2112: ha partecipato a sdfg sdfs
+	  <li> 12/12/2112: ha partecipato a sdfg sdfs
+	  <li> 12/12/2112: ha partecipato a sdfg sdfs
+	  <li> 12/12/2112: ha partecipato a sdfg sdfs
+	  <li> 12/12/2112: ha partecipato a sdfg sdfs
+		</ol>
+		<ol class=center>
+		  <li>Punteggio
+		  <li><textarea placeholder="Fai sapere qualcosa di te..."></textarea>
+		</ol>
 	</ul> 
   <li><a href="#"> <img alt="" class=bottone src="Bottoni/contatti1stat.png" onmouseover="src='Bottoni/contatti1mouse.png'" onmousedown="src='Bottoni/contatti1stat.png'" onmouseout="src='Bottoni/contatti1stat.png'">  </a>
-  <ul> <li>21212121212122121</ul> 
+  <ul class=scheda id=contatti> <li>21212121212122121</ul> 
 	<li><a href="#"> <img alt="" class=bottone src="Bottoni/mess1stat.png" onmouseover="src='Bottoni/mess1mouse.png'" onmousedown="src='Bottoni/mess1stat.png'" onmouseout="src='Bottoni/mess1stat.png'">  </a>
-  <ul> <li>21212121212122121</ul> 
+  <ul class=scheda id=messaggi> <li>21212121212122121</ul> 
 	<li><a href="#"> <img alt="" class=bottone src="Bottoni/evento1stat.png" onmouseover="src='Bottoni/evento1mouse.png'" onmousedown="src='Bottoni/evento1stat.png'" onmouseout="src='Bottoni/evento1stat.png'">  </a>
-  <ul> <li>21212121212122121</ul> 
+  <ul class=scheda id=eventi> <li>21212121212122121</ul> 
 	<li><a href="#"> <img alt="" class=bottone src="Bottoni/associaz1disatt.png">  </a>
   <li><a href="#"> <img alt="" class=bottone src="Bottoni/sponsor1disatt.png">  </a>
  </ul>
@@ -213,7 +226,4 @@ jQuery(function($) {
 	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 </table>
-<div class=popup>
-<p> icchéttipare
-</div>
 </div>
