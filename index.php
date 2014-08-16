@@ -84,7 +84,7 @@ jQuery(function($) {
  </div>
  <ul id=titoletto class="center unregistered FlyOut DropDown">
   <li><img alt="" src="Registrati.png"><br>Scopri tutti i vantaggi per utenti ed associazioni! 
-   <ul><li><!--<?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?>--></li></ul>
+   <ul><li><?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?></li></ul>
  </ul>
 </div>
 
