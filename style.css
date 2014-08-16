@@ -5,18 +5,19 @@
  font-size: 100%;
  font-family:georgia;
  vertical-align: baseline;
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
 }
 
 html, body {height:100%}
-#page {height:calc(100% - 115px);text-align:center;position:relative; top: 115px;}
+#page {height:calc(100% - 105px);text-align:center;position:relative; top: 105px;}
 body { background-color:#fae2c9;}
 
 #topbar {
  background-color:#005826;
  color:#fae2c9;
  text-align:center;
- padding-top:15px;
- padding-bottom: 10px;
  height: 90px;
  position:fixed;
  width:100%;
@@ -38,17 +39,70 @@ border-bottom: #535354 solid 5px;
 	width:200px;
 }
 
-.bottone { margin-top:20px; height:50px; width:60px; padding:5px;}
+.bottone { margin:20px 5px 10px; height:50px; width:60px;}
 
 .registered a { text-decoration:none; }
-.registered { display:none !important; width:390px}
-.unregistered {/* display:none !important;*/}
+.registered { /* display:none !important; width:390px */}
+.unregistered { display:none !important;}
 
 .comandi{ margin-top: 20px;  text-align:center; width:100%;}
 .comandi a { text-decoration: none;}
 .comandi a:hover {cursor:pointer}
 
 .rigadimensione {height:2px;}
+
+#topbar .registered .DropDown>li>ul {
+ left:0;
+ width:calc(96% - 480px); 
+ min-width:300px;
+ margin-left:calc(2% + 235px);
+ margin-top:55px;
+ position:fixed;
+ height:calc(100% - 200px);
+ color: #005826;
+ font: bold 14px georgia;
+background: #fae2c9;
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+border: #535354 solid 5px;
+z-index: 1;
+}
+
+#topbar .registered .DropDown>li:hover { z-index: 2;}
+
+#topbar .registered .DropDown>li:hover:after, #topbar .DropDown>li.click:after {
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0 20px 60px;
+border-color: #fae2c9 transparent;
+display: block;
+width: 0;
+z-index: 1;
+top: calc(100% - 0);
+left: 17px;
+}
+
+#topbar  .registered .DropDown>li:hover:before, #topbar .DropDown>li.click:before {
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0 24px 66px;
+border-color: #535354 transparent;
+display: block;
+width: 0;
+z-index: 0;
+top: calc(100% - 11px);
+left: 13px;
+}
+
+.scheda ol  {list-style-type: none; margin:8px; width:180px; white-space: normal;}
+#dati { float:left;}
+#log { float:right;word-wrap: break-word;}
+#profilo img {width:180px; height:180px;}
+#profilo textarea {width:100%; height:200px; resize: none;}
+#profilo  .center { width:calc(100% - 450px);}
 
 #bacheca * { text-shadow: 0 0 0.083em #997f64;}
 #bacheca .comandi ul { margin:3px;}
@@ -85,51 +139,6 @@ h1 {
  font-variant:small-caps;
 }
 
-#topbar .registered .DropDown>li>ul {
- left:0;
- width:calc(96% - 480px); 
- min-width:300px;
- margin-left:calc(2% + 240px);
- margin-top:55px;
- position:fixed;
- height:500px;
- color: #005826;
- font: bold 14px georgia;
-background: #fae2c9;
--webkit-border-radius: 15px;
--moz-border-radius: 15px;
-border-radius: 15px;
-border: #535354 solid 5px;
-z-index: 1;
-}
-
-#topbar .registered .DropDown>li:hover:after, #topbar .DropDown>li.click:after {
-content: '';
-position: absolute;
-border-style: solid;
-border-width: 0 20px 60px;
-border-color: #fae2c9 transparent;
-display: block;
-width: 0;
-z-index: 1;
-top: calc(100% - 0);
-left: 17px;
-}
-
-#topbar  .registered .DropDown>li:hover:before, #topbar .DropDown>li.click:before {
-content: '';
-position: absolute;
-border-style: solid;
-border-width: 0 24px 66px;
-border-color: #535354 transparent;
-display: block;
-width: 0;
-z-index: 0;
-top: calc(100% - 11px);
-left: 13px;
-}
-
-
 #sponsor { float:left; margin-left:2%;}
 #board { float:right; margin-right:2%;}
 .sidebar {
@@ -137,7 +146,6 @@ left: 13px;
  color:#fae2c9;
  width:200px;
  height:100%;
- margin-top:10px;
  padding-top: 20px;
  font:bolder 18px georgia;
  text-align:center; 
@@ -165,9 +173,6 @@ left: 13px;
 #bacheca tr, th, td {
 padding:2px;
 float:left;
--webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-        box-sizing: border-box;
 }
 
 #bacheca .argomento { font: bold 14px georgia; text-align:center; }
