@@ -41,8 +41,8 @@ border-bottom: #535354 solid 5px;
 .bottone { margin-top:20px; height:50px; width:60px; padding:5px;}
 
 .registered a { text-decoration:none; }
-.registered { /*display:none !important; width:390px;*/}
-.unregistered { display:none !important;}
+.registered { display:none !important; width:390px}
+.unregistered {/* display:none !important;*/}
 
 .comandi{ margin-top: 20px;  text-align:center; width:100%;}
 .comandi a { text-decoration: none;}
