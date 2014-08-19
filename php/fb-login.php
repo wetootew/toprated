@@ -43,4 +43,5 @@ if ($session) {
 } else
   echo "not logged in!";
 ?>
+<div class="fb-login-button" data-max-rows="1" data-size="icon" data-show-faces="false" data-auto-logout-link="true"></div>
 <div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="icon" data-show-faces="false" data-auto-logout-link="true"></div>
