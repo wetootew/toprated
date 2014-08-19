@@ -100,15 +100,15 @@ jQuery(function($) {
  <img alt="" width=200 height=80 class=registered id=spaziodx src="logo.jpg">
  
  <div class="login unregistered">
+  <div style=float:right;><?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?></div>
   <p> Sei registrato? </p>
   <input type=text name=usr placeholder=Username><br>
   <input type=password name=pwd placeholder=Password ><br>
   <img alt="" src="login.png">
  </div>
- <ul id=titoletto class="center unregistered FlyOut DropDown">
-  <li><img alt="" src="Registrati.png"><br>Scopri tutti i vantaggi per utenti ed associazioni! 
-   <ul><li><?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?></li></ul>
- </ul>
+ <div id=titoletto class="center unregistered">
+  <img alt="" src="Registrati.png"><br>Scopri tutti i vantaggi per utenti ed associazioni! 
+ </div>
 </div>
 
 <div id=page>
