@@ -7,15 +7,6 @@ ini_set('display_errors', 1);
 require_once __DIR__ . '/vendor/autoload.php';
 ?>-->
 <title>Boh</title>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&appId=1439231382984557&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 <script src="script.js" type="text/javascript"></script>
@@ -114,8 +105,7 @@ jQuery(function($) {
 <div id=page>
  <div class=sidebar id=sponsor>
   <h2> Sponsor </h2>
-  <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
- </div>
+  </div>
  
  <div class=sidebar id=board>
   <h2> Community Board </h2>
