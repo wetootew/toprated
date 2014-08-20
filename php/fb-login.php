@@ -1,7 +1,17 @@
 <div id="fb-root"></div>
 <script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&appId=1439231382984557&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
 window.fbAsyncInit = function() {FB.init({appId: '1439231382984557', xfbml: true, version: 'v2.0' });};
-function checkLoginState() {FB.getLoginStatus(function(response) {statusChangeCallback(response);});}
+function checkLoginState() {FB.getLoginStatus(function(response) {statusChangeCallback(response);});};
+</script>
+
 
 function statusChangeCallback(response) {
     if (response.status === 'connected') 
@@ -10,13 +20,6 @@ function statusChangeCallback(response) {
       });
     else  $(".login").innerHTML += response.status;
   }
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&appId=1439231382984557&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 <?php
 use Facebook\FacebookJavaScriptLoginHelper;
 use Facebook\FacebookSession;
