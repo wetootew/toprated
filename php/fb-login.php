@@ -10,7 +10,6 @@
 
 window.fbAsyncInit = function() {FB.init({appId: '1439231382984557', xfbml: true, version: 'v2.0' });};
 function checkLoginState() {FB.getLoginStatus(function(response) {statusChangeCallback(response);});};
-</script>
 
 
 function statusChangeCallback(response) {
@@ -20,6 +19,7 @@ function statusChangeCallback(response) {
       });
     else  $(".login").innerHTML += response.status;
   }
+</script>
 <?php
 use Facebook\FacebookJavaScriptLoginHelper;
 use Facebook\FacebookSession;
