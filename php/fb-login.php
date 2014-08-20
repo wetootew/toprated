@@ -8,17 +8,6 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-window.fbAsyncInit = function() {FB.init({appId: '1439231382984557', xfbml: true, version: 'v2.0' });};
-function checkLoginState() {FB.getLoginStatus(function(response) {statusChangeCallback(response);});};
-
-
-function statusChangeCallback(response) {
-    if (response.status === 'connected') 
-      FB.api('/me', function(response) {
-        $(".login").innerHTML = 'Benvenuto ' + response.name + ',<br>' +  response.email);
-      });
-    else  $(".login").innerHTML += response.status;
-  }
 </script>
 <?php
 use Facebook\FacebookJavaScriptLoginHelper;
