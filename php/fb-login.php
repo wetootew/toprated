@@ -33,5 +33,5 @@ try {
 }
 if ($session) echo "logged in!";
 ?>
-<div class="fb-login-button" data-max-rows="1" data-size="icon" data-show-faces="false" data-auto-logout-link="true"></div>
-<input type=button onclick="alert('ciao')" value=fbinfo>
+<div class="fb-login-button" onlogin="alert('ciao')" data-max-rows="1" data-size="icon" data-show-faces="false" data-auto-logout-link="true"></div>
+<input type=button onclick value=fbinfo>
