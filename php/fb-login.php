@@ -4,7 +4,7 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&cookie=&satus=1&appId=1439231382984557&version=v2.0";
+  js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&cookie=1&satus=1&appId=1439231382984557&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
@@ -12,13 +12,8 @@
 function statusChangeCallback(response) {
   if (response.status === 'connected'){
       FB.api('/me', function(user) {
-    alert(user.name);
-    alert(user.first_name);
-    alert(user.last_name);
-    alert(user.email);
-    alert(response.name + ', ' +  response.email)
+    alert(user.name+ ', ' + user.email);
     });
-
   }
 }
 
