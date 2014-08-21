@@ -46,4 +46,4 @@ try {
 }
 if ($session) echo "logged in!";
 ?>
-<div class="fb-login-button" onlogin="checkLoginState()" data-max-rows="1" data-size="icon" data-show-faces="false" data-auto-logout-link="true"></div>
+<div class="fb-login-button" onlogin="checkLoginState()" scope="public_profile,email" data-max-rows="1" data-size="icon" data-show-faces="false" data-auto-logout-link="true"></div>
