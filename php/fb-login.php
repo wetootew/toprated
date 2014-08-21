@@ -9,6 +9,18 @@
 }(document, 'script', 'facebook-jssdk'));
 
 
+function statusChangeCallback(response) {
+alert('ciao')
+  /*if (response.status === 'connected') 
+    FB.api('/me', function(response) {
+      $(".login").innerHTML = 'Benvenuto ' + response.name + ',<br>' +  response.email);
+    });
+  else  $(".login").innerHTML += response.status;*/
+}
+
+function checkLoginState() {FB.getLoginStatus(function(response) {statusChangeCallback(response);});};
+
+
 
 </script>
 <?php
@@ -33,5 +45,4 @@ try {
 }
 if ($session) echo "logged in!";
 ?>
-<div class="fb-login-button" onlogin="alert('ciao')" data-max-rows="1" data-size="icon" data-show-faces="false" data-auto-logout-link="true"></div>
-<input type=button onclick value=fbinfo>
+<div class="fb-login-button" onlogin="checkLoginState()" data-max-rows="1" data-size="icon" data-show-faces="false" data-auto-logout-link="true"></div>
