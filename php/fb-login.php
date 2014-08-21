@@ -10,10 +10,16 @@
 
 
 function statusChangeCallback(response) {
-  if (response.status === 'connected')
-    FB.api('/me', function(usr) {
-      alert('Benvenuto ' + usr.name + ',<br>' +  usr.email);
+  if (response.status === 'connected'){
+      FB.api('/me', function(user) {
+    alert(user.name);
+    alert(user.first_name);
+    alert(user.last_name);
+    alert(user.email);
+    alert(response.name + ', ' +  response.email)
     });
+
+  }
 }
 
 function checkLoginState() {FB.getLoginStatus(function(response) {statusChangeCallback(response);});};
