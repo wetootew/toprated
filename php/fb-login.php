@@ -10,9 +10,12 @@
 
 
 function statusChangeCallback(response) {
-alert('ciao')
-  /*if (response.status === 'connected') 
-    FB.api('/me', function(response) {
+  if (response.status === 'connected') 
+    alert('ciado')
+    else 
+    alert('cdiao')
+    
+   /* FB.api('/me', function(response) {
       $(".login").innerHTML = 'Benvenuto ' + response.name + ',<br>' +  response.email);
     });
   else  $(".login").innerHTML += response.status;*/
