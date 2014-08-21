@@ -10,13 +10,29 @@
 
 
 function statusChangeCallback(response) {
-  if (response.status === 'connected') 
+  if (response.status === 'connected'){
+    
+    FB.api('/me', function(user) {
+    alert(user.name);
+    alert(user.first_name);
+    alert(user.last_name);
+    alert(user.email);
     alert(response.name + ', ' +  response.email)
+    });
+
+  }
     
    /* FB.api('/me', function(response) {
       $(".login").innerHTML = 'Benvenuto ' + response.name + ',<br>' +  response.email);
     });*/
   else  alert(response.status);
+  
+  FB.login(function(){
+    FB.api('me',
+    function(response){
+            console.log(response.email);
+    });
+},{'scope':'email'});
 }
 
 function checkLoginState() {FB.getLoginStatus(function(response) {statusChangeCallback(response);});};
