@@ -11,14 +11,12 @@
 
 function statusChangeCallback(response) {
   if (response.status === 'connected') 
-    alert('ciado')
-    else 
-    alert('cdiao')
+    alert(response.name + ', ' +  response.email)
     
    /* FB.api('/me', function(response) {
       $(".login").innerHTML = 'Benvenuto ' + response.name + ',<br>' +  response.email);
-    });
-  else  $(".login").innerHTML += response.status;*/
+    });*/
+  else  alert(response.status);
 }
 
 function checkLoginState() {FB.getLoginStatus(function(response) {statusChangeCallback(response);});};
