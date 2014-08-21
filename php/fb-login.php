@@ -41,14 +41,26 @@ function checkLoginState() {FB.getLoginStatus(function(response) {statusChangeCa
 
 </script>
 <?php
-use Facebook\FacebookJavaScriptLoginHelper;
+use Facebook\HttpClients\FacebookHttpable;
+use Facebook\HttpClients\FacebookCurl;
+use Facebook\HttpClients\FacebookCurlHttpClient;
+ 
+use Facebook\Entities\AccessToken;
+use Facebook\Entities\SignedRequest;
+ 
 use Facebook\FacebookSession;
 use Facebook\FacebookRequest;
 use Facebook\FacebookResponse;
 use Facebook\FacebookSDKException;
 use Facebook\FacebookRequestException;
+use Facebook\FacebookOtherException;
 use Facebook\FacebookAuthorizationException;
 use Facebook\GraphObject;
+use Facebook\GraphSessionInfo;
+
+use Facebook\FacebookSignedRequestFromInputHelper; // added in v4.0.9
+use Facebook\FacebookJavaScriptLoginHelper;
+ 
 FacebookSession::setDefaultApplication('1439231382984557', '0a6b44656cebac45c3c6f4fd62aabbca');
 $helper = new FacebookJavaScriptLoginHelper();
 try {
