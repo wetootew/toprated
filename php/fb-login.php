@@ -10,33 +10,13 @@
 
 
 function statusChangeCallback(response) {
-  if (response.status === 'connected'){
-    
-    FB.api('/me', function(user) {
-    alert(user.name);
-    alert(user.first_name);
-    alert(user.last_name);
-    alert(user.email);
-    alert(response.name + ', ' +  response.email)
+  if (response.status === 'connected')
+    FB.api('/me', function(usr) {
+      $(".login").innerHTML = 'Benvenuto ' + usr.name + ',<br>' +  usr.email);
     });
-
-  }
-    
-   /* FB.api('/me', function(response) {
-      $(".login").innerHTML = 'Benvenuto ' + response.name + ',<br>' +  response.email);
-    });*/
-  else  alert(response.status);
-  
-  FB.login(function(){
-    FB.api('me',
-    function(response){
-            console.log(response.email);
-    });
-},{'scope':'email'});
 }
 
 function checkLoginState() {FB.getLoginStatus(function(response) {statusChangeCallback(response);});};
-
 
 
 </script>
@@ -44,10 +24,8 @@ function checkLoginState() {FB.getLoginStatus(function(response) {statusChangeCa
 use Facebook\HttpClients\FacebookHttpable;
 use Facebook\HttpClients\FacebookCurl;
 use Facebook\HttpClients\FacebookCurlHttpClient;
- 
 use Facebook\Entities\AccessToken;
 use Facebook\Entities\SignedRequest;
- 
 use Facebook\FacebookSession;
 use Facebook\FacebookRequest;
 use Facebook\FacebookResponse;
@@ -57,7 +35,6 @@ use Facebook\FacebookOtherException;
 use Facebook\FacebookAuthorizationException;
 use Facebook\GraphObject;
 use Facebook\GraphSessionInfo;
-
 use Facebook\FacebookSignedRequestFromInputHelper; // added in v4.0.9
 use Facebook\FacebookJavaScriptLoginHelper;
  
