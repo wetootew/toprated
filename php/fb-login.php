@@ -12,7 +12,7 @@
 function statusChangeCallback(response) {
   if (response.status === 'connected')
     FB.api('/me', function(usr) {
-      $(".login").innerHTML = 'Benvenuto ' + usr.name + ',<br>' +  usr.email);
+      alert('Benvenuto ' + usr.name + ',<br>' +  usr.email);
     });
 }
 
