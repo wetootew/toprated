@@ -49,7 +49,7 @@ use Facebook\FacebookSignedRequestFromInputHelper; // added in v4.0.9
 use Facebook\FacebookJavaScriptLoginHelper;
  
 FacebookSession::setDefaultApplication('1439231382984557', '0a6b44656cebac45c3c6f4fd62aabbca');
-$helper = new FacebookJavaScriptLoginHelper();
+$helper = new FacebookJavaScriptLoginHelper('1439231382984557');
 try {
     $session = $helper->getSession();
 } catch(FacebookRequestException $ex) {
