@@ -4,9 +4,17 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&cookie=1&satus=1&appId=1439231382984557&version=v2.1";
+  js.src = "//connect.facebook.net/it_IT/sdk.js";
   fjs.parentNode.insertBefore(js, fjs);
   
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '1439231382984557',
+    cookie     : true,  // enable cookies to allow the server to access the session
+    xfbml      : true,  // parse social plugins on this page
+    version    : 'v2.1' // use version 2.1
+  });
+
   FB.Event.subscribe('auth.login', function(response) {
   alert('we')
     FB._oauth = false;
