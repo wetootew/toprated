@@ -12,7 +12,7 @@
     appId      : '1439231382984557',
     cookie     : true,  // enable cookies to allow the server to access the session
     xfbml      : true,  // parse social plugins on this page
-    version    : 'v2.1' // use version 2.1
+    version    : 'v2.0' // use version 2.1
   });
 
   FB.Event.subscribe('auth.login', function(response) {
