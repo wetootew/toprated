@@ -6,6 +6,14 @@
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&cookie=1&satus=1&appId=1439231382984557&version=v2.0";
   fjs.parentNode.insertBefore(js, fjs);
+  
+  FB.Event.subscribe('auth.login', function(response) {
+    FB._oauth = false;
+    FB.Cookie.setEnabled(true);
+    FB.Auth.setSession(response.authResponse, response.status);
+    FB._oauth = true;
+    window.location.reload();
+});
 }(document, 'script', 'facebook-jssdk'));
 
 
