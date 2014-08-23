@@ -4,7 +4,7 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&cookie=1&satus=1&appId=1439231382984557&version=v2.0";
+  js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&cookie=1&satus=1&appId=1439231382984557&version=v2.1";
   fjs.parentNode.insertBefore(js, fjs);
   
   FB.Event.subscribe('auth.login', function(response) {
