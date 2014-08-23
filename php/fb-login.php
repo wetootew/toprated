@@ -8,6 +8,7 @@
   fjs.parentNode.insertBefore(js, fjs);
   
   FB.Event.subscribe('auth.login', function(response) {
+  alert('we')
     FB._oauth = false;
     FB.Cookie.setEnabled(true);
     FB.Auth.setSession(response.authResponse, response.status);
