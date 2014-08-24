@@ -103,8 +103,8 @@ if ( isset( $session ) ) {
 ?>
 <button id="fb_login">Fb Login</button>
 <?php
-}
-?*/>
+}*/
+?>
 <div id="fb-root"></div>
 </body>
 </html>
