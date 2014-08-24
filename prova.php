@@ -1,4 +1,4 @@
-<?php
+<?php /*
 session_start(); 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -15,7 +15,7 @@ use Facebook\FacebookRequestException;
 use Facebook\FacebookAuthorizationException;
 use Facebook\GraphObject;
  
-FacebookSession::setDefaultApplication('1439231382984557','0a6b44656cebac45c3c6f4fd62aabbca');
+FacebookSession::setDefaultApplication('1439231382984557','0a6b44656cebac45c3c6f4fd62aabbca');*/
 ?>
 <html>
 <head>
@@ -81,7 +81,7 @@ $(document).ready(function() {
 </script>
 </head>
 <body>
-<?
+<?/*
 $helper = new FacebookJavaScriptLoginHelper();
 try {
   $session = $helper->getSession();
@@ -104,7 +104,7 @@ if ( isset( $session ) ) {
 <button id="fb_login">Fb Login</button>
 <?php
 }
-?>
+?*/>
 <div id="fb-root"></div>
 </body>
 </html>
