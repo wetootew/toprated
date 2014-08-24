@@ -1,9 +1,9 @@
 <!DOCTYPE html> 
 <!--<?php 
 session_start(); 
-include('db.php'); 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+require_once __DIR__ . 'php/db.php'; 
 require_once __DIR__ . '/vendor/autoload.php';
 ?>-->
 <title>Boh</title>
