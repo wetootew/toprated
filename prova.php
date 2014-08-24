@@ -1,4 +1,9 @@
 <?php
+session_start(); 
+include('db.php'); 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+require_once __DIR__ . '/vendor/autoload.php';
 
 use Facebook\FacebookSession;
 use Facebook\FacebookRedirectLoginHelper;
@@ -25,7 +30,7 @@ $(document).ready(function() {
   };
  
   $.ajaxSetup({ cache: true });
-  $.getScript(‘//connect.facebook.net/zh_TW/sdk.js’, function(){
+  $.getScript(‘/connect.facebook.net/zh_TW/sdk.js’, function(){
     FB.init({
       appId      : ‘1439231382984557‘,
       status     : true,
