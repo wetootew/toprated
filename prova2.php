@@ -90,8 +90,17 @@ try {
   echo 'ex';
 }
  
+// see if we have a session
+if ( isset( $session ) ) {
+  $request = new FacebookRequest( $session, ‘GET’, ‘/me’ );
+  $response = $request->execute();
+  $graphObject = $response->getGraphObject();
+  echo $graphObject->getProperty(‘id’). ‘<br/>’;
+  echo $graphObject->getProperty(‘name’). ‘<br/>’;
+  echo $graphObject->getProperty(‘email’). ‘<br/>’;
+}else echo'<button id="fb_login">Fb Login</button>';
+
 ?>
-<button id="fb_login">Fb Login</button>
 
 <div id="fb-root"></div>
 </body>
