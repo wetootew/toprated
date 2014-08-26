@@ -35,7 +35,6 @@ $(document).ready(function() {
       status     : true,
       cookie     : true,
       xfbml      : true,
-          oauth : true //enables OAuth 2.0
       version    : ‘v2.0′
     });
  
