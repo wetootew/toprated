@@ -2,7 +2,6 @@
 session_start(); 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require_once __DIR__ . 'php/db.php'; 
 require_once __DIR__ . '/vendor/autoload.php';
 
 use Facebook\FacebookSession;
@@ -81,30 +80,9 @@ $(document).ready(function() {
 </script>
 </head>
 <body>
-<?
-$helper = new FacebookJavaScriptLoginHelper();
-try {
-  $session = $helper->getSession();
-} catch( FacebookRequestException $ex ) {
-  // When Facebook returns an error
-} catch( Exception $ex ) {
-  // When validation fails or other local issues
-}
- 
-// see if we have a session
-if ( isset( $session ) ) {
-  $request = new FacebookRequest( $session, ‘GET’, ‘/me’ );
-  $response = $request->execute();
-  $graphObject = $response->getGraphObject();
-  echo $graphObject->getProperty(‘id’). ‘<br/>’;
-  echo $graphObject->getProperty(‘name’). ‘<br/>’;
-  echo $graphObject->getProperty(‘email’). ‘<br/>’;
-}else{
-?>
+
 <button id="fb_login">Fb Login</button>
-<?php
-}
-?>
+
 <div id="fb-root"></div>
 </body>
 </html>
