@@ -1,3 +1,22 @@
+<?php 
+session_start(); 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+require_once __DIR__ . 'php/db.php'; 
+require_once __DIR__ . '/vendor/autoload.php';
+
+use Facebook\FacebookSession;
+use Facebook\FacebookRedirectLoginHelper;
+use Facebook\FacebookJavaScriptLoginHelper;
+use Facebook\FacebookRequest;
+use Facebook\FacebookResponse;
+use Facebook\FacebookSDKException;
+use Facebook\FacebookRequestException;
+use Facebook\FacebookAuthorizationException;
+use Facebook\GraphObject;
+ 
+FacebookSession::setDefaultApplication('1439231382984557','0a6b44656cebac45c3c6f4fd62aabbca');
+?>
 <html>
 <head>
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -62,9 +81,30 @@ $(document).ready(function() {
 </script>
 </head>
 <body>
-
+<?
+$helper = new FacebookJavaScriptLoginHelper();
+try {
+  $session = $helper->getSession();
+} catch( FacebookRequestException $ex ) {
+  // When Facebook returns an error
+} catch( Exception $ex ) {
+  // When validation fails or other local issues
+}
+ 
+// see if we have a session
+if ( isset( $session ) ) {
+  $request = new FacebookRequest( $session, ‘GET’, ‘/me’ );
+  $response = $request->execute();
+  $graphObject = $response->getGraphObject();
+  echo $graphObject->getProperty(‘id’). ‘<br/>’;
+  echo $graphObject->getProperty(‘name’). ‘<br/>’;
+  echo $graphObject->getProperty(‘email’). ‘<br/>’;
+}else{
+?>
 <button id="fb_login">Fb Login</button>
-
+<?php
+}
+?>
 <div id="fb-root"></div>
 </body>
 </html>
