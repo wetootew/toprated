@@ -80,7 +80,17 @@ $(document).ready(function() {
 </script>
 </head>
 <body>
-
+<?php
+$helper = new FacebookJavaScriptLoginHelper();
+try {
+  $session = $helper->getSession();
+} catch( FacebookRequestException $ex ) {
+  echo 'fbex';
+} catch( Exception $ex ) {
+  echo 'ex';
+}
+ 
+?>
 <button id="fb_login">Fb Login</button>
 
 <div id="fb-root"></div>
