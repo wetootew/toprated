@@ -81,6 +81,7 @@ $(document).ready(function() {
 </script>
 </head>
 <body>
+<div id="fb-root"></div>
 <?php
 $helper = new FacebookJavaScriptLoginHelper();
 try {
@@ -103,7 +104,10 @@ if ( isset( $session ) ) {
 }else echo '<button id="fb_login">Fb Login</button>';
 
 ?>
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+<div class="fb-login-button" onlogin="checkLoginState()" scope="public_profile,email" data-max-rows="1" data-size="icon" data-show-faces="false" data-auto-logout-link="true"></div>
 
-<div id="fb-root"></div>
+
 </body>
 </html>
