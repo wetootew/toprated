@@ -92,13 +92,14 @@ try {
  
 // see if we have a session
 if ( isset( $session ) ) {
-  $request = new FacebookRequest( $session, ‘GET’, ‘/me’ );
-  $response = $request->execute();
-  $graphObject = $response->getGraphObject();
-  echo $graphObject->getProperty(‘id’). ‘<br/>’;
-  echo $graphObject->getProperty(‘name’). ‘<br/>’;
-  echo $graphObject->getProperty(‘email’). ‘<br/>’;
-}else echo'<button id="fb_login">Fb Login</button>';
+  //$request = new FacebookRequest( $session, ‘GET’, ‘/me’ );
+  //$response = $request->execute();
+  //$graphObject = $response->getGraphObject();
+  //echo $graphObject->getProperty(‘id’). ‘<br/>’;
+  //echo $graphObject->getProperty(‘name’). ‘<br/>’;
+  //echo $graphObject->getProperty(‘email’). ‘<br/>’;
+  echo 'logged in';
+}else echo '<button id="fb_login">Fb Login</button>';
 
 ?>
 
