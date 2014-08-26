@@ -43,6 +43,7 @@ $(document).ready(function() {
   });
  
   function statusChangeCallback(response) {
+  alert('asd');
     if (response.status === ‘connected’) {
       userLogin();
     } else if (response.status === ‘not_authorized’) {
@@ -65,6 +66,7 @@ $(document).ready(function() {
  
   $("#fb_login").bind("click", function (e) {
     e.preventDefault();
+  alert('assadd');
     if(FBobject.loaded==false){
       FB.login(function(response) {
         if (response.authResponse) {
