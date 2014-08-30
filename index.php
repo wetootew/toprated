@@ -1,9 +1,9 @@
 <!DOCTYPE html> 
 <!--<?php 
 session_start(); 
+include('db.php'); 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require_once __DIR__ . '/php/db.php'; 
 require_once __DIR__ . '/vendor/autoload.php';
 ?>-->
 <title>Boh</title>
@@ -58,25 +58,29 @@ jQuery(function($) {
  <ul class="FlyOut DropDown">
   <li><a href="#"> <img alt="" class=bottone src="Bottoni/prof1stat.png" onmouseover="src='Bottoni/prof1mouse.png'" onmousedown="src='Bottoni/prof1stat.png'" onmouseout="src='Bottoni/prof1stat.png'">  </a>
 	<ul class=scheda id=profilo>
-		<li><ol id=dati>
-	  <li><img style=margin:auto; src=barba.jpg  width=280 height=280>
-	  <li> Mario Rossi
-	  <li> Camaiore
-	  <li> idraulico
-	  <li> licenza media
+		<li><ol id=dati contenteditable="true">
+	   <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
+	   <li> Mario Rossi
+	   <li> Camaiore
+	   <li> idraulico
+	   <li> licenza media
 		</ol>
-		<li><ol id=log>
-	  <li> 12/12/2112: ha partecipato a sdfg sdfs
-	  <li> 12/12/2112: ha partecipato a sdfg sdfs
-	  <li> 12/12/2112: ha partecipato a sdfg sdfs
-	  <li> 12/12/2112: ha partecipato a sdfg sdfs
-	  <li> 12/12/2112: ha partecipato a sdfg sdfs
-	  <li> 12/12/2112: ha partecipato a sdfg sdfs
+		<ol id=log>
+	   <li> 12/12/2112: ha partecipato a sdfg sdfs
+	   <li> 12/12/2112: ha partecipato a sdfg sdfs
+	   <li> 12/12/2112: ha partecipato a sdfg sdfs
+	   <li> 12/12/2112: ha partecipato a sdfg sdfs
+	   <li> 12/12/2112: ha partecipato a sdfg sdfs
+	   <li> 12/12/2112: ha partecipato a sdfg sdfs
 		</ol>
 		<ol class=center>
-		  <li>Punteggio
-		  <li><textarea placeholder="Fai sapere qualcosa di te..."></textarea>
-		</ol>
+		  <li><img src="" width=40 height=40>
+				<p class=progresslbl style="left:50px;">500</p>
+				<progress title=825 value=.75></progress>
+				<p class=progresslbl style="right:50px;">1000</p>
+				<img src="" width=40 height=40>
+				<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
+		 </ol>
 	</ul> 
   <li><a href="#"> <img alt="" class=bottone src="Bottoni/contatti1stat.png" onmouseover="src='Bottoni/contatti1mouse.png'" onmousedown="src='Bottoni/contatti1stat.png'" onmouseout="src='Bottoni/contatti1stat.png'">  </a>
   <ul class=scheda id=contatti> <li>21212121212122121</ul> 
@@ -91,21 +95,21 @@ jQuery(function($) {
  <img alt="" width=200 height=80 class=registered id=spaziodx src="logo.jpg">
  
  <div class="login unregistered">
-  <div style="float:right;"><?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?></div>
   <p> Sei registrato? </p>
   <input type=text name=usr placeholder=Username><br>
   <input type=password name=pwd placeholder=Password ><br>
   <img alt="" src="login.png">
  </div>
- <div id=titoletto class="center unregistered">
-  <img alt="" src="Registrati.png"><br>Scopri tutti i vantaggi per utenti ed associazioni! 
- </div>
+ <ul id=titoletto class="center unregistered FlyOut DropDown">
+  <li><img alt="" src="Registrati.png"><br>Scopri tutti i vantaggi per utenti ed associazioni! 
+   <ul><li><?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?></li></ul>
+ </ul>
 </div>
 
 <div id=page>
  <div class=sidebar id=sponsor>
   <h2> Sponsor </h2>
-  </div>
+ </div>
  
  <div class=sidebar id=board>
   <h2> Community Board </h2>
@@ -226,4 +230,5 @@ jQuery(function($) {
 	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 </table>
+<div style="clear:both;"></div>
 </div>
