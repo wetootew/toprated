@@ -8,19 +8,19 @@
 -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
         box-sizing: border-box;
+word-wrap:break-word;
 }
 
-html, body {height:100%}
-#page {height:calc(100% - 105px);text-align:center;position:relative; top: 105px;}
-body { background-color:#fae2c9;}
+html, body {height:100%; background-color:#fae2c9;}
 
 #topbar {
  background-color:#005826;
  color:#fae2c9;
  text-align:center;
- height: 90px;
+ height: 95px;
  position:fixed;
  width:100%;
+ min-width:920px;
 z-index: 1;
 border-bottom: #535354 solid 5px;
 }
@@ -42,7 +42,7 @@ border-bottom: #535354 solid 5px;
 .bottone { margin:20px 5px 10px; height:50px; width:60px;}
 
 .registered a { text-decoration:none; }
-.registered {display:none !important;}
+.unregistered { display:none !important;}
 
 .comandi{ margin-top: 20px;  text-align:center; width:100%;}
 .comandi a { text-decoration: none;}
@@ -53,7 +53,7 @@ border-bottom: #535354 solid 5px;
 #topbar .registered .DropDown>li>ul {
  left:0;
  width:calc(96% - 480px); 
- min-width:300px;
+ min-width:640px;
  margin-left:calc(2% + 235px);
  margin-top:55px;
  position:fixed;
@@ -79,7 +79,7 @@ border-color: #fae2c9 transparent;
 display: block;
 width: 0;
 z-index: 1;
-top: calc(100% - 0);
+top: 100%;
 left: 17px;
 }
 
@@ -97,11 +97,64 @@ left: 13px;
 }
 
 .scheda ol  {list-style-type: none; margin:8px; width:180px; white-space: normal;}
+
+
 #dati { float:left;}
-#log { float:right;word-wrap: break-word;}
-#profilo img {width:180px; height:180px;}
-#profilo textarea {width:100%; height:200px; resize: none;}
-#profilo  .center { width:calc(100% - 450px);}
+#log { float:right;}
+#profilo .foto {width:180px; height:180px;}
+#profilo textarea {
+ width:100%;
+ height:200px;
+ resize: none;
+ background: #fae2c9;
+ color:#997f64; 
+	text-shadow: 0 0 0.083em #997f64;
+}
+#profilo  .center { width:calc(100% - 450px); min-width: 200px;}
+#profilo>li{ height:100%;}
+
+#log li {
+ text-align:left;
+ font: bold 11px georgia;
+}
+
+progress { color: #005826; } /* IE10 */
+progress::-moz-progress-bar { background: #005826; } /* Firefox */
+progress::-webkit-progress-value { background: #005826; } /* Chrome */
+progress::-webkit-progress-bar { background: #fae2c9;} /* Chrome */
+progress {
+ width:calc(100% - 90px);
+ height: 20px;
+ background: #fae2c9; 
+   -webkit-appearance: none;
+   appearance: none;
+	 -moz-appearance: none;
+ }
+.progresslbl { 
+	top:0; 
+	position:absolute; 
+	color:#997f64;  
+	text-shadow: 0 0 0.083em #997f64;
+}
+
+#page {
+float:right;
+ height:100%; 
+ text-align:center;
+ position:relative; 
+ top: 105px; 
+ display:inline-block;
+}
+#bacheca:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+#bacheca tbody {display: inline-block;}
+
+#bacheca  tbody:last-child:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
 
 #bacheca * { text-shadow: 0 0 0.083em #997f64;}
 #bacheca .comandi ul { margin:3px;}
@@ -122,12 +175,13 @@ left: 13px;
 .comandi * { vertical-align: middle;}
 .comandi img { width:85%;}
  
-.center p {  margin-top:6px; margin-bottom:2px; }
+.center p {  margin-bottom:2px; }
 .center { 
  margin-left:auto;
  margin-right:auto;
  display:-moz-inline-stack;
  display:inline-block;
+ position:relative; 
  zoom:1;
 *display:inline;
 }
@@ -141,14 +195,16 @@ h1 {
 #sponsor { float:left; margin-left:2%;}
 #board { float:right; margin-right:2%;}
 .sidebar {
+position:relative;
  background-color:#005826;
  color:#fae2c9;
  width:200px;
  height:100%;
+ bottom:0;
  padding-top: 20px;
  font:bolder 18px georgia;
  text-align:center; 
- border-radius:20px;
+ border-radius:20px 20px 0 0;
 }
 
 #bacheca { 
@@ -158,7 +214,7 @@ h1 {
  margin-right:auto; 
  }
  
-#bacheca tr {margin-left:auto; margin-right:auto; display:table;}
+#bacheca tr {display:inline-block;}
 #bacheca td:first-child  {width:100%;}
 #bacheca tbody tr{
  width: 190px;
@@ -169,7 +225,7 @@ h1 {
  }
 #bacheca tbody {margin-left:auto; margin-right:auto;}
 #bacheca td {display:block;}
-#bacheca tr, th, td {
+#bacheca th, td {
 padding:2px;
 float:left;
 }
