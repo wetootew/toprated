@@ -98,7 +98,7 @@ left: 13px;
 
 .scheda ol  {list-style-type: none; margin:8px; width:180px; white-space: normal;}
 
-
+#descrProf { padding-top: 10px; font-variant:small-caps;}
 #dati { float:left;}
 #log { float:right;}
 #profilo .foto {width:180px; height:180px;}
@@ -136,6 +136,28 @@ progress {
 	color:#997f64;  
 	text-shadow: 0 0 0.083em #997f64;
 }
+
+#contatti ol {width:100%; text-align:left; }
+#contatti ol>li {display:inline-block; margin:10px;}
+#contatti a { 
+ color:#005826;
+ text-shadow: 0 0 0.09em #005826;
+ text-decoration: none;
+ }
+#contatti a:hover {cursor:pointer}
+
+#contatti tr {display:inline-block; }
+#contatti {white-space: normal;}
+#contatti tbody tr{
+ width: 180px;
+ height: 75px;
+ margin: calc(1% + 3px) calc(1% + 3px) calc(1% + 3px) calc(1% + 3px); 
+ border: 5px solid; 
+ border-radius: 8px;
+ } 
+#contatti th, td {float:left;}
+#contatti .nick {  font: bold 12px georgia;}
+#contatti .location {  font: bold 10px georgia;}
 
 #page {
 float:right;
@@ -223,7 +245,6 @@ position:relative;
  border: 5px solid; 
  border-radius: 8px;
  }
-#bacheca tbody {margin-left:auto; margin-right:auto;}
 #bacheca td {display:block;}
 #bacheca th, td {
 padding:2px;
@@ -243,7 +264,7 @@ float:left;
 .descrizione { height: 45px; text-align:justify; font: 12px georgia;}
 .visite { padding: 10px 0 10px 0;}
 .nomedata {float:right; font: italic 12px georgia;}
-.fotopost {margin-left:-4px;}
+.fotopost {margin-left:-2px;}
 .periodo {text-align:center; font: 12px georgia; width:100%;}
 .titolopost {
 width:100%; 
