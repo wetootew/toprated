@@ -64,6 +64,8 @@ jQuery(function($) {
 	   <li> Camaiore
 	   <li> idraulico
 	   <li> licenza media
+		 <li> interessi
+		 <li> gruppi
 		</ol>
 		<ol id=log>
 	   <li> 12/12/2112: ha partecipato a sdfg sdfs
@@ -78,12 +80,55 @@ jQuery(function($) {
 				<p class=progresslbl style="left:50px;">500</p>
 				<progress title=825 value=.75></progress>
 				<p class=progresslbl style="right:50px;">1000</p>
-				<img src="" width=40 height=40>
+				<img src="" width=40 height=40><br>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<h2 id=descrProf> Descrizione </h2>
 				<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
 		 </ol>
 	</ul> 
   <li><a href="#"> <img alt="" class=bottone src="Bottoni/contatti1stat.png" onmouseover="src='Bottoni/contatti1mouse.png'" onmousedown="src='Bottoni/contatti1stat.png'" onmouseout="src='Bottoni/contatti1stat.png'">  </a>
-  <ul class=scheda id=contatti> <li>21212121212122121</ul> 
+  <ul class=scheda id=contatti> 
+	<li> <table class=sortable>
+  <caption>
+	<ol><li><a href=#>Tutti</a><li><a href=#>Amici</a><li><a href=#>Associati</a><li><a href=#>+</a></ol>
+	<ul class="center FlyOut DropDown" style="display:none;">
+	 <li><a href=#> Ordina </a>
+	  <ul class="bubble bachecaul">
+		  <li><table><thead><tr>
+        <th>Per nome<a class=freccia> </a>
+        <th>Per data<a class=freccia> </a>
+        <th>visti<a class=freccia> </a>
+        <th>Voti<a class=freccia> </a>
+      </table>
+		</ul>		
+	</ul>
+	<tbody>
+<tr>
+	<td><img class=fotoCont width=60 height=60 src=foto.jpg>
+	<td class=nick>Mario Rossi
+	<td class=location>Camayork
+<tr>
+	<td><img class=fotoCont width=60 height=60 src=foto.jpg>
+	<td class=nick>Mario Verdi
+	<td class=location>Camayork	
+<tr>
+	<td><img class=fotoCont width=60 height=60 src=foto.jpg>
+	<td class=nick>Mario Bianchi
+	<td class=location>Camayork	
+<tr>
+	<td><img class=fotoCont width=60 height=60 src=foto.jpg>
+	<td class=nick>Mario Bianchi
+	<td class=location>Camayork	
+<tr>
+	<td><img class=fotoCont width=60 height=60 src=foto.jpg>
+	<td class=nick>Mario Bianchi
+	<td class=location>Camayork
+</table></ul> 
 	<li><a href="#"> <img alt="" class=bottone src="Bottoni/mess1stat.png" onmouseover="src='Bottoni/mess1mouse.png'" onmousedown="src='Bottoni/mess1stat.png'" onmouseout="src='Bottoni/mess1stat.png'">  </a>
   <ul class=scheda id=messaggi> <li>21212121212122121</ul> 
 	<li><a href="#"> <img alt="" class=bottone src="Bottoni/evento1stat.png" onmouseover="src='Bottoni/evento1mouse.png'" onmousedown="src='Bottoni/evento1stat.png'" onmouseout="src='Bottoni/evento1stat.png'">  </a>
