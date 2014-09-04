@@ -1,18 +1,17 @@
- <script type="text/javascript">
+<?php 
+if (session_status() == PHP_SESSION_NONE) session_start(); 
+
+
+
+
+?>
+
+<script type="text/javascript">
       (function() {
        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-       po.src = 'https://apis.google.com/js/client:plusone.js';
+       po.src = 'https://apis.google.com/js/client:plusone.js?onload=render';
        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
      })();
-    </script>
-<script type="text/javascript">
- (function() {
-   var po = document.createElement('script');
-   po.type = 'text/javascript'; po.async = true;
-   po.src = 'https://apis.google.com/js/client:plusone.js?onload=render';
-   var s = document.getElementsByTagName('script')[0];
-   s.parentNode.insertBefore(po, s);
- })();
 
    /* Executed when the APIs finish loading */
  function render() {
