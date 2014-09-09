@@ -35,7 +35,7 @@ $(document).ready(function() {
       status     : true,
       cookie     : true,
       xfbml      : true,
-      version    : ‘v2.0′
+      version    : ‘v2.1′
     });
  
     FB.getLoginStatus(statusChangeCallback);
