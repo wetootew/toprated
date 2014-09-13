@@ -44,17 +44,17 @@ border-bottom: #535354 solid 5px;
 .registered a { text-decoration:none; }
 .unregistered { display:none !important;}
 
-.comandi{ margin-top: 20px;  text-align:center; width:100%;}
 .comandi a { text-decoration: none;}
 .comandi a:hover {cursor:pointer}
-
+.comandi * { vertical-align: middle;}
+ 
 .rigadimensione {height:2px;}
 
 #topbar .registered .DropDown>li>ul {
  left:0;
  width:calc(96% - 480px); 
- min-width:640px;
- margin-left:calc(2% + 235px);
+ overflow: auto;
+ margin-left:calc(2% + 240px);
  margin-top:55px;
  position:fixed;
  height:calc(100% - 200px);
@@ -97,7 +97,7 @@ left: 13px;
 }
 
 .scheda ol  {list-style-type: none; margin:8px; width:180px; white-space: normal;}
-
+.scheda>li{min-width:640px;}
 #descrProf { padding-top: 10px; font-variant:small-caps;}
 #dati { float:left;}
 #log { float:right;}
@@ -113,10 +113,7 @@ left: 13px;
 #profilo  .center { width:calc(100% - 450px); min-width: 200px;}
 #profilo>li{ height:100%;}
 
-#log li {
- text-align:left;
- font: bold 11px georgia;
-}
+#log li {text-align:left; font: bold 11px georgia;}
 
 progress { color: #005826; } /* IE10 */
 progress::-moz-progress-bar { background: #005826; } /* Firefox */
@@ -138,30 +135,44 @@ progress {
 	text-shadow: 0 0 0.083em #997f64;
 }
 
-#contatti ol {width:100%; text-align:left; }
-#contatti ol>li {display:inline-block; margin:10px;}
-#contatti a { 
- color:#005826;
- text-shadow: 0 0 0.09em #005826;
- text-decoration: none;
- }
-#contatti a:hover {cursor:pointer}
 
+#contatti ol {width:calc(100% - 10px); text-align:left; }
+#contatti ol>li {display:inline-block; margin:10px;}
+#contatti li:hover {cursor:pointer}
+
+#contatti table {width:100%;}
+#contatti table caption {overflow:auto;}
 #contatti tr {display:inline-block; }
+#contatti td img {margin: 2px;}
 #contatti {white-space: normal;}
 #contatti tbody tr{
- width: 180px;
+ width: 200px;
  height: 75px;
  margin: calc(1% + 3px) calc(1% + 3px) calc(1% + 3px) calc(1% + 3px); 
  border: 5px solid; 
  border-radius: 8px;
  } 
+
+#contatti td[class] { width:126px; text-align:center;}
 #contatti th, td {float:left;}
 #contatti .nick {  font: bold 12px georgia;}
 #contatti .location {  font: bold 10px georgia;}
 
+#contatti .comandi ul { margin:3px;}
+#contatti .comandi li {
+ margin: 10px;
+ font: bold 18px georgia;
+ color:#005826;
+ text-shadow: 0 0 0.09em #005826;
+ }
+ #contatti .comandi li:hover {
+ color:#997f64;
+ text-shadow: 0 0 0.3em #997f64; 
+}
 
-
+#contatti .associazioni {
+ color:#997f64;
+}
 
 
 
@@ -172,6 +183,8 @@ progress {
  min-height:calc(100% - 105px);
  text-align:center;
 }
+
+#page .comandi{ margin-top: 20px;  text-align:center; width:100%;}
 
 #sponsor { left:0; margin-left:2%;}
 #board { right:0; margin-right:2%;}
@@ -217,7 +230,7 @@ h1 {
 #bacheca * { text-shadow: 0 0 0.083em #997f64;}
 #bacheca .comandi ul { margin:3px;}
 #bacheca .comandi a { margin: 10px; font: bold 18px georgia; color:#997f64;}
-#bacheca .comandi a:hover, #bacheca .comandi a.click {
+#bacheca .comandi a:hover, #bacheca .comandi li.click>a {
  color:#005826;
  text-shadow: 0 0 0.3em #005826; 
 }
@@ -225,14 +238,11 @@ h1 {
 #board .comandi { margin-top:23px;}
 #board .comandi ul { margin:1px;}
 #board .comandi a { font: bold 12px georgia; margin: 10px; color:#fae2c9;}
-#board .comandi a:hover, #board .comandi a.click {
+#board .comandi a:hover, #board .comandi li.click>a {
  color:#997f64;
  text-shadow: 0 0 0.3em #997f64;
  }
 
-.comandi * { vertical-align: middle;}
-.comandi img { width:85%;}
- 
 .center p {  margin-bottom:2px; }
 .center { 
  margin-left:auto;
