@@ -38,6 +38,39 @@ jQuery(function($) {
      for (i = 0; i < l; i++) b.appendChild(a[i].o);
      sortabledir*=-1;
   })});		
+	
+	$("#contatti .comandi li:not(:first-child):not(:last-child)").click(function(e) {
+	  e.stopPropagation();
+		$("#contatti tbody tr").hide();		
+		$("#contatti tbody ." + this.innerHTML.toLowerCase()).show();
+  });
+		
+	$("#contatti .comandi li:first-child").click(function(e) {
+	  e.stopPropagation();
+		$("#contatti tbody tr").show();
+  });
+	
+	$("#contatti .comandi li:not(:first-child):not(:last-child)").dblclick(function(e) {
+	  e.stopPropagation();
+		$(this).attr('contenteditable','true');
+  });
+	
+	$("#contatti .comandi li:not(:first-child):not(:last-child)").keypress(function(e) {
+	  e.stopPropagation();
+			if(e.keyCode==13) {
+		   $(this).attr('contenteditable','false');
+			 e.preventDefault();
+			 $(this).blur();
+			}
+  });
+	
+	$("#contatti .comandi li:last-child").click(function(e) {
+	  e.stopPropagation();
+		var newgroup = $(this).prev().clone(true);
+		newgroup.html('nome gruppo');
+		newgroup.attr('contenteditable','true');
+		newgroup.insertBefore($(this));
+  });
 		
 		
 	/*$( ".slider-range" ).after(document.createElement('div').slider({
@@ -57,7 +90,7 @@ jQuery(function($) {
  <div class="registered center">
  <ul class="FlyOut DropDown">
   <li><a href="#"> <img alt="" class=bottone src="Bottoni/prof1stat.png" onmouseover="src='Bottoni/prof1mouse.png'" onmousedown="src='Bottoni/prof1stat.png'" onmouseout="src='Bottoni/prof1stat.png'">  </a>
-	<ul class=scheda id=profilo>
+	 <ul class=scheda id=profilo>
 		<li><ol id=dati contenteditable="true">
 	   <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
 	   <li> Mario Rossi
@@ -91,40 +124,30 @@ jQuery(function($) {
 				<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
 		 </ol>
 	</ul> 
+	
   <li><a href="#"> <img alt="" class=bottone src="Bottoni/contatti1stat.png" onmouseover="src='Bottoni/contatti1mouse.png'" onmousedown="src='Bottoni/contatti1stat.png'" onmouseout="src='Bottoni/contatti1stat.png'">  </a>
-  <ul class=scheda id=contatti> 
-	<li> <table class=sortable>
-  <caption>
-	<ol><li><a href=#>Tutti</a><li><a href=#>Amici</a><li><a href=#>Associati</a><li><a href=#>+</a></ol>
-	<ul class="center FlyOut DropDown" style="display:none;">
-	 <li><a href=#> Ordina </a>
-	  <ul class="bubble bachecaul">
-		  <li><table><thead><tr>
-        <th>Per nome<a class=freccia> </a>
-        <th>Per data<a class=freccia> </a>
-        <th>visti<a class=freccia> </a>
-        <th>Voti<a class=freccia> </a>
-      </table>
-		</ul>		
-	</ul>
-	<tbody>
-<tr>
+   <ul class=scheda id=contatti> 
+		<li> <table class=sortable>
+		 <caption>
+			<ol class=comandi><li>Tutti<li>Amici<li>Associazioni<li>+</ol>
+		 <tbody>
+<tr class="amici ass2">
 	<td><img class=fotoCont width=60 height=60 src=foto.jpg>
 	<td class=nick>Mario Rossi
 	<td class=location>Camayork
-<tr>
+<tr class=amici>
 	<td><img class=fotoCont width=60 height=60 src=foto.jpg>
 	<td class=nick>Mario Verdi
 	<td class=location>Camayork	
-<tr>
+<tr class="amici ass1">
 	<td><img class=fotoCont width=60 height=60 src=foto.jpg>
 	<td class=nick>Mario Bianchi
 	<td class=location>Camayork	
-<tr>
+<tr class=associazioni>
 	<td><img class=fotoCont width=60 height=60 src=foto.jpg>
-	<td class=nick>Mario Bianchi
+	<td class=nick>Ass. Mario Bianchi
 	<td class=location>Camayork	
-<tr>
+<tr class="amici ass2">
 	<td><img class=fotoCont width=60 height=60 src=foto.jpg>
 	<td class=nick>Mario Bianchi
 	<td class=location>Camayork
@@ -164,10 +187,10 @@ jQuery(function($) {
 		 <li><a href=#> Ordina </a>
 			<ul class="bubble bachecaul">
 				<li><table><thead><tr>
-					<th>Per nome<a class=freccia> </a>
-					<th>Per data<a class=freccia> </a>
-					<th>visti<a class=freccia> </a>
-					<th>Voti<a class=freccia> </a>
+					<th><a href=#>Per nome</a><a class=freccia> </a>
+					<th><a href=#>Per data</a><a class=freccia> </a>
+					<th><a href=#>Visite</a><a class=freccia> </a>
+					<th><a href=#>Voti</a><a class=freccia> </a>
 				</table>
 			</ul>
 			
