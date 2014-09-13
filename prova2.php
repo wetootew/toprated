@@ -27,7 +27,8 @@ try {
 }
 if ($session) {
   echo 'logged in';
-}
+} else
+  echo 'not logged in';
 ?>
 <?php echo $appId; ?>
 <!DOCTYPE html> 
