@@ -36,33 +36,20 @@ if ($session) {
 
 <div id="fb-root"></div>
  <script>
-     window.fbAsyncInit = function() {
+  window.fbAsyncInit = function() {
+   FB.init({appId:<?php echo $appId; ?>, status:false, cookie:true, xfbml:true, oauth:true});
+  };
 
-     // Initialize Facebook Connect
-    FB.init({
-       appId  : <?php echo $appId; ?>,
-       status : false, // Check login status
-       cookie : true, // Enable cookies to allow the server to access the session
-       xfbml  : true,  // Parse XFBML
-       oauth  : true
-    });
+ (function() {
+  var e = document.createElement('script'); e.async = true;
+  e.src = '//connect.facebook.net/en_US/all.js';
+  document.getElementById('fb-root').appendChild(e);
+ }());
 
-     };
-
-
-   (function() {
-   var e = document.createElement('script'); e.async = true;
-    e.src = '//connect.facebook.net/en_US/all.js#xfbml=1';
-    document.getElementById('fb-root').appendChild(e);
-   }());
-
-
-  function fbLoginCheck(response){
-     if(response.status != 'unknown'){
-       //reload or redirect once logged in...
-       window.location.reload();
-    }
-   }
+ function fbLoginCheck(response){
+  if(response.status != 'unknown') //reload or redirect once logged in...
+   window.location.reload();
+ }
  </script>
 
    <a class="fb_button fb_button_medium"  
