@@ -21,9 +21,9 @@ $helper = new FacebookRedirectLoginHelper($appId);
 try {
   $session = $helper->getSessionFromRedirect();
 } catch(FacebookRequestException $ex) {
-  // When Facebook returns an error
+  echo 'fbex: ' . $e->getCode().' '. $e->getMessage();
 } catch(\Exception $ex) {
-  // When validation fails or other local issues
+  echo 'ex: ' . $e->getCode().' '. $e->getMessage();
 }
 if ($session) {
   echo 'logged in';
