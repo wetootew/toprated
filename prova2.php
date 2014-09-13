@@ -13,102 +13,62 @@ use Facebook\FacebookSDKException;
 use Facebook\FacebookRequestException;
 use Facebook\FacebookAuthorizationException;
 use Facebook\GraphObject;
- 
-FacebookSession::setDefaultApplication('1439231382984557','0a6b44656cebac45c3c6f4fd62aabbca');
-?>
-<html>
-<head>
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script>
-$(document).ready(function() {
-  var FBobject = {
-    loaded: false,
-    id: "",
-    email: "",
-    name: ""
-  };
- 
-  $.ajaxSetup({ cache: true });
-  $.getScript(‘/connect.facebook.net/en_US/sdk.js’, function(){
-    FB.init({
-      appId      : ‘1439231382984557‘,
-      status     : true,
-      cookie     : true,
-      xfbml      : true,
-      version    : ‘v2.1′
-    });
- 
-    FB.getLoginStatus(statusChangeCallback);
-    FB.Event.subscribe(‘auth.login’, statusChangeCallback);
-  });
- 
-  function statusChangeCallback(response) {
-  alert('asd');
-    if (response.status === ‘connected’) {
-      userLogin();
-    } else if (response.status === ‘not_authorized’) {
-      console.log(‘Please log into this app.’);
-    } else {
-      console.log(‘Please log into Facebook.’);
-   }
-  }
- 
-  function userLogin() {
-    console.log(‘Welcome!Fetching your information…. ‘);
-    FB.api(‘/me’, function(response) {
-      FBobject.loaded = true;
-      FBobject.id = response.id;
-      FBobject.email = response.email;
-      FBobject.name = response.name;
-      console.log(FBobject);
-    });
-  }
- 
-  $("#fb_login").bind("click", function (e) {
-    e.preventDefault();
-  alert('assadd');
-    if(FBobject.loaded==false){
-      FB.login(function(response) {
-        if (response.authResponse) {
-        }else{
-          alert("login");
-        }
-      }, {scope: ‘email,publish_actions’});
-    }else{
-      alert("no login");
-    }
-  });
-});
-</script>
-</head>
-<body>
-<div id="fb-root"></div>
-<?php
-$helper = new FacebookJavaScriptLoginHelper();
+ $appId = '1439231382984557';
+FacebookSession::setDefaultApplication($appId,'0a6b44656cebac45c3c6f4fd62aabbca');
+
+
+$helper = new FacebookRedirectLoginHelper();
 try {
-  $session = $helper->getSession();
-} catch( FacebookRequestException $ex ) {
-  echo 'fbex';
-} catch( Exception $ex ) {
-  echo 'ex';
+  $session = $helper->getSessionFromRedirect();
+} catch(FacebookRequestException $ex) {
+  // When Facebook returns an error
+} catch(\Exception $ex) {
+  // When validation fails or other local issues
 }
- 
-// see if we have a session
-if ( isset( $session ) ) {
-  //$request = new FacebookRequest( $session, ‘GET’, ‘/me’ );
-  //$response = $request->execute();
-  //$graphObject = $response->getGraphObject();
-  //echo $graphObject->getProperty(‘id’). ‘<br/>’;
-  //echo $graphObject->getProperty(‘name’). ‘<br/>’;
-  //echo $graphObject->getProperty(‘email’). ‘<br/>’;
+if ($session) {
   echo 'logged in';
-}else echo '<button id="fb_login">Fb Login</button>';
-
+}
 ?>
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-<div class="fb-login-button" onlogin="checkLoginState()" scope="public_profile,email" data-max-rows="1" data-size="icon" data-show-faces="false" data-auto-logout-link="true"></div>
+<?php echo $appId; ?>
+<!DOCTYPE html> 
+<title>Boh</title>
 
 
-</body>
-</html>
+<div id="fb-root"></div>
+ <script>
+     window.fbAsyncInit = function() {
+
+     // Initialize Facebook Connect
+    FB.init({
+       appId  : <?php echo $appId; ?>,
+       status : false, // Check login status
+       cookie : true, // Enable cookies to allow the server to access the session
+       xfbml  : true,  // Parse XFBML
+       oauth  : true
+    });
+
+     };
+
+   // Get Facebook Connect JS and append it to the DOM
+   (function() {
+   var e = document.createElement('script'); 
+    e.async = true;
+    e.src = document.location.protocol+'//connect.facebook.net/en_US/all.js#xfbml=1';
+    document.getElementById('fb-root').appendChild(e);
+   }());
+
+  function fbLoginCheck(response){
+     if(response.status != 'unknown'){
+       //reload or redirect once logged in...
+       window.location.reload();
+    }
+   }
+ </script>
+
+   <a class="fb_button fb_button_medium"  
+    onclick='FB.login(fbLoginCheck,{ scope: "user_about_me,user_location,user_birthday,email,publish_stream"})'>
+   <span class="fb_button_text">Join with Facebook</span></a>
+
+
+
+
