@@ -17,7 +17,7 @@ use Facebook\GraphObject;
 FacebookSession::setDefaultApplication($appId,'0a6b44656cebac45c3c6f4fd62aabbca');
 
 
-$helper = new FacebookRedirectLoginHelper();
+$helper = new FacebookRedirectLoginHelper($appId);
 try {
   $session = $helper->getSessionFromRedirect();
 } catch(FacebookRequestException $ex) {
