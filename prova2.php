@@ -19,9 +19,9 @@ FacebookSession::setDefaultApplication($appId,'0a6b44656cebac45c3c6f4fd62aabbca'
 $helper = new FacebookJavaScriptLoginHelper();
 try {
     $session = $helper->getSession();
-} catch(FacebookRequestException $ex) {
+} catch(FacebookRequestException $e) {
   echo 'fbex: ' . $e->getCode().' '. $e->getMessage();
-} catch(\Exception $ex) {
+} catch(\Exception $e) {
   echo 'ex: ' . $e->getCode().' '. $e->getMessage();
 }
 if ($session) {
