@@ -49,16 +49,12 @@ if ($session) {
 
      };
 
-   // Get Facebook Connect JS and append it to the DOM
 
-  // Load the SDK asynchronously
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
+   (function() {
+   var e = document.createElement('script'); e.async = true;
+    e.src = '//connect.facebook.net/en_US/all.js#xfbml=1';
+    document.getElementById('fb-root').appendChild(e);
+   }());
 
 
   function fbLoginCheck(response){
