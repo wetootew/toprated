@@ -47,6 +47,7 @@ if ($session) {
  }());
 
  function fbLoginCheck(response){
+ alert('asd');
   if(response.status != 'unknown') //reload or redirect once logged in...
    window.location.reload();
  }
