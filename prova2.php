@@ -56,6 +56,8 @@ if ($session) {
     onclick='FB.login(fbLoginCheck,{ scope: "user_about_me,user_location,user_birthday,email,publish_stream"})'>
    <span class="fb_button_text">Join with Facebook</span></a>
 
+<div class="fb-login-button" onlogin="fbLoginCheck()" scope="public_profile,user_location,email" data-max-rows="1" data-size="icon" data-show-faces="true" data-auto-logout-link="true"></div>
+
 
 
 
