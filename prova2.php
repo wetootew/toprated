@@ -53,7 +53,7 @@ if ($session) {
  }
  </script>
 
-   <a class="fb_button fb_button_medium"  
+   <a class="fb-login-button" data-size="icon"
     onclick='FB.login(fbLoginCheck,{ scope: "user_about_me,user_location,user_birthday,email,publish_stream"})'>
    <span class="fb_button_text">Join with Facebook</span></a>
 
