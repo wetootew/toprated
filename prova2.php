@@ -51,13 +51,19 @@ if ($session) {
   if(response.status != 'unknown') //reload or redirect once logged in...
    window.location.reload();
  }
+ 
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      fbLoginCheck(response);
+    });
+  }
  </script>
 
    <a class="fb-login-button" data-size="icon"
-    onclick='FB.login(fbLoginCheck,{ scope: "user_about_me,user_location,user_birthday,email,publish_stream"})'>
+    onclick='FB.login(fbLoginCheck,{ scope: "user_about_me,user_location,user_birthday,email"})'>
    <span class="fb_button_text">Join with Facebook</span></a>
 
-<div class="fb-login-button" onlogin="fbLoginCheck()" scope="public_profile,user_location,email" data-max-rows="1" data-size="icon" data-show-faces="true" data-auto-logout-link="true"></div>
+<div class="fb-login-button" onlogin="checkLoginState()" scope="public_profile,user_location,email" data-max-rows="1" data-size="icon" data-show-faces="true" data-auto-logout-link="true"></div>
 
 
 
