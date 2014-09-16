@@ -24,9 +24,9 @@ try {
 } catch(\Exception $e) {
   echo 'ex: ' . $e->getCode().' '. $e->getMessage();
 }
-if ($session) {
+if ($session)
   echo 'logged in';
-} else
+else
   echo 'not logged in';
 ?>
 <?php echo $appId; ?>
@@ -37,7 +37,7 @@ if ($session) {
 <div id="fb-root"></div>
  <script>
   window.fbAsyncInit = function() {
-   FB.init({appId:<?php echo $appId; ?>, status:false, cookie:true, xfbml:true, oauth:true});
+   FB.init({appId:<?php echo $appId; ?>, status:true, cookie:true, xfbml:true, oauth:true});
   };
 
  (function() {
@@ -53,9 +53,7 @@ if ($session) {
  }
  
   function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      fbLoginCheck(response);
-    });
+    FB.getLoginStatus(function(response) { fbLoginCheck(response); });
   }
  </script>
 
