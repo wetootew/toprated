@@ -13,6 +13,7 @@ use Facebook\FacebookSDKException;
 use Facebook\FacebookRequestException;
 use Facebook\FacebookAuthorizationException;
 use Facebook\GraphObject;
+use Facebook\GraphUser;
  $appId = '1439231382984557';
 FacebookSession::setDefaultApplication($appId,'0a6b44656cebac45c3c6f4fd62aabbca');
 
@@ -31,8 +32,9 @@ if ($session){
 
     echo "Name: " . $user_profile->getName();
     echo "city: " . $user_profile->getCity();
-    echo "city: " . $user_profile->getEmail();
+    echo "email: " . $user_profile['email'];
   echo '<pre>' . print_r( $user_profile, 1 ) . '</pre>';
+  
 }
 else
   echo 'not logged in';
