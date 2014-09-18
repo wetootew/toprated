@@ -31,7 +31,6 @@ if ($session){
     ))->execute()->getGraphObject(GraphUser::className());
 
     echo "Name: " . $user_profile->getName();
-    echo "city: " . $user_profile->getCity();
     echo "email: " . $user_profile['email'];
   echo '<pre>' . print_r( $user_profile, 1 ) . '</pre>';
   
