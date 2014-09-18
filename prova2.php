@@ -32,7 +32,7 @@ if ($session){
     echo "Name: " . $user_profile->getName();
     echo "city: " . $user_profile->getCity();
     echo "city: " . $user_profile->getEmail();
-  echo '<pre>' . print_r( $graphObject, 1 ) . '</pre>';
+  echo '<pre>' . print_r( $user_profile, 1 ) . '</pre>';
 }
 else
   echo 'not logged in';
