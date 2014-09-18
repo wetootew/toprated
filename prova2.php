@@ -24,8 +24,16 @@ try {
 } catch(\Exception $e) {
   echo 'ex: ' . $e->getCode().' '. $e->getMessage();
 }
-if ($session)
-  echo 'logged in';
+if ($session){
+ 
+    $user_profile = (new FacebookRequest($session, 'GET', '/me'
+    ))->execute()->getGraphObject(GraphUser::className());
+
+    echo "Name: " . $user_profile->getName();
+    echo "city: " . $user_profile->getCity();
+    echo "city: " . $user_profile->getEmail();
+  echo '<pre>' . print_r( $graphObject, 1 ) . '</pre>';
+}
 else
   echo 'not logged in';
 ?>
@@ -47,7 +55,6 @@ else
  }());
 
  function fbLoginCheck(response){
- alert('asd');
   if(response.status != 'unknown') //reload or redirect once logged in...
    window.location.reload();
  }
@@ -57,9 +64,6 @@ else
   }
  </script>
 
-   <a class="fb-login-button" data-size="icon"
-    onclick='FB.login(fbLoginCheck,{ scope: "user_about_me,user_location,user_birthday,email"})'>
-   <span class="fb_button_text">Join with Facebook</span></a>
 
 <div class="fb-login-button" onlogin="checkLoginState()" scope="public_profile,user_about_me,user_location,email" data-size="icon"></div>
 
