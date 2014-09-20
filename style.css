@@ -22,7 +22,7 @@ html, body { background-color:#fae2c9;}
  width:100%;
  min-width:920px;
 z-index: 1;
-border-bottom: #535354 solid 5px;
+border-bottom: #754814 solid 5px;
 }
 
 #logo {float:left; position:absolute; left:2%;}
@@ -64,7 +64,7 @@ background: #fae2c9;
 -webkit-border-radius: 15px;
 -moz-border-radius: 15px;
 border-radius: 15px;
-border: #535354 solid 5px;
+border: #754814 solid 5px;
 z-index: 1;
 }
 
@@ -88,7 +88,7 @@ content: '';
 position: absolute;
 border-style: solid;
 border-width: 0 24px 66px;
-border-color: #535354 transparent;
+border-color: #754814 transparent;
 display: block;
 width: 0;
 z-index: 0;
@@ -170,11 +170,8 @@ progress {
  text-shadow: 0 0 0.3em #997f64; 
 }
 
-#contatti .associazioni {
- color:#997f64;
-}
-
-
+#contatti .associazioni {color:#997f64;}
+#contatti .comandi li[contenteditable=true] {border:2px dashed;padding:6px;}
 
 #page {
  right:0; left:0;
