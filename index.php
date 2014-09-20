@@ -40,9 +40,7 @@ jQuery(function($) {
   })});		
 	
 	$("#contatti .comandi li:not(:first-child):not(:last-child)").click(function(e) {
-	  e.stopPropagation();
-		$("#contatti tbody tr").hide();		
-		$("#contatti tbody ." + this.innerHTML.toLowerCase()).show();
+		gruppoFiltra(this);
   });
 		
 	$("#contatti .comandi li:first-child").click(function(e) {
@@ -50,25 +48,22 @@ jQuery(function($) {
 		$("#contatti tbody tr").show();
   });
 	
-	$("#contatti .comandi li:not(:first-child):not(:last-child)").dblclick(function(e) {
-	  e.stopPropagation();
-		$(this).attr('contenteditable','true');
-  });
+	function gruppoFiltra(g) {
+		$("#contatti tbody tr").hide();		
+		$("#contatti tbody ." + g.innerHTML.toLowerCase()).show();
+  }
 	
-	$("#contatti .comandi li:not(:first-child):not(:last-child)").keypress(function(e) {
-	  e.stopPropagation();
-			if(e.keyCode==13) {
-		   $(this).attr('contenteditable','false');
-			 e.preventDefault();
-			 $(this).blur();
-			}
-  });
+	function gruppoEditabile(g) {
+	  g.keypress(function(e){if(e.keyCode==13) g.blur()});
+		g.blur(function(e){g.attr('contenteditable','false')});
+		g.dblclick(function(e) { g.attr('contenteditable','true');g.focus();})
+		g.click(function(e) {gruppoFiltra(this)});
+	}
 	
+	$("#contatti .comandi .gruppo").each(function(){gruppoEditabile($(this))})
 	$("#contatti .comandi li:last-child").click(function(e) {
-	  e.stopPropagation();
-		var newgroup = $(this).prev().clone(true);
-		newgroup.html('nome gruppo');
-		newgroup.attr('contenteditable','true');
+		var newgroup = $('<li class=gruppo contenteditable=true>nome gruppo</li>');
+		gruppoEditabile(newgroup);
 		newgroup.insertBefore($(this));
   });
 		
@@ -129,7 +124,7 @@ jQuery(function($) {
    <ul class=scheda id=contatti> 
 		<li> <table class=sortable>
 		 <caption>
-			<ol class=comandi><li>Tutti<li>Amici<li>Associazioni<li>+</ol>
+			<ol class=comandi><li>Tutti<li>Amici<li>Associazioni<li class=gruppo>Associazioni<li>+</ol>
 		 <tbody>
 <tr class="amici ass2">
 	<td><img class=fotoCont width=60 height=60 src=foto.jpg>
