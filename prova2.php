@@ -1,5 +1,4 @@
 <?php 
-require_once __DIR__ . '/vendor/autoload.php';
 use Facebook\FacebookSession;
 use Facebook\FacebookRedirectLoginHelper;
 use Facebook\FacebookJavaScriptLoginHelper;
@@ -11,8 +10,9 @@ use Facebook\FacebookAuthorizationException;
 use Facebook\GraphObject;
 use Facebook\GraphUser;
 $appId = '1439231382984557';
-if ( session_status() == PHP_SESSION_NONE ) //{
-    session_start();
+if ( session_status() == PHP_SESSION_NONE ) {
+ session_start();
+ require_once __DIR__ . '/vendor/autoload.php';
  error_reporting(E_ALL);
  ini_set('display_errors', 1);
  FacebookSession::setDefaultApplication($appId,'0a6b44656cebac45c3c6f4fd62aabbca');
@@ -28,7 +28,7 @@ if ( session_status() == PHP_SESSION_NONE ) //{
    //echo '<pre>' . print_r( $user_profile, 1 ) . '</pre>';
    
  }
-//}
+}
 ?>
 <!DOCTYPE html> 
 <title>Boh</title>
