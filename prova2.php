@@ -46,7 +46,9 @@ if ( session_status() == PHP_SESSION_NONE ) {
 
  function fbLoginCheck(response){
   if(response.status != 'unknown')
-   window.location.reload();
+   ajax(<?php echo __FILE__ ; ?>).done(function(data){alert(data)})
+   alert(<?php echo __FILE__; ?>)
+   //window.location.reload();
  }
  
   function checkLoginState() { FB.getLoginStatus(function(response) { fbLoginCheck(response); }); }
