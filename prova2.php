@@ -2,7 +2,6 @@
 $appId = '1439231382984557';
 if ( session_status() == PHP_SESSION_NONE ) {
     session_start();
-}
  error_reporting(E_ALL);
  ini_set('display_errors', 1);
  require_once __DIR__ . '/vendor/autoload.php';
@@ -29,7 +28,7 @@ if ( session_status() == PHP_SESSION_NONE ) {
    //echo '<pre>' . print_r( $user_profile, 1 ) . '</pre>';
    
  }
-//}
+}
 ?>
 <!DOCTYPE html> 
 <title>Boh</title>
