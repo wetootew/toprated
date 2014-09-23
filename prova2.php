@@ -1,52 +1,41 @@
-<?php 
-session_start(); 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-require_once __DIR__ . '/vendor/autoload.php';
-
-use Facebook\FacebookSession;
-use Facebook\FacebookRedirectLoginHelper;
-use Facebook\FacebookJavaScriptLoginHelper;
-use Facebook\FacebookRequest;
-use Facebook\FacebookResponse;
-use Facebook\FacebookSDKException;
-use Facebook\FacebookRequestException;
-use Facebook\FacebookAuthorizationException;
-use Facebook\GraphObject;
-use Facebook\GraphUser;
- $appId = '1439231382984557';
-FacebookSession::setDefaultApplication($appId,'0a6b44656cebac45c3c6f4fd62aabbca');
-
-$helper = new FacebookJavaScriptLoginHelper();
-try {
-    $session = $helper->getSession();
-} catch(FacebookRequestException $e) {
-  echo 'fbex: ' . $e->getCode().' '. $e->getMessage();
-} catch(\Exception $e) {
-  echo 'ex: ' . $e->getCode().' '. $e->getMessage();
-}
-if ($session){
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+ session_start(); 
+ error_reporting(E_ALL);
+ ini_set('display_errors', 1);
+ require_once __DIR__ . '/vendor/autoload.php';
+ use Facebook\FacebookSession;
+ use Facebook\FacebookJavaScriptLoginHelper;
+ use Facebook\FacebookRequest;
+ use Facebook\FacebookResponse;
+ use Facebook\FacebookSDKException;
+ use Facebook\FacebookRequestException;
+ use Facebook\FacebookAuthorizationException;
+ use Facebook\GraphObject;
+ use Facebook\GraphUser;
+  $appId = '1439231382984557';
+ FacebookSession::setDefaultApplication($appId,'0a6b44656cebac45c3c6f4fd62aabbca');
  
-    $user_profile = (new FacebookRequest($session, 'GET', '/me'
-    ))->execute()->getGraphObject(GraphUser::className());
-
-    echo "Name: " . $user_profile->getName();
-    echo "email: " . $user_profile->getProperty('email');
-  echo '<pre>' . print_r( $user_profile, 1 ) . '</pre>';
-  
+ $helper = new FacebookJavaScriptLoginHelper();
+ try { $session = $helper->getSession(); }
+ catch(\Exception $e) { die 'ex: ' . $e->getCode().' '. $e->getMessage();} 
+ if (isset($session) && $session) {
+     $user_profile = (new FacebookRequest($session, 'GET', '/me'
+     ))->execute()->getGraphObject(GraphUser::className());
+ 
+     echo "Name: " . $user_profile->getName();
+     echo "<br>email: " . $user_profile->getProperty('email');
+   echo '<pre>' . print_r( $user_profile, 1 ) . '</pre>';
+   die;
+ }
 }
-else
-  echo 'not logged in';
 ?>
-<?php echo $appId; ?>
 <!DOCTYPE html> 
 <title>Boh</title>
-
-
 <div id="fb-root"></div>
  <script>
   window.fbAsyncInit = function() {
-   FB.init({appId:<?php echo $appId; ?>, status:true, cookie:true, xfbml:true, oauth:true});
+   FB.init({appId:<?php echo $appId; ?>, status:true,cookie:true,xfbml:true,oauth:true});
   };
 
  (function() {
@@ -57,7 +46,9 @@ else
 
  function fbLoginCheck(response){
   if(response.status != 'unknown') //reload or redirect once logged in...
-   window.location.reload();
+   ajax(<?php echo __FILE__ ; ?>).done(function(data){alert(data)})
+   alert(<?php echo __FILE__; ?>)
+   //window.location.reload();
  }
  
   function checkLoginState() {
