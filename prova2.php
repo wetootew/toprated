@@ -1,24 +1,4 @@
-<?php
-$appId = '1439231382984557';
-if (session_status() == PHP_SESSION_NONE) {
- session_start(); 
- error_reporting(E_ALL);
- ini_set('display_errors', 1);
- require_once __DIR__ . '/vendor/autoload.php';
- use Facebook\FacebookSession;
- use Facebook\FacebookJavaScriptLoginHelper;
- use Facebook\FacebookRequest;
- use Facebook\FacebookResponse;
- use Facebook\FacebookSDKException;
- use Facebook\FacebookRequestException;
- use Facebook\FacebookAuthorizationException;
- use Facebook\GraphObject;
- use Facebook\GraphUser;
- FacebookSession::setDefaultApplication($appId,'0a6b44656cebac45c3c6f4fd62aabbca');
- 
 
-}
-?>
 <!DOCTYPE html> 
 <title>Boh</title>
 <div id="fb-root"></div>
@@ -35,8 +15,8 @@ if (session_status() == PHP_SESSION_NONE) {
 
  function fbLoginCheck(response){
   if(response.status != 'unknown') //reload or redirect once logged in...
-   ajax(<?php echo __FILE__ ; ?>).done(function(data){alert(data)})
-   alert(<?php echo __FILE__; ?>)
+   ajax('<?php echo __FILE__ ; ?>').done(function(data){alert(data)})
+  alert('<?php echo __FILE__; ?>')
    //window.location.reload();
  }
  
