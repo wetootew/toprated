@@ -1,4 +1,5 @@
 <?php
+$appId = '1439231382984557';
 if (session_status() == PHP_SESSION_NONE) {
  session_start(); 
  error_reporting(E_ALL);
@@ -13,7 +14,6 @@ if (session_status() == PHP_SESSION_NONE) {
  use Facebook\FacebookAuthorizationException;
  use Facebook\GraphObject;
  use Facebook\GraphUser;
-  $appId = '1439231382984557';
  FacebookSession::setDefaultApplication($appId,'0a6b44656cebac45c3c6f4fd62aabbca');
  
 
