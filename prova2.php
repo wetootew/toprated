@@ -4,7 +4,7 @@
 <div id="fb-root"></div>
  <script>
   window.fbAsyncInit = function() {
-   FB.init({appId:<?php echo $appId; ?>, status:true,cookie:true,xfbml:true,oauth:true});
+   FB.init({appId:'1439231382984557', status:true,cookie:true,xfbml:true,oauth:true});
   };
 
  (function() {
