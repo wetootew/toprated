@@ -39,18 +39,17 @@ border-bottom: #754814 solid 5px;
 	width:200px;
 }
 
-.bottone { margin:20px 5px 10px; height:50px; width:60px;}
+.bottoni>li>img { margin:20px 5px 10px; height:50px; width:60px;cursor:pointer;}
 
 .registered a { text-decoration:none; }
 .unregistered { display:none !important;}
 
 .comandi a { text-decoration: none;}
-.comandi a:hover {cursor:pointer}
 .comandi * { vertical-align: middle;}
  
 .rigadimensione {height:2px;}
 
-#topbar .registered .DropDown>li>ul {
+#topbar .registered>.DropDown>li>ul {
  left:0;
  width:calc(96% - 480px); 
  overflow: auto;
@@ -68,9 +67,9 @@ border: #754814 solid 5px;
 z-index: 1;
 }
 
-#topbar .registered .DropDown>li:hover { z-index: 2;}
+#topbar .registered>.DropDown>li:hover { z-index: 2;}
 
-#topbar .registered .DropDown>li:hover:after, #topbar .DropDown>li.click:after {
+#topbar .registered>.DropDown>li:hover:after, #topbar .registered>.DropDown>li.click:after {
 content: '';
 position: absolute;
 border-style: solid;
@@ -83,7 +82,7 @@ top: 100%;
 left: 17px;
 }
 
-#topbar  .registered .DropDown>li:hover:before, #topbar .DropDown>li.click:before {
+#topbar  .registered>.DropDown>li:hover:before, #topbar .registered>.DropDown>li.click:before {
 content: '';
 position: absolute;
 border-style: solid;
@@ -137,12 +136,10 @@ progress {
 
 
 #contatti ol {width:calc(100% - 10px); text-align:left; }
-#contatti ol>li {display:inline-block; margin:10px;}
-#contatti li:hover {cursor:pointer}
-
+#contatti ol>li {}
 #contatti table {width:100%;}
 #contatti table caption {overflow:auto;}
-#contatti tr {display:inline-block; }
+#contatti tr {display:inline-block; cursor:pointer;}
 #contatti td img {margin: 2px;}
 #contatti {white-space: normal;}
 #contatti tbody tr{
@@ -153,13 +150,26 @@ progress {
  border-radius: 8px;
  } 
 
+#contatti td:last-child {
+  visibility:hidden;
+  opacity:0;
+  transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+	}
+#contatti tr:hover td:last-child {visibility:visible;
+  opacity:1;
+  transition-delay:0s;
+
+	
+	}
+
 #contatti td[class] { width:126px; text-align:center;}
 #contatti th, td {float:left;}
 #contatti .nick {  font: bold 12px georgia;}
 #contatti .location {  font: bold 10px georgia;}
 
-#contatti .comandi ul { margin:3px;}
-#contatti .comandi li {
+#contatti .comandi>li {
+cursor:pointer;
+ display:inline-block;
  margin: 10px;
  font: bold 18px georgia;
  color:#005826;
@@ -169,6 +179,7 @@ progress {
  color:#997f64;
  text-shadow: 0 0 0.3em #997f64; 
 }
+#contatti .bottoni>li>img {height:20px; width:24px;}
 
 #contatti .associazioni {color:#997f64;}
 #contatti .comandi li[contenteditable=true] {border:2px dashed;padding:6px;}
@@ -207,8 +218,6 @@ h1 {
 #bacheca { 
  color:#997f64; 
  max-width:calc(96% - 400px); 
- margin-left:auto; 
- margin-right:auto; 
  }
 #bacheca tbody {display: inline-block;} 
 #bacheca tbody tr{
@@ -280,6 +289,7 @@ text-align:center;
 .FlyOut li:hover>ul, .FlyOut li.click>ul {position: absolute; display: inline;}
 .DropDown>li, .DropDown>li:hover>ul , .DropDown>li.click>ul {display: block; float: left;}
 .DropDown>li {position:relative;}
+
 
 #bacheca .bubble {top:calc(100% + 22px);}
 
