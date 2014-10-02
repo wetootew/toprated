@@ -22,12 +22,10 @@ if ( session_status() == PHP_SESSION_NONE ) {
  if (isset($session) && $session) {
      $user_profile = (new FacebookRequest($session, 'GET', '/me'
      ))->execute()->getGraphObject(GraphUser::className());
- 
-     //echo "Name: " . $user_profile->getName();
-     echo "email: " . $user_profile->getProperty('email');
-   //echo '<pre>' . print_r( $user_profile, 1 ) . '</pre>';
-   
+     //save to db $user_profile->getProperty('email'); print_r( $user_profile, 1 )
+     die "Name: " . $user_profile->getName();
  }
+ die "error";
 }
 ?>
 <!DOCTYPE html> 
@@ -48,7 +46,7 @@ if ( session_status() == PHP_SESSION_NONE ) {
  function fbLoginCheck(response){
    alert('ajax call <?php echo basename(__FILE__); ?>')
   if(response.status != 'unknown')
-   jQuery.ajax().done(function(data){alert('ajax works');});
+   jQuery.ajax().done(function(data){alert(data);});
    alert('ajax called')
  }
  
