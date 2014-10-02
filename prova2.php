@@ -9,13 +9,12 @@ use Facebook\FacebookRequestException;
 use Facebook\FacebookAuthorizationException;
 use Facebook\GraphObject;
 use Facebook\GraphUser;
-$appId = '1439231382984557';
 if ( session_status() == PHP_SESSION_NONE ) {
  session_start();
  require_once __DIR__ . '/vendor/autoload.php';
- error_reporting(E_ALL);
- ini_set('display_errors', 1);
- FacebookSession::setDefaultApplication($appId,'0a6b44656cebac45c3c6f4fd62aabbca');
+ error_reporting(E_ALL); ini_set('display_errors', 1);
+ 
+ FacebookSession::setDefaultApplication('1439231382984557','0a6b44656cebac45c3c6f4fd62aabbca');
  $helper = new FacebookJavaScriptLoginHelper();
  try { $session = $helper->getSession();}
  catch (Exception $e) { echo 'ex: ' . $e->getCode().' '. $e->getMessage();}
@@ -33,9 +32,7 @@ if ( session_status() == PHP_SESSION_NONE ) {
  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <div id="fb-root"></div>
 <script>
- window.fbAsyncInit = function() {
-  FB.init({appId:<?php echo $appId; ?>, status:1, cookie:1, xfbml:1, oauth:1});
- };
+ window.fbAsyncInit = function(){FB.init({appId:'1439231382984557', status:1, cookie:1, xfbml:1, oauth:1})};
 
  (function() {
   var e = document.createElement('script'); e.async = true;
@@ -44,12 +41,10 @@ if ( session_status() == PHP_SESSION_NONE ) {
  }());
 
  function fbLoginCheck(response){
-   alert('ajax call <?php echo basename(__FILE__); ?>')
   if(response.status != 'unknown')
-   jQuery.ajax().done(function(data){alert(data);});
-   alert('ajax called')
+   jQuery.ajax('<?php echo basename(__FILE__); ?>').done(function(data){alert(data);});
  }
  
-  function checkLoginState() { FB.getLoginStatus(function(response) { fbLoginCheck(response); }); }
- </script>
+ function checkLoginState() { FB.getLoginStatus(function(response) { fbLoginCheck(response); }); }
+</script>
 <div class="fb-login-button" onlogin="checkLoginState()" scope="public_profile,user_about_me,user_location,email" data-size="icon"></div>
