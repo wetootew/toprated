@@ -34,7 +34,7 @@ if ( session_status() == PHP_SESSION_NONE ) {
 <div id="fb-root"></div>
 <script>
  window.fbAsyncInit = function() {
-  FB.init({appId:<?php echo $appId; ?>, status:true, cookie:true, xfbml:true, oauth:true});
+  FB.init({appId:<?php echo $appId; ?>, status:1, cookie:1, xfbml:1, oauth:1});
  };
 
  (function() {
