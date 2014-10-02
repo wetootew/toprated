@@ -45,9 +45,9 @@ if ( session_status() == PHP_SESSION_NONE ) {
  }());
 
  function fbLoginCheck(response){
-   alert('ajax call')
+   alert('ajax call <?php echo basename(__FILE__); ?>')
   if(response.status != 'unknown')
-   ajax(<?php echo basename(__FILE__); ?>).done(function(data){alert('ajax works')})
+   ajax('<?php echo basename(__FILE__); ?>').done(function(data){alert('ajax works')})
    alert('ajax called')
  }
  
