@@ -32,6 +32,7 @@ if ( session_status() == PHP_SESSION_NONE ) {
 ?>
 <!DOCTYPE html> 
 <title>Boh</title>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <div id="fb-root"></div>
 <script>
  window.fbAsyncInit = function() {
@@ -47,7 +48,7 @@ if ( session_status() == PHP_SESSION_NONE ) {
  function fbLoginCheck(response){
    alert('ajax call <?php echo basename(__FILE__); ?>')
   if(response.status != 'unknown')
-   jQuery.ajax('<?php echo basename(__FILE__); ?>').done(function(data){alert('ajax works')})
+   jQuery.ajax().done(function(data){alert('ajax works');});
    alert('ajax called')
  }
  
