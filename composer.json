@@ -5,4 +5,9 @@
     "twig/twig": ">=1.8,<2.0-dev",
     "google/apiclient": "1.0.*@beta"
   }
+  "autoload": {
+        "psr-0": {
+            "App" : "src"
+        }
+    }
 }
