@@ -46,7 +46,7 @@ const CLIENT_SECRET = 'Gsm7ehRyQmGEph3haOyUbh24';
 /**
 * Optionally replace this with your application's name.
 */
-const APPLICATION_NAME = "Google+ PHP Quickstart";
+const APPLICATION_NAME = "toprated";
 $client = new Google_Client();
 $client->setApplicationName(APPLICATION_NAME);
 $client->setClientId(CLIENT_ID);
