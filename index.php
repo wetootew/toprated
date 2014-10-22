@@ -81,8 +81,7 @@ jQuery(function($) {
 
 <div id=topbar>
  <img alt="" width=200 height=80 id=logo src="logo.jpg">
- <div class="registered center">
- <ul class="FlyOut DropDown bottoni">
+ <ul class="registered center FlyOut DropDown bottoni">
   <li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
 	 <ul class=scheda id=profilo>
 		<li><ol id=dati contenteditable="true">
@@ -125,70 +124,70 @@ jQuery(function($) {
 		 <caption>
 			<ol class=comandi><li>Tutti<li>Amici<li>Associazioni<li class=gruppo>Associazioni<li>+</ol>
 		 <tbody>
-<tr class="amici ass2">
-	<td><img class=fotoCont width=60 height=60 src=foto.jpg>
-	<td class=nick>Mario Rossi
-	<td class=location>Camayork
-	<td class=asd>
-	 <ol class="FlyOut DropDown bottoni">
-		<li><img alt="" title=profilo name=prof1 src="Bottoni/prof1stat.png">
-	  <li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
-		<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
-		<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
-	</ol>		
-<tr class=amici>
-	<td><img class=fotoCont width=60 height=60 src=foto.jpg>
-	<td class=nick>Mario Verdi
-	<td class=location>Camayork
-	<td class=asd>
-	 <ol class="FlyOut DropDown bottoni">
-		<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
-	  <li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
-		<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
-		<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
-	</ol>			
-<tr class="amici ass1">
-	<td><img class=fotoCont width=60 height=60 src=foto.jpg>
-	<td class=nick>Mario Bianchi
-	<td class=location>Camayork	
-	<td class=asd>
-	 <ol class="FlyOut DropDown bottoni">
-		<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
-	  <li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
-		<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
-		<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
-	</ol>		
-<tr class=associazioni>
-	<td><img class=fotoCont width=60 height=60 src=foto.jpg>
-	<td class=nick>Ass. Mario Bianchi
-	<td class=location>Camayork	
-	<td class=asd>
-	 <ol class="FlyOut DropDown bottoni">
-		<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
-	  <li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
-		<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
-		<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
-	</ol>		
-<tr class="amici ass2">
-	<td><img class=fotoCont width=60 height=60 src=foto.jpg>
-	<td class=nick>Mario Bianchi
-	<td class=location>Camayork
-	<td class=asd>
-	 <ol class="FlyOut DropDown bottoni">
-		<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
-	  <li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
-		<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
-		<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
-	</ol>		
-</table></ul> 
+		<tr class="amici ass2">
+			<td><img class=fotoCont width=60 height=60 src=foto.jpg>
+			<td class=nick>Mario Rossi
+			<td class=location>Camayork
+			<td class=asd>
+			 <ol class="FlyOut DropDown bottoni">
+				<li><img alt="" title=profilo name=prof1 src="Bottoni/prof1stat.png">
+				<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
+				<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
+				<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
+			</ol>		
+		<tr class=amici>
+			<td><img class=fotoCont width=60 height=60 src=foto.jpg>
+			<td class=nick>Mario Verdi
+			<td class=location>Camayork
+			<td class=asd>
+			 <ol class="FlyOut DropDown bottoni">
+				<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
+				<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
+				<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
+				<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
+			</ol>			
+		<tr class="amici ass1">
+			<td><img class=fotoCont width=60 height=60 src=foto.jpg>
+			<td class=nick>Mario Bianchi
+			<td class=location>Camayork	
+			<td class=asd>
+			 <ol class="FlyOut DropDown bottoni">
+				<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
+				<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
+				<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
+				<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
+			</ol>		
+		<tr class=associazioni>
+			<td><img class=fotoCont width=60 height=60 src=foto.jpg>
+			<td class=nick>Ass. Mario Bianchi
+			<td class=location>Camayork	
+			<td class=asd>
+			 <ol class="FlyOut DropDown bottoni">
+				<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
+				<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
+				<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
+				<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
+			</ol>		
+		<tr class="amici ass2">
+			<td><img class=fotoCont width=60 height=60 src=foto.jpg>
+			<td class=nick>Mario Bianchi
+			<td class=location>Camayork
+			<td class=asd>
+			 <ol class="FlyOut DropDown bottoni">
+				<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
+				<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
+				<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
+				<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
+			</ol>		
+		</table>
+	 </ul> 
 	<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
-  <ul class=scheda id=messaggi> <li>21212121212122121</ul> 
+   <ul class=scheda id=messaggi> <li>21212121212122121</ul> 
 	<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
-  <ul class=scheda id=eventi> <li>21212121212122121</ul> 
+   <ul class=scheda id=eventi> <li>21212121212122121</ul> 
 	<li><img alt="" src="Bottoni/associaz1disatt.png">
   <li><img alt="" src="Bottoni/sponsor1disatt.png">
  </ul>
- </div>
  <img alt="" width=200 height=80 class=registered id=spaziodx src="logo.jpg">
  
  <div class="login unregistered">
@@ -197,9 +196,25 @@ jQuery(function($) {
   <input type=password name=pwd placeholder=Password ><br>
   <img alt="" src="login.png">
  </div>
- <ul id=titoletto class="center unregistered FlyOut DropDown">
+ <ul id=titoletto class="center unregistered FlyOut DropDown OnlyClick">
   <li><img alt="" src="Registrati.png"><br>Scopri tutti i vantaggi per utenti ed associazioni! 
-   <ul><li><?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?></li></ul>
+   <ul>
+		<li id=registrazione class=scheda> 
+			<span><h2>Registrazione sicura con:</h2>
+				<?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?>
+				<img width=100 height=100 src="http://primenews.com.bd/english/wp-content/uploads/2014/08/facebook-logo-300x300.jpg">
+				<span class=regOption>o con:</span> 
+				<img width=100 height=100 src="http://blog.vizzeco.com/Portals/153087/images/gPlus%20logo-resized-600.png">
+				
+
+				<h3>Registrandoti, accetti le seguenti condizioni d'uso:</h3>
+				<textarea disabled cols=42 rows=4>
+TITOLO
+bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+				</textarea>
+			</span>
+			<span><ol><li>lista features</ol></span>
+   </ul>
  </ul>
 </div>
 
