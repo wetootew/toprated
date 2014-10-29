@@ -42,7 +42,7 @@ border-bottom: #754814 solid 5px;
 .bottoni>li>img { margin:25px 5px 10px; height:50px; width:60px;cursor:pointer;}
 
 .registered a { text-decoration:none; }
-.registered { display:none !important;}
+.unregistered { display:none !important;}
 
 .comandi a { text-decoration: none;}
 .comandi * { vertical-align: middle;}
@@ -51,7 +51,7 @@ border-bottom: #754814 solid 5px;
 
 #topbar .registered.DropDown>li>ul, #registrazione {
  left:0;
- width:calc(96% - 480px); 
+ width:calc(96% - 480px);
  overflow: auto;
  margin-left:calc(2% + 240px);
  margin-top:55px;
@@ -95,8 +95,36 @@ top: calc(100% - 11px);
 left: 13px;
 }
 
-.scheda ol  {list-style-type: none; margin:8px; width:180px; white-space: normal;}
-.scheda>li{min-width:640px; height:100%;}
+.scheda ol  {list-style-type: none; white-space: normal;}
+.scheda>li {min-width:640px; height:100%;}
+
+.scheda ol.comandi {
+ overflow-x:auto; 
+ max-width:800px; 
+ width:calc(100% - 10px); 
+ text-align:left;
+ white-space: nowrap;
+}
+.scheda ol.comandi>li, .scheda ol.comandi {
+ transform:rotateX(180deg);
+ -ms-transform:rotateX(180deg); /* IE 9 */
+ -webkit-transform:rotateX(180deg); /* Safari and Chrome */
+} 
+.scheda ol.comandi>li {
+  cursor:pointer;
+  display:inline-block;
+	padding: 10px;
+	font: bold 18px georgia;
+	color:#005826;
+	text-shadow: 0 0 0.09em #005826;
+	border: #005826 2px solid;
+}
+ 
+.scheda ol.comandi li:hover {color:#997f64; text-shadow: 0 0 0.3em #997f64;}
+.scheda ol.comandi li.active {color:#997f64; text-shadow: 0 0 0.3em #997f64; border-bottom:transparent;}
+ 
+
+#profilo ol {margin:8px; width:180px;}
 #descrProf { padding-top: 10px; font-variant:small-caps;}
 #dati { float:left;}
 #log { float:right;}
@@ -133,7 +161,7 @@ progress {
 }
 
 
-#contatti ol {width:calc(100% - 10px); text-align:left;}
+#contatti ol {}
 #contatti table {width:100%;}
 #contatti table caption {overflow:auto;}
 #contatti tr {display:inline-block; cursor:pointer;}
@@ -159,22 +187,10 @@ progress {
 #contatti .nick {  font: bold 12px georgia;}
 #contatti .location {  font: bold 10px georgia;}
 
-#contatti .comandi>li {
-cursor:pointer;
- display:inline-block;
- margin: 10px;
- font: bold 18px georgia;
- color:#005826;
- text-shadow: 0 0 0.09em #005826;
- }
- #contatti .comandi li:hover {
- color:#997f64;
- text-shadow: 0 0 0.3em #997f64; 
-}
 #contatti .bottoni>li>img {height:20px; width:24px;}
 
 #contatti .associazioni {color:#997f64;}
-#contatti .comandi li[contenteditable=true] {border:2px dashed;padding:6px;}
+.scheda ol.comandi li[contenteditable=true] {border:2px dashed;padding:6px;}
 
 #registrazione {
  top:90px;
