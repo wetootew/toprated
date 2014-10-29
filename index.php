@@ -34,17 +34,21 @@ jQuery(function($) {
      sortabledir*=-1;
   })});		
 	
-	$("#contatti .comandi li:not(:first-child):not(:last-child)").click(function(e) {
+	$("#contatti .comandi li:not(:first-child):not(:last-child):not(.gruppo)").click(function(e) {
 		gruppoFiltra($(this));
   });
-		
+
 	$("#contatti .comandi li:first-child").click(function(e) {
 		$("#contatti tbody tr").show();
+		$("#contatti .comandi li").removeClass('active')
+		$(this).toggleClass('active')
   });
 	
 	function gruppoFiltra(g) {
 		$("#contatti tbody tr").hide();		
 		$("#contatti tbody ." + g.html().toLowerCase()).show();
+		$("#contatti .comandi li").removeClass('active')
+		g.toggleClass('active')
   }
 	
 	function gruppoEditabile(g) {
@@ -122,8 +126,9 @@ jQuery(function($) {
    <ul class=scheda id=contatti> 
 		<li> <table class=sortable>
 		 <caption>
-			<ol class=comandi><li>Tutti<li>Amici<li>Associazioni<li class=gruppo>Associazioni<li>+</ol>
-		 <tbody>
+			<ol class=comandi><li>Tutti<li>Amici<li>Associazioni<li>+</ol>
+		 
+<tbody>
 		<tr class="amici ass2">
 			<td><img class=fotoCont width=60 height=60 src=foto.jpg>
 			<td class=nick>Mario Rossi
@@ -220,7 +225,7 @@ bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
 
 <div id=page>
  <aside id=sponsor>
-  <h2> Sponsor </h2>
+  <h2> Sostenitori </h2>
  </aside>
  
  <table id=bacheca class="sortable center">
