@@ -34,37 +34,52 @@ jQuery(function($) {
      sortabledir*=-1;
   })});		
 	
-	$("#contatti .comandi li:not(:first-child):not(:last-child):not(.gruppo)").click(function(e) {
+	$(".tab .comandi li:not(:first-child):not(:last-child):not(.editable)").click(function(e) {
 		gruppoFiltra($(this));
   });
+	$(".tab .comandi .editable").each(function(){gruppoEditabile($(this))})
 
 	$("#contatti .comandi li:first-child").click(function(e) {
-		$("#contatti tbody tr").show();
-		$("#contatti .comandi li").removeClass('active')
+		$(".tab tbody tr").show();
+		$(".tab .comandi li").removeClass('active')
 		$(this).toggleClass('active')
   });
-	
+		
+	$("#contatti .comandi li:last-child").click(function(e) {
+		var newgroup = $('<li class=editable contenteditable=true>Nuovo</li>');
+		gruppoEditabile(newgroup);
+		newgroup.insertBefore($(this));
+  });
+
 	function gruppoFiltra(g) {
-		$("#contatti tbody tr").hide();		
-		$("#contatti tbody ." + g.html().toLowerCase()).show();
-		$("#contatti .comandi li").removeClass('active')
+		$(".tab tbody tr").hide();		
+		$(".tab tbody ." + g.html().toLowerCase()).show();
+		$(".tab .comandi li").removeClass('active')
 		g.toggleClass('active')
   }
 	
 	function gruppoEditabile(g) {
 	  g.keypress(function(e) {if(e.keyCode==13) g.blur()});
-		g.blur(function(e) {g.attr('contenteditable','false')});
 		g.click(function(e) {gruppoFiltra(g)});
-		g.dblclick(function(e) { g.attr('contenteditable','true'); g.focus();window.getSelection().setPosition(0)});
+		g.blur(function(e) { 
+		 if (g.html() == '<br>' || g.html() == '') 
+		  g.html(g.attr('name'));  		 
+		 g.attr('contenteditable','false')
+		});
+		g.dblclick(function(e) { 
+		 g.attr('contenteditable','true');
+		 g.attr('name', g.html());
+		 g.focus(); window.getSelection().setPosition(0)
+		});
 	}
 	
-	$("#contatti .comandi .gruppo").each(function(){gruppoEditabile($(this))})
-	$("#contatti .comandi li:last-child").click(function(e) {
-		var newgroup = $('<li class=gruppo contenteditable=true>nome gruppo</li>');
-		gruppoEditabile(newgroup);
-		newgroup.insertBefore($(this));
+	
+	$("#gruppi .comandi li:not(:last-child)").click(function(e) {
+		gruppoFiltra($(this));
   });
-
+	
+	
+	
 	$(".bottoni>li>img[name]")
 		.click(function(event) {this.src = "Bottoni/"+this.name+"stat.png"})
 		.mouseout(function(event) {this.src = "Bottoni/"+this.name+"stat.png"})
@@ -84,7 +99,7 @@ jQuery(function($) {
 
 
 <div id=topbar>
- <img alt="" width=200 height=80 id=logo src="logo.jpg">
+ <img alt="" width=190 height=85 id=logo src="logo.png">
  <ul class="registered center FlyOut DropDown bottoni">
   <li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
 	 <ul class=scheda id=profilo>
@@ -123,74 +138,89 @@ jQuery(function($) {
 	</ul> 
 	
   <li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
-   <ul class=scheda id=contatti> 
-		<li> <table class=sortable>
+   <ul class="scheda tab" id=contatti> 
+		<li> <table>
 		 <caption>
-			<ol class=comandi><li>Tutti<li>Amici<li>Associazioni<li>+</ol>
-		 
-<tbody>
-		<tr class="amici ass2">
-			<td><img class=fotoCont width=60 height=60 src=foto.jpg>
-			<td class=nick>Mario Rossi
-			<td class=location>Camayork
-			<td class=asd>
-			 <ol class="FlyOut DropDown bottoni">
-				<li><img alt="" title=profilo name=prof1 src="Bottoni/prof1stat.png">
-				<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
-				<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
-				<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
-			</ol>		
-		<tr class=amici>
-			<td><img class=fotoCont width=60 height=60 src=foto.jpg>
-			<td class=nick>Mario Verdi
-			<td class=location>Camayork
-			<td class=asd>
-			 <ol class="FlyOut DropDown bottoni">
-				<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
-				<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
-				<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
-				<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
-			</ol>			
-		<tr class="amici ass1">
-			<td><img class=fotoCont width=60 height=60 src=foto.jpg>
-			<td class=nick>Mario Bianchi
-			<td class=location>Camayork	
-			<td class=asd>
-			 <ol class="FlyOut DropDown bottoni">
-				<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
-				<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
-				<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
-				<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
-			</ol>		
-		<tr class=associazioni>
-			<td><img class=fotoCont width=60 height=60 src=foto.jpg>
-			<td class=nick>Ass. Mario Bianchi
-			<td class=location>Camayork	
-			<td class=asd>
-			 <ol class="FlyOut DropDown bottoni">
-				<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
-				<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
-				<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
-				<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
-			</ol>		
-		<tr class="amici ass2">
-			<td><img class=fotoCont width=60 height=60 src=foto.jpg>
-			<td class=nick>Mario Bianchi
-			<td class=location>Camayork
-			<td class=asd>
-			 <ol class="FlyOut DropDown bottoni">
-				<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
-				<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
-				<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
-				<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
-			</ol>		
+			<ol class=comandi><li>Tutti<li>Amici<li>Associazioni<li>+</ol>		 
+     <tbody>
+			<tr class="amici ass2">
+				<td><img class=fotoCont width=60 height=60 src=foto.jpg>
+				<td class=nick>Mario Rossi
+				<td class=location>Camayork
+				<td class=asd>
+				 <ol class="FlyOut DropDown bottoni">
+					<li><img alt="" title=profilo name=prof1 src="Bottoni/prof1stat.png">
+					<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
+					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
+					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
+				</ol>		
+			<tr class=amici>
+				<td><img class=fotoCont width=60 height=60 src=foto.jpg>
+				<td class=nick>Mario Verdi
+				<td class=location>Camayork
+				<td class=asd>
+				 <ol class="FlyOut DropDown bottoni">
+					<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
+					<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
+					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
+					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
+				</ol>			
+			<tr class="amici ass1">
+				<td><img class=fotoCont width=60 height=60 src=foto.jpg>
+				<td class=nick>Mario Bianchi
+				<td class=location>Camayork	
+				<td class=asd>
+				 <ol class="FlyOut DropDown bottoni">
+					<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
+					<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
+					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
+					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
+				</ol>		
+			<tr class=associazioni>
+				<td><img class=fotoCont width=60 height=60 src=foto.jpg>
+				<td class=nick>Ass. Mario Bianchi
+				<td class=location>Camayork	
+				<td class=asd>
+				 <ol class="FlyOut DropDown bottoni">
+					<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
+					<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
+					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
+					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
+				</ol>		
+			<tr class="amici ass2">
+				<td><img class=fotoCont width=60 height=60 src=foto.jpg>
+				<td class=nick>Mario Bianchi
+				<td class=location>Camayork
+				<td class=asd>
+				 <ol class="FlyOut DropDown bottoni">
+					<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
+					<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
+					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
+					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
+				</ol>		
 		</table>
 	 </ul> 
 	<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
    <ul class=scheda id=messaggi> <li>21212121212122121</ul> 
 	<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
    <ul class=scheda id=eventi> <li>21212121212122121</ul> 
-	<li><img alt="" src="Bottoni/associaz1disatt.png">
+	 
+	<li><img alt="" src="Bottoni/associaz1disatt.png">	
+   <ul class="scheda tab" id=gruppi> 
+		<li> <table>
+		 <caption>
+			<ol class=comandi><li>Tutti<li>Amici<li>Associazioni<li>+</ol>		 
+     <tbody>
+			<tr class="amici ass2">
+				<td><input type=button value=asd><input type=button value=asd><input type=button value=asd><input type=button value=asd>		
+			<tr class="amici ass1">
+					<td><input type=button value=asd><input type=button value=asd><input type=button value=asd><input type=button value=asd>		
+			<tr class=associazioni>
+					<td><input type=button value=asd><input type=button value=asd><input type=button value=asd><input type=button value=asd>		
+			<tr class="amici ass2">
+					<td><input type=button value=asd><input type=button value=asd><input type=button value=asd><input type=button value=asd>			
+		</table>
+	 </ul> 
   <li><img alt="" src="Bottoni/sponsor1disatt.png">
  </ul>
  <img alt="" width=200 height=80 class=registered id=spaziodx src="logo.jpg">
