@@ -11,7 +11,7 @@ use Facebook\GraphObject;
 use Facebook\GraphUser;
 if ( session_status() == PHP_SESSION_NONE ) {
  session_start();
- require_once __DIR__ . '/vendor/autoload.php';
+ require_once __DIR__ . '/../vendor/autoload.php';
  error_reporting(E_ALL); ini_set('display_errors', 1);
  
  FacebookSession::setDefaultApplication('1439231382984557','0a6b44656cebac45c3c6f4fd62aabbca');
