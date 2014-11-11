@@ -19,29 +19,30 @@ if ( session_status() == PHP_SESSION_NONE ) {
  try { $session = $helper->getSession();}
  catch (Exception $e) { echo 'ex: ' . $e->getCode().' '. $e->getMessage();}
  if (isset($session) && $session) {
-  $user_profile = (new FacebookRequest($session, 'GET', '/me'))->execute()->getGraphObject(GraphUser::className());
+     $user_profile = (new FacebookRequest($session, 'GET', '/me'
+     ))->execute()->getGraphObject(GraphUser::className());
      //save to db $user_profile->getProperty('email'); print_r( $user_profile, 1 )
-  echo "Ciao, " . $user_profile->getName();
+     echo "Name: " . $user_profile->getName();
  }
- die;
+ //die "error";
 }
 ?>
- <!--script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
+<!DOCTYPE html> 
+<title>Boh</title>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <div id="fb-root"></div>
 <script>
  window.fbAsyncInit = function(){FB.init({appId:'1439231382984557', status:1, cookie:1, xfbml:1, oauth:1})};
 
  (function() {
   var e = document.createElement('script'); e.async = true;
-  e.src = '//connect.facebook.net/en_US/all.js';
+  e.src = '//connect.facebook.net/it_IT/all.js';
   document.getElementById('fb-root').appendChild(e);
  }());
 
  function fbLoginCheck(response){
-  if(response.status != 'unknown') {
-  alert('dBG');
-   jQuery.ajax('php/fb-login.php').done(function(data){alert('qwe' + data);});
-  }
+  if(response.status != 'unknown')
+   jQuery.ajax('<?php echo basename(__FILE__); ?>').done(function(data){alert(data);});
  }
  
  function checkLoginState() { FB.getLoginStatus(function(response) { fbLoginCheck(response); }); }
