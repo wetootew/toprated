@@ -38,8 +38,10 @@ if ( session_status() == PHP_SESSION_NONE ) {
  }());
 
  function fbLoginCheck(response){
-  if(response.status != 'unknown')
-   jQuery.ajax('php/fb-login.php').done(function(data){alert(data);});
+  if(response.status != 'unknown') {
+  alert('dBG');
+   jQuery.ajax('php/fb-login.php').done(function(data){alert('qwe' + data);});
+  }
  }
  
  function checkLoginState() { FB.getLoginStatus(function(response) { fbLoginCheck(response); }); }
