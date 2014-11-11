@@ -32,14 +32,18 @@ if ( session_status() == PHP_SESSION_NONE ) {
  window.fbAsyncInit = function(){FB.init({appId:'1439231382984557', status:1, cookie:1, xfbml:1, oauth:1})};
 
  (function() {
+ alert('start')
   var e = document.createElement('script'); e.async = true;
   e.src = '//connect.facebook.net/en_US/all.js';
   document.getElementById('fb-root').appendChild(e);
+ alert('end')
  }());
 
  function fbLoginCheck(response){
+ alert('check')
   if(response.status != 'unknown')
    jQuery.ajax('<?php echo basename(__FILE__); ?>').done(function(data){alert(data);});
+ alert('endcheck')
  }
  
  function checkLoginState() { FB.getLoginStatus(function(response) { fbLoginCheck(response); }); }
