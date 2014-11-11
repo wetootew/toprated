@@ -44,4 +44,4 @@ if ( session_status() == PHP_SESSION_NONE ) {
  
  function checkLoginState() { FB.getLoginStatus(function(response) { fbLoginCheck(response); }); }
 </script>
-<div class="fb-login-button" onlogin="checkLoginState()" scope="public_profile,user_about_me,user_location,email" data-size="icon"></div>
+<div class="fb-login-button" onlogin="checkLoginState()" scope="public_profile,user_about_me,user_location,email" data-size="medium"></div>
