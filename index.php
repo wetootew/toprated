@@ -223,20 +223,19 @@ jQuery(function($) {
 	 </ul> 
   <li><img alt="" src="Bottoni/sponsor1disatt.png">
  </ul>
- <img alt="" width=200 height=80 class=registered id=spaziodx src="logo.jpg">
  
- <div class="login unregistered">
+ <div class="login">
   <p> Sei registrato? </p>
-  <input type=text name=usr placeholder=Username><br>
+				<?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?>
+  <!--input type=text name=usr placeholder=Username><br>
   <input type=password name=pwd placeholder=Password ><br>
-  <img alt="" src="login.png">
+  <img alt="" src="login.png"-->
  </div>
  <ul id=titoletto class="center unregistered FlyOut DropDown OnlyClick">
   <li><img alt="" src="Registrati.png"><br>Scopri tutti i vantaggi per utenti ed associazioni! 
    <ul>
 		<li id=registrazione class=scheda> 
 			<span><h2>Registrazione sicura con:</h2>
-				<?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?>
 				<img width=100 height=100 src="http://primenews.com.bd/english/wp-content/uploads/2014/08/facebook-logo-300x300.jpg">
 				<span class=regOption>o con:</span> 
 				<img width=100 height=100 src="http://blog.vizzeco.com/Portals/153087/images/gPlus%20logo-resized-600.png">
