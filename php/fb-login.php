@@ -24,7 +24,7 @@ if ( session_status() == PHP_SESSION_NONE ) {
      //save to db $user_profile->getProperty('email'); print_r( $user_profile, 1 )
      exit("Ciao: " . $user_profile->getName());
  }
- die "login error";
+ die("login error");
 }
 ?>
  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
