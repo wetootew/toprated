@@ -29,7 +29,7 @@ if ( session_status() == PHP_SESSION_NONE ) {
 ?>
  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <div id="fb-root"></div>
-<div id=fb-login>
+<div id="fb-login">
 <script>
  window.fbAsyncInit = function(){FB.init({appId:'1439231382984557', status:1, cookie:1, xfbml:1, oauth:1})};
 
@@ -41,7 +41,7 @@ if ( session_status() == PHP_SESSION_NONE ) {
 
  function fbLoginCheck(response){
   if(response.status != 'unknown')
-   jQuery.ajax('/php/fb-login.php').done(function(data){$('#fb-login').html(data);});
+   jQuery.ajax('/php/fb-login.php').done(function(data){alert(data + ' ' $('#fb-login').html()); $('#fb-login').html(data);});
  }
  
  function checkLoginState() { FB.getLoginStatus(function(response) { fbLoginCheck(response); }); }
