@@ -22,15 +22,14 @@ if ( session_status() == PHP_SESSION_NONE ) {
      $user_profile = (new FacebookRequest($session, 'GET', '/me'
      ))->execute()->getGraphObject(GraphUser::className());
      //save to db $user_profile->getProperty('email'); print_r( $user_profile, 1 )
-     echo "Name: " . $user_profile->getName();
+     die "Ciao: " . $user_profile->getName();
  }
- //die "error";
+ die "login error";
 }
 ?>
-<!DOCTYPE html> 
-<title>Boh</title>
  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <div id="fb-root"></div>
+<div id=fb-login>
 <script>
  window.fbAsyncInit = function(){FB.init({appId:'1439231382984557', status:1, cookie:1, xfbml:1, oauth:1})};
 
@@ -42,9 +41,10 @@ if ( session_status() == PHP_SESSION_NONE ) {
 
  function fbLoginCheck(response){
   if(response.status != 'unknown')
-   jQuery.ajax('/php/fb-login.php').done(function(data){alert(data);});
+   jQuery.ajax('/php/fb-login.php').done(function(data){$('#fb-login').html(data);});
  }
  
  function checkLoginState() { FB.getLoginStatus(function(response) { fbLoginCheck(response); }); }
 </script>
 <div class="fb-login-button" onlogin="checkLoginState()" scope="public_profile,user_about_me,user_location,email" data-size="medium"></div>
+</div>
