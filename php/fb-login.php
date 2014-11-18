@@ -29,7 +29,7 @@ if ( session_status() == PHP_SESSION_NONE ) {
 ?>
  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <div id="fb-root"></div>
-<div id="fb-login">
+<!--div id="fb-login"-->
 <script>
  window.fbAsyncInit = function(){FB.init({appId:'1439231382984557', status:1, cookie:1, xfbml:1, oauth:1})};
 
@@ -47,4 +47,4 @@ if ( session_status() == PHP_SESSION_NONE ) {
  function checkLoginState() { FB.getLoginStatus(function(response) { fbLoginCheck(response); }); }
 </script>
 <div class="fb-login-button" onlogin="checkLoginState()" scope="public_profile,user_about_me,user_location,email" data-size="medium"></div>
-</div>
+<!--/div-->
