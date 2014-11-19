@@ -22,7 +22,7 @@ if ( session_status() == PHP_SESSION_NONE ) {
      $user_profile = (new FacebookRequest($session, 'GET', '/me'
      ))->execute()->getGraphObject(GraphUser::className());
      //save to db $user_profile->getProperty('email'); print_r( $user_profile, 1 )
-     exit( "Ciao, " . $user_profile->getName();
+     exit( "Ciao, " . $user_profile->getName());
  }
  die ("fb login error");
 }
