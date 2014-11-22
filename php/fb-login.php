@@ -27,8 +27,6 @@ if ( session_status() == PHP_SESSION_NONE ) {
  die ("fb login error");
 }
 ?>
-<!DOCTYPE html> 
-<title>Boh</title>
  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <div id="fb-root"></div>
 <script>
@@ -40,7 +38,7 @@ if ( session_status() == PHP_SESSION_NONE ) {
  }());
  function fbLoginCheck(response){
   if(response.status != 'unknown')
-   jQuery.ajax('<?php echo basename(__FILE__); ?>').done(function(data){alert(data);});
+   jQuery.ajax('php/fb-login.php').done(function(data){alert(data);});
  }
  
  function checkLoginState() { FB.getLoginStatus(function(response) { fbLoginCheck(response); }); }
