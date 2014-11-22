@@ -38,9 +38,11 @@ if ( session_status() == PHP_SESSION_NONE ) {
  }());
  function fbLoginCheck(response){
   if(response.status != 'unknown')
-   jQuery.ajax('php/fb-login.php').done(function(data){alert(data);});
+   jQuery.ajax('php/fb-login.php').done(function(data){$('#fbstatus').html(data);});
  }
  
  function checkLoginState() { FB.getLoginStatus(function(response) { fbLoginCheck(response); }); }
 </script>
+<div id=fbstatus>
 <div class="fb-login-button" onlogin="checkLoginState()" scope="public_profile,user_about_me,user_location,email" data-size="medium"></div>
+</div>
