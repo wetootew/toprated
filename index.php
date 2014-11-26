@@ -255,13 +255,13 @@ jQuery(function($) {
    <ul>
 		<li id=registrazione class="scheda oscuramento chiudi"> 
 			<span><h2>Registrazione sicura con:</h2>
-				<?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?>
+				<!--?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?-->
 				<img width=100 height=100 src="Bottoni/Facebook1.png">
 				<span class=regOption>o con</span> 
 				<img width=100 height=100 src="Bottoni/gplus1.png">
 				
 				<?php 
-				foreach(glob('comuni') as $file)  
+				foreach(glob('comuni/') as $file)  
 					echo "<img src=$file>";  
 				?>
 
