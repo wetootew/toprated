@@ -29,6 +29,17 @@ border-bottom: #754814 solid 5px;
 #titoletto { font-size:12px; margin-top:6px; position:absolute;}
 #spaziodx { float:right; position:absolute; right:2%;}
 
+iframe {
+margin-top:50px;
+}
+
+.registered a { text-decoration:none; }
+.registered { display:none !important;}
+
+.registered.bottoni>li>img {margin:25px 5px 10px;height:50px;width:60px;cursor:pointer;}
+
+.unregistered.center img { margin-top:-5px; margin-bottom: -3px; cursor: pointer;}
+
 .login * { margin: 2px;}
 .login  p { margin: 6px;}
 .login {
@@ -39,17 +50,12 @@ border-bottom: #754814 solid 5px;
 	width:200px;
 }
 
-.bottoni>li>img { margin:25px 5px 10px; height:50px; width:60px;cursor:pointer;}
-
-.registered a { text-decoration:none; }
-.unregistered { display:none !important;}
-
 .comandi a { text-decoration: none;}
 .comandi * { vertical-align: middle;}
 
 .rigadimensione {height:2px;}
 
-#topbar .registered.DropDown>li>ul, #registrazione {
+#topbar .scheda {
  left:0;
  width:calc(96% - 480px);
  overflow: auto;
@@ -64,7 +70,6 @@ background: #fae2c9;
 -moz-border-radius: 15px;
 border-radius: 15px;
 border: #754814 solid 5px;
-z-index: 1;
 }
 
 #topbar .registered.DropDown>li:hover { z-index: 2;}
@@ -73,11 +78,11 @@ z-index: 1;
 content: '';
 position: absolute;
 border-style: solid;
-border-width: 0 20px 60px;
+border-width: 0 20px 61px;
 border-color: #fae2c9 transparent;
 display: block;
 width: 0;
-z-index: 1;
+z-index: 10;
 top: 100%;
 left: 17px;
 }
@@ -86,49 +91,83 @@ left: 17px;
 content: '';
 position: absolute;
 border-style: solid;
-border-width: 0 24px 66px;
+border-width: 0 24px 67px;
 border-color: #754814 transparent;
 display: block;
 width: 0;
-z-index: 0;
+z-index: 9;
 top: calc(100% - 11px);
 left: 13px;
 }
 
-.scheda ol  {list-style-type: none; white-space: normal;}
-.scheda>li {min-width:640px; height:100%;}
-
+.scheda>li:first-child {min-width:640px; height:100%;}
+.scheda ol  {list-style-type: none;}
 .scheda ol.comandi {
  overflow-x:auto; 
- max-width:800px; 
- width:calc(100% - 10px); 
+ max-width:805px; 
+ width:100%; 
  text-align:left;
  white-space: nowrap;
 }
-.scheda ol.comandi>li, .scheda ol.comandi {
+
+.help:hover {color:#997f64; text-shadow: 0 0 0.3em #997f64;}
+.help {
+  font: bolder 18px georgia; 
+ cursor: pointer;
+ position:absolute;
+ bottom: 5px;
+ right: 5px;
+}
+
+.xClose {
+position:absolute;
+top: 5px;
+right: 5px;
+}
+
+.tab {white-space: normal;}
+.tab ol.comandi>li, .tab ol.comandi {
  transform:rotateX(180deg);
  -ms-transform:rotateX(180deg); /* IE 9 */
  -webkit-transform:rotateX(180deg); /* Safari and Chrome */
-} 
-.scheda ol.comandi>li {
-  cursor:pointer;
   display:inline-block;
+} 
+.tab ol.comandi>li {
+  cursor:pointer;
 	padding: 10px;
 	font: bold 18px georgia;
 	color:#005826;
 	text-shadow: 0 0 0.09em #005826;
 	border: #005826 2px solid;
 }
+.tab ol.comandi:after {
+content: '';
+	border-color: #005826;
+border-width:	2px 0 0 0; /* ribaltato: basso verde */
+border-style: solid;
+	z-index:-1;
+position: absolute; top: 0; left: 0;
+width: 100%;
+height:calc(100% - 2px);
+}
+
+.oscuramento {z-index:5;top:90px;box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.30);}
  
-.scheda ol.comandi li:hover {color:#997f64; text-shadow: 0 0 0.3em #997f64;}
-.scheda ol.comandi li.active {color:#997f64; text-shadow: 0 0 0.3em #997f64; border-bottom: #fae2c9 solid;}
+.tab ol.comandi li:hover {color:#997f64; text-shadow: 0 0 0.3em #997f64;}
+.tab ol.comandi li.active {color:#997f64; text-shadow: 0 0 0.3em #997f64; border-bottom: #fae2c9 2px solid;}
+
+table.tab {width:100%;}
+.tab ol.comandi li[contenteditable=true] {border:2px dashed;padding:6px;}
  
 
+#profilo {white-space: normal;}
 #profilo ol {margin:8px; width:180px;}
 #descrProf { padding-top: 10px; font-variant:small-caps;}
 #dati { float:left;}
 #log { float:right;}
+#log li {text-align:left; font: bold 11px georgia;}
 #profilo .foto {width:180px; height:180px;}
+#profilo .center { width:calc(100% - 450px); min-width: 200px;}
 #profilo textarea {
  width:100%;
  height:200px;
@@ -136,9 +175,6 @@ left: 13px;
  color:#997f64; 
 	text-shadow: 0 0 0.083em #997f64;
 }
-#profilo  .center { width:calc(100% - 450px); min-width: 200px;}
-
-#log li {text-align:left; font: bold 11px georgia;}
 
 progress { color: #005826; } /* IE10 */
 progress::-moz-progress-bar { background: #005826; } /* Firefox */
@@ -160,49 +196,29 @@ progress {
 	text-shadow: 0 0 0.083em #997f64;
 }
 
-
-#contatti ol {}
-#contatti table {width:100%;}
-#contatti table caption {overflow:auto;}
 #contatti tr {display:inline-block; cursor:pointer;}
 #contatti td img {margin: 2px;}
-#contatti {white-space: normal;}
 #contatti tbody tr{
  width: 200px;
  height: 75px;
  margin: calc(1% + 3px) calc(1% + 3px) calc(1% + 3px) calc(1% + 3px); 
  border: 5px solid; 
  border-radius: 8px;
- } 
+} 
 
 #contatti td:last-child {
-  visibility:hidden;
-  opacity:0;
+  visibility:hidden; opacity:0;
   transition:visibility 0s linear 0.5s,opacity 0.5s linear;
 }
 #contatti tr:hover td:last-child {visibility:visible; opacity:1; transition-delay:0s;}
 
 #contatti td[class] { width:126px; text-align:center;}
-#contatti th, td {float:left;}
+#contatti td {float:left;}
 #contatti .nick {  font: bold 12px georgia;}
 #contatti .location {  font: bold 10px georgia;}
-
 #contatti .bottoni>li>img {height:20px; width:24px;}
-
 #contatti .associazioni {color:#997f64;}
-.tab ol.comandi li[contenteditable=true] {border:2px dashed;padding:6px;}
 
-
-
-
-
-
-
-
-#registrazione {
- top:90px;
- box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.30);
-}
 #registrazione>span {display:block; width:50%; float:left;}
 #registrazione h2 {margin:54px 0 24px;}
 #registrazione textarea {font:11px georgia}
@@ -309,7 +325,7 @@ font-variant: small-caps;
 text-align:center;
 }
 
-.FlyOut ul, .FlyOut.OnlyClick li:not(.click)>ul {display: none; list-style-type: none; white-space: nowrap;}
+.FlyOut li>ul, .FlyOut.OnlyClick li:not(.click)>ul {display: none; list-style-type: none; white-space: nowrap;}
 .FlyOut li:hover>ul, .FlyOut li.click>ul {position: absolute; display: inline;}
 .DropDown>li, .DropDown>li:hover>ul , .DropDown>li.click>ul {display: block; float: left;}
 .DropDown>li {position:relative;}
