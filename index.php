@@ -5,6 +5,7 @@ include('db.php');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require_once __DIR__ . '/vendor/autoload.php';
+include('php/fb-login.php'); ?> <?php include('php/g-login.php');
 ?>-->
 <title>Boh</title>
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -255,17 +256,16 @@ jQuery(function($) {
    <ul>
 		<li id=registrazione class="scheda oscuramento chiudi"> 
 			<span><h2>Registrazione sicura con:</h2>
-				<!--?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?-->
 				<img width=100 height=100 src="Bottoni/Facebook1.png">
 				<span class=regOption>o con</span> 
 				<img width=100 height=100 src="Bottoni/gplus1.png">
 				
 				<?php 
 				foreach(glob('comuni/') as $file)  
-					echo "<img src=$file>";  
+					echo '<img src="'.$file.'">';  
 				?>
 
-				<h3>Registrandoti, accetti le seguenti condizioni d'uso:</h3>
+				<h3>Registrandoti, accetti le seguenti condizioni d&rsquouso:</h3>
 				<textarea disabled cols=42 rows=4>
 TITOLO
 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
