@@ -28,7 +28,7 @@ jQuery(function($) {
     $(this).toggleClass("click");
   });
 	
-	$("div").click(function(event) {
+	$("div").on('click', function(event) {
 	  event.stopPropagation();
 		$(".FlyOut>li").removeClass('click');
 		$(".scheda.oscuramento").remove();
@@ -261,7 +261,7 @@ jQuery(function($) {
 				<img width=100 height=100 src="Bottoni/gplus1.png">
 				
 				<?php 
-				foreach(glob('comuni/') as $file)  
+				foreach(glob('comuni/*') as $file)  
 					echo '<img src="'.$file.'">';  
 				?>
 
