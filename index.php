@@ -259,9 +259,9 @@ jQuery(function($) {
 				<img width=100 height=100 src="Bottoni/Facebook1.png">
 				<span class=regOption>o con</span> 
 				<img width=100 height=100 src="Bottoni/gplus1.png">
-				
+				<br>
 				<?php 
-				foreach(glob('comuni/*') as $file)  
+				foreach(glob('comuni/*.png') as $file)  
 					echo '<img src="'.$file.'">';  
 				?>
 
