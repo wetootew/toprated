@@ -12,18 +12,28 @@ require_once __DIR__ . '/vendor/autoload.php';
 <script src="script.js" type="text/javascript"></script>
 <script type="text/javascript">
 
+function loadVideo(id) {
+	var helpVideo = { 
+		'profilo' : 'xFlBZMiVMT0',
+		'contatti' : 'a-J_e3bFH08'
+	}
+	$('#topbar').prepend('<div class="scheda oscuramento"><iframe width="560" height="315" src="http://www.youtube.com/embed/' + helpVideo[id] + '?list=RDlh28ZAGkahk" frameborder="0" allowfullscreen></iframe></div>');
+}
+
 jQuery(function($) {
-  $(".FlyOut li").click(function(event) {
+  $(".FlyOut>li").click(function(event) {
 	  event.stopPropagation();
+		$(".FlyOut>li").removeClass('click');
     $(this).toggleClass("click");
-		$(".FlyOut li").not(this).not($(this).parents()).removeClass('click');
-  });
-		
-	$("div").click(function(event) {
-	  event.stopPropagation();
-		$(".FlyOut li").removeClass('click');
   });
 	
+	$("div").click(function(event) {
+	  event.stopPropagation();
+		$(".FlyOut>li").removeClass('click');
+		$(".scheda.oscuramento").remove();
+		
+  });
+
   sortabledir = 1;
   $(".sortable").each(function (i,e) {$(e).find('th').click(function() {
      var b = $(e).find('tbody')[0], l = b.rows.length, c = this.cellIndex, a = [], f, t;
@@ -74,16 +84,25 @@ jQuery(function($) {
 	}
 	
 	
-	$("#gruppi .comandi li:not(:last-child)").click(function(e) {
+	$("#gruppi .comandi li").click(function(e) {
 		gruppoFiltra($(this));
   });
 	
+	$(".scheda:not(.chiudi)").each(function(e) {
+		$(this).append('<li class=help onclick="loadVideo(\'' + $(this).attr('id') +'\')">?</li>')
+  });
+		
+	$(".scheda.chiudi").each(function(e) {
+		$(this).append('<div class=xClose>X</div>')
+  });
 	
+	$("#gruppi .comandi li:first-child").click();
 	
 	$(".bottoni>li>img[name]")
-		.click(function(event) {this.src = "Bottoni/"+this.name+"stat.png"})
+		.mousedown(function(event) {this.src = "Bottoni/"+this.name+"click.png"})
 		.mouseout(function(event) {this.src = "Bottoni/"+this.name+"stat.png"})
-		.mouseover(function(event) {this.src = "Bottoni/"+this.name+"mouse.png"})
+		.mouseover(function(event) {this.src = "Bottoni/"+this.name+"over.png"})
+		.mouseup(function(event) {this.src = "Bottoni/"+this.name+"over.png"})
 	  //.attr("src", "Bottoni/"+$(this).name+"stat.png")
 		
 	/*$( ".slider-range" ).after(document.createElement('div').slider({
@@ -93,7 +112,7 @@ jQuery(function($) {
     }
   }));<!-- funzionalità da implementare -->*/ 
 	
-
+			
 });
 </script>
 
@@ -138,8 +157,8 @@ jQuery(function($) {
 	</ul> 
 	
   <li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
-   <ul class="scheda tab" id=contatti> 
-		<li> <table>
+   <ul class=scheda id=contatti> 
+		<li> <table class=tab>
 		 <caption>
 			<ol class=comandi><li>Tutti<li>Amici<li>Associazioni<li>+</ol>		 
      <tbody>
@@ -206,10 +225,10 @@ jQuery(function($) {
    <ul class=scheda id=eventi> <li>21212121212122121</ul> 
 	 
 	<li><img alt="" src="Bottoni/associaz1disatt.png">	
-   <ul class="scheda tab" id=gruppi> 
-		<li> <table>
+   <ul class=scheda id=gruppi> 
+		<li> <table class=tab>
 		 <caption>
-			<ol class=comandi><li>Tutti<li>Amici<li>Associazioni<li>+</ol>		 
+			<ol class=comandi><li>Ass1<li>Ass2<li>nuovo</ol>		 
      <tbody>
 			<tr class="amici ass2">
 				<td><input type=button value=asd><input type=button value=asd><input type=button value=asd><input type=button value=asd>		
@@ -217,29 +236,34 @@ jQuery(function($) {
 					<td><input type=button value=asd><input type=button value=asd><input type=button value=asd><input type=button value=asd>		
 			<tr class=associazioni>
 					<td><input type=button value=asd><input type=button value=asd><input type=button value=asd><input type=button value=asd>		
-			<tr class="amici ass2">
-					<td><input type=button value=asd><input type=button value=asd><input type=button value=asd><input type=button value=asd>			
+			<tr class=nuovo>
+					<td><input type=button value="crea gruppo"><input type=button value="cerca"><input type=button value="registra associazione">			
 		</table>
 	 </ul> 
   <li><img alt="" src="Bottoni/sponsor1disatt.png">
  </ul>
+ <img alt="" width=200 height=80 class=registered id=spaziodx src="logo.jpg">
  
- <div class="login">
+ <div class="login unregistered">
   <p> Sei registrato? </p>
-				<?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?>
-  <!--input type=text name=usr placeholder=Username><br>
+  <input type=text name=usr placeholder=Username><br>
   <input type=password name=pwd placeholder=Password ><br>
-  <img alt="" src="login.png"-->
+  <img alt="" src="login.png">
  </div>
- <ul id=titoletto class="center unregistered FlyOut DropDown OnlyClick">
-  <li><img alt="" src="Registrati.png"><br>Scopri tutti i vantaggi per utenti ed associazioni! 
+ <ul id=titoletto class="center unregistered FlyOut DropDown OnlyClick bottoni">
+  <li><img alt="" name=Registrati src="Bottoni/Registratistat.png" height="82" width="215"><br>Scopri tutti i vantaggi per utenti ed associazioni! 
    <ul>
-		<li id=registrazione class=scheda> 
+		<li id=registrazione class="scheda oscuramento chiudi"> 
 			<span><h2>Registrazione sicura con:</h2>
-				<img width=100 height=100 src="http://primenews.com.bd/english/wp-content/uploads/2014/08/facebook-logo-300x300.jpg">
-				<span class=regOption>o con:</span> 
-				<img width=100 height=100 src="http://blog.vizzeco.com/Portals/153087/images/gPlus%20logo-resized-600.png">
+				<?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?>
+				<img width=100 height=100 src="Bottoni/Facebook1.png">
+				<span class=regOption>o con</span> 
+				<img width=100 height=100 src="Bottoni/gplus1.png">
 				
+				<?php 
+				foreach(glob('comuni') as $file)  
+					echo "<img src=$file>";  
+				?>
 
 				<h3>Registrandoti, accetti le seguenti condizioni d'uso:</h3>
 				<textarea disabled cols=42 rows=4>
@@ -251,7 +275,6 @@ bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
    </ul>
  </ul>
 </div>
-
 <div id=page>
  <aside id=sponsor>
   <h2> Sostenitori </h2>
