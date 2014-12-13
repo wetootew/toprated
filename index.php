@@ -18,7 +18,7 @@ function loadVideo(id) {
 		'profilo' : 'xFlBZMiVMT0',
 		'contatti' : 'a-J_e3bFH08'
 	}
-	$('#topbar').prepend('<div class="scheda oscuramento"><iframe width="560" height="315" src="http://www.youtube.com/embed/' + helpVideo[id] + '?list=RDlh28ZAGkahk" frameborder="0" allowfullscreen></iframe></div>');
+	$('#topbar').prepend('<div class="scheda oscuramento temp"><div class=xClose>X</div><iframe width="560" height="315" src="http://www.youtube.com/embed/' + helpVideo[id] + '?list=RDlh28ZAGkahk" frameborder="0" allowfullscreen></iframe></div>');
 }
 
 jQuery(function($) {
@@ -31,7 +31,7 @@ jQuery(function($) {
 	$("div").on('click', function(event) {
 	  event.stopPropagation();
 		$(".FlyOut>li").removeClass('click');
-		$(".scheda.oscuramento").remove();
+		$(".temp").remove();
 		
   });
 
@@ -99,7 +99,7 @@ jQuery(function($) {
 	
 	$("#gruppi .comandi li:first-child").click();
 	
-	$(".bottoni>li>img[name]")
+	$(".bottoni img[name]")
 		.mousedown(function(event) {this.src = "Bottoni/"+this.name+"click.png"})
 		.mouseout(function(event) {this.src = "Bottoni/"+this.name+"stat.png"})
 		.mouseover(function(event) {this.src = "Bottoni/"+this.name+"over.png"})
@@ -229,16 +229,20 @@ jQuery(function($) {
    <ul class=scheda id=gruppi> 
 		<li> <table class=tab>
 		 <caption>
-			<ol class=comandi><li>Ass1<li>Ass2<li>nuovo</ol>		 
-     <tbody>
+			<ol class=comandi><li>nuovo</ol>		 
+     <tbody>	
+			<tr class=nuovo>
+				<td class=bottoni>
+				<img alt="" name=ricerca src="Bottoni/ricercastat.png">
+				<img alt="" name=creagruppoass src="Bottoni/creagruppoassstat.png">
+				<img alt="" name=Registraassociazione src="Bottoni/Registraassociazionestat.png">			
 			<tr class="amici ass2">
 				<td><input type=button value=asd><input type=button value=asd><input type=button value=asd><input type=button value=asd>		
 			<tr class="amici ass1">
 					<td><input type=button value=asd><input type=button value=asd><input type=button value=asd><input type=button value=asd>		
 			<tr class=associazioni>
 					<td><input type=button value=asd><input type=button value=asd><input type=button value=asd><input type=button value=asd>		
-			<tr class=nuovo>
-					<td><input type=button value="crea gruppo"><input type=button value="cerca"><input type=button value="registra associazione">			
+		
 		</table>
 	 </ul> 
   <li><img alt="" src="Bottoni/sponsor1disatt.png">
@@ -249,7 +253,7 @@ jQuery(function($) {
   <p> Sei registrato? </p>
   <input type=text name=usr placeholder=Username><br>
   <input type=password name=pwd placeholder=Password ><br>
-  <img alt="" src="login.png">
+  <img alt="" src="bottoni/login.png">
  </div>
  <ul id=titoletto class="center unregistered FlyOut DropDown OnlyClick bottoni">
   <li><img alt="" name=Registrati src="Bottoni/Registratistat.png" height="82" width="215"><br>Scopri tutti i vantaggi per utenti ed associazioni! 
@@ -271,7 +275,13 @@ TITOLO
 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
 				</textarea>
 			</span>
-			<span><ol><li>lista features</ol></span>
+			<span><ol id=features>
+			  <li>Tieniti aggiornato sugli eventi delle associazioni nelle zone che ti interessano!
+			  <li>Hai un'associazione? Crea contatti con i cittadini e con le altre associazioni per organizzare eventi di qualità!
+			  <li>Conosci nuove persone con i tuoi stessi interessi!
+			  <li>Avvia e unisciti a gruppi associativi in modo libero e veloce!
+			  <li>Trova nuovi stimoli per la tua vita sociale!
+</ol></span>
    </ul>
  </ul>
 </div>
@@ -309,8 +319,8 @@ bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
 	<td class=periodo> 01/01/01 - 02/02/02
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
 	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
-	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
-	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
+	<td class=visite>235 <img alt="" width=20 height=13 src=pics/visualverde.png>
+	<td class=voto><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 
 <tr><td class="argomento ambientepost">Ambiente
@@ -318,8 +328,8 @@ bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
 	<td class=periodo> 01/01/01 - 02/02/02
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
 	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
-	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
-	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
+	<td class=visite>235 <img alt="" width=20 height=13 src=pics/visualverde.png>
+	<td class=voto><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 
 <tr><td class="argomento culturapost">Cultura
@@ -327,8 +337,8 @@ bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
 	<td class=periodo> 01/01/01 - 02/02/02
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
 	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
-	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
-	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
+	<td class=visite>235 <img alt="" width=20 height=13 src=pics/visualverde.png>
+	<td class=voto><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 
 <tr><td class="argomento sportpost">Sport
@@ -336,8 +346,8 @@ bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
 	<td class=periodo> 01/01/01 - 02/02/02
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
 	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
-	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
-	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
+	<td class=visite>235 <img alt="" width=20 height=13 src=pics/visualverde.png>
+	<td class=voto><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 	
 <tr><td class="argomento donnapost">Donna
@@ -345,8 +355,8 @@ bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
 	<td class=periodo> 01/01/01 - 02/02/02
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
 	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
-	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
-	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
+	<td class=visite>235 <img alt="" width=20 height=13 src=pics/visualverde.png>
+	<td class=voto><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 
 <tr><td class="argomento intrattenimentopost">Intrattenimento
@@ -354,8 +364,8 @@ bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
 	<td class=periodo> 01/01/01 - 02/02/02
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
 	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
-	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
-	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
+	<td class=visite>235 <img alt="" width=20 height=13 src=pics/visualverde.png>
+	<td class=voto><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 
 <tr><td class="argomento gastronomiapost">Gastronomia
@@ -363,8 +373,8 @@ bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
 	<td class=periodo> 01/01/01 - 02/02/02
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
 	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
-	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
-	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
+	<td class=visite>235 <img alt="" width=20 height=13 src=pics/visualverde.png>
+	<td class=voto><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 	
 <tr><td class="argomento socialepost">Sociale
@@ -372,40 +382,40 @@ bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
 	<td class=periodo> 01/01/01 - 02/02/02
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
 	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
-	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
-	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
+	<td class=visite>235 <img alt="" width=20 height=13 src=pics/visualverde.png>
+	<td class=voto><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 <tr><td class="argomento socialepost">Sociale
 	<td class=titolopost><a>Titolo del post</a>
 	<td class=periodo> 01/01/01 - 02/02/02
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
 	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
-	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
-	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
+	<td class=visite>235 <img alt="" width=20 height=13 src=pics/visualverde.png>
+	<td class=voto><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 <tr><td class="argomento socialepost">Sociale
 	<td class=titolopost><a>Titolo del post</a>
 	<td class=periodo> 01/01/01 - 02/02/02
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
 	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
-	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
-	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
+	<td class=visite>235 <img alt="" width=20 height=13 src=pics/visualverde.png>
+	<td class=voto><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 <tr><td class="argomento socialepost">Sociale
 	<td class=titolopost><a>Titolo del post</a>
 	<td class=periodo> 01/01/01 - 02/02/02
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
 	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
-	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
-	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
+	<td class=visite>235 <img alt="" width=20 height=13 src=pics/visualverde.png>
+	<td class=voto><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 <tr><td class="argomento socialepost">Sociale
 	<td class=titolopost><a>Titolo del post</a>
 	<td class=periodo> 01/01/01 - 02/02/02
 	<td><img class=fotopost width=180 height=90 src=foto.jpg>
 	<td class=descrizione>Prime righe della descrizione dell'evento o breve sintesi dell'evento
-	<td class=visite>235 <img alt="" width=20 height=13 src=visualverde.png>
-	<td class=voto><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png><img alt="" width=16 height=13 src=stellavoto.png>
+	<td class=visite>235 <img alt="" width=20 height=13 src=pics/visualverde.png>
+	<td class=voto><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
 </table>
 
