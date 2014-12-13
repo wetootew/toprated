@@ -8,6 +8,7 @@
    -moz-box-sizing: border-box;
         box-sizing: border-box;
 word-wrap:break-word;
+white-space: normal;
 }
 
 html, body { background-color:#fae2c9;}
@@ -36,7 +37,9 @@ margin-top:50px;
 .registered a { text-decoration:none; }
 .registered { display:none !important;}
 
-.registered.bottoni>li>img {margin:25px 5px 10px;height:50px;width:60px;cursor:pointer;}
+.bottoni img {cursor:pointer;}
+
+.registered.bottoni>li>img {margin:25px 5px 10px;height:50px;width:60px;}
 
 .unregistered.center img { margin-top:-5px; margin-bottom: -3px; cursor: pointer;}
 
@@ -120,9 +123,19 @@ left: 13px;
 }
 
 .xClose {
-position:absolute;
+position:absolute; 
+ cursor: pointer;
 top: 5px;
 right: 5px;
+}
+
+#features {
+margin:30px;
+word-wrap:break-word;
+list-style-type: decimal;
+}
+#features li {
+margin:10px;
 }
 
 .tab {white-space: normal;}
