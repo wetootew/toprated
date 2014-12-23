@@ -84,11 +84,6 @@ jQuery(function($) {
 		});
 	}
 	
-	
-	$("#gruppi .comandi li").click(function(e) {
-		gruppoFiltra($(this));
-  });
-	
 	$(".scheda:not(.chiudi)").each(function(e) {
 		$(this).append('<li class=help onclick="loadVideo(\'' + $(this).attr('id') +'\')">?</li>')
   });
@@ -97,7 +92,39 @@ jQuery(function($) {
 		$(this).append('<div class=xClose>X</div>')
   });
 	
-	$("#gruppi .comandi li:first-child").click();
+	
+		
+	$("#gruppi img[name=ricerca]").click(function(e) {
+		if (!$('#gruppi .comandi li:contains("Ricerca")').length)
+			$("#gruppi .comandi").append("<li>Ricerca</li>")
+			
+		$('#gruppi .comandi li:contains("Ricerca")').click()
+  });
+	
+	$("#gruppi img[name=creagruppoass]").click(function(e) {
+		if (!$('#gruppi .comandi li:contains("Gruppo")').length) 
+			$("#gruppi .comandi").append("<li>Gruppo</li>")
+			
+		$('#gruppi .comandi li:contains("Gruppo")').click()
+  });
+	
+	$("#gruppi img[name=Registraassociazione]").click(function(e) {
+		if (!$('#gruppi .comandi li:contains("Associazione")').length) 
+			$("#gruppi .comandi").append("<li>Associazione</li>")
+			
+		$('#gruppi .comandi li:contains("Associazione")').click()
+		});
+	
+		
+	$("#gruppi .comandi").on('click',"li", function(event) {
+		gruppoFiltra($(this));		
+  });
+
+	
+	
+	$("#gruppi .comandi li:first-child").click();	
+	$("#topbar").click();
+	
 	
 	$(".bottoni img[name]")
 		.mousedown(function(event) {this.src = "Bottoni/"+this.name+"click.png"})
@@ -236,12 +263,20 @@ jQuery(function($) {
 				<img alt="" name=ricerca src="Bottoni/ricercastat.png">
 				<img alt="" name=creagruppoass src="Bottoni/creagruppoassstat.png">
 				<img alt="" name=Registraassociazione src="Bottoni/Registraassociazionestat.png">			
-			<tr class="amici ass2">
-				<td><input type=button value=asd><input type=button value=asd><input type=button value=asd><input type=button value=asd>		
-			<tr class="amici ass1">
-					<td><input type=button value=asd><input type=button value=asd><input type=button value=asd><input type=button value=asd>		
-			<tr class=associazioni>
-					<td><input type=button value=asd><input type=button value=asd><input type=button value=asd><input type=button value=asd>		
+			<tr class=associazione><td><input value=bananaass>
+
+			<tr class=gruppo><td><input value=bananagruppo>
+			<tr class=ricerca><td><form action="javascript:void(0);">
+			  <input type=search value=bananaricerca list=previousResearches><input type=submit value=cerca></form>
+			
+
+<datalist id=previousResearches>
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Google Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist><!--TODO: schede ricerca multiple-->
 		
 		</table>
 	 </ul> 
