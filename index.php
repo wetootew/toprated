@@ -21,7 +21,7 @@ function loadVideo(id) {
 	$('#topbar').prepend('<div class="scheda oscuramento temp"><div class=xClose>X</div><iframe width="560" height="315" src="http://www.youtube.com/embed/' + helpVideo[id] + '?list=RDlh28ZAGkahk" frameborder="0" allowfullscreen></iframe></div>');
 }
 
-jQuery(function($) {
+$( document ).ready(function() {
   $(".FlyOut>li").click(function(event) {
 	  event.stopPropagation();
 		$(".FlyOut>li").removeClass('click');
@@ -51,8 +51,8 @@ jQuery(function($) {
 	$(".tab .comandi .editable").each(function(){gruppoEditabile($(this))})
 
 	$("#contatti .comandi li:first-child").click(function(e) {
-		$(".tab tbody tr").show();
-		$(".tab .comandi li").removeClass('active')
+		$(this).closest(".tab").find("tbody tr").show();
+		$(this).closest(".tab").find(".comandi li").removeClass('active')
 		$(this).toggleClass('active')
   });
 		
@@ -63,9 +63,9 @@ jQuery(function($) {
   });
 
 	function gruppoFiltra(g) {
-		$(".tab tbody tr").hide();		
-		$(".tab tbody ." + g.html().toLowerCase()).show();
-		$(".tab .comandi li").removeClass('active')
+		g.closest(".tab").find("tbody tr").hide();		
+		g.closest(".tab").find("tbody ." + g.html().toLowerCase()).show();
+		g.closest(".tab").find(".comandi li").removeClass('active')
 		g.toggleClass('active')
   }
 	
@@ -122,7 +122,10 @@ jQuery(function($) {
 
 	
 	
-	$("#gruppi .comandi li:first-child").click();	
+	//$(".tab .comandi li:first-child").click();	
+	
+	$(".tab .comandi li:first-child").each(function(e) {$(this).click() });
+  
 	$("#topbar").click();
 	
 	
@@ -139,8 +142,18 @@ jQuery(function($) {
       $( ui.prev() ).val(ui.values[ 0 ] + " - " + ui.values[ 1 ] );
     }
   }));<!-- funzionalità da implementare -->*/ 
-	
-			
+
+$('.scheda').on("mousedown",".dati li", function(event){$(this).attr('contenteditable','true');});
+$('.scheda').on("keyup", ".nome", function(event) {
+	var $tr = $(this).closest("tr");
+	if ($tr.hasClass("associazione") || $tr.hasClass("gruppo")) {
+		var $trClone = $tr.clone(true);
+		$trClone.hide();
+		$tr.parent().append($trClone)
+	}
+	$tr.attr( "class", $(this).html() )
+	$tr.closest(".tab").find(".active").html($(this).html()); 
+});	
 });
 </script>
 
@@ -149,17 +162,17 @@ jQuery(function($) {
  <img alt="" width=190 height=85 id=logo src="logo.png">
  <ul class="registered center FlyOut DropDown bottoni">
   <li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
-	 <ul class=scheda id=profilo>
-		<li><ol id=dati contenteditable="true">
+	 <ul class="scheda profilo">
+		<li><ol class=dati contenteditable="true">
 	   <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
-	   <li> Mario Rossi
+	   <li class=nome> Mario Rossi
 	   <li> Camaiore
 	   <li> idraulico
 	   <li> licenza media
 		 <li> interessi
 		 <li> gruppi
 		</ol>
-		<ol id=log>
+		<ol class=log>
 	   <li> 12/12/2112: ha partecipato a sdfg sdfs
 	   <li> 12/12/2112: ha partecipato a sdfg sdfs
 	   <li> 12/12/2112: ha partecipato a sdfg sdfs
@@ -179,7 +192,7 @@ jQuery(function($) {
 				<img src="" width=40 height=25>
 				<img src="" width=40 height=25>
 				<img src="" width=40 height=25>
-				<h2 id=descrProf> Descrizione </h2>
+				<h2 class=descrProf> Descrizione </h2>
 				<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
 		 </ol>
 	</ul> 
@@ -263,9 +276,68 @@ jQuery(function($) {
 				<img alt="" name=ricerca src="Bottoni/ricercastat.png">
 				<img alt="" name=creagruppoass src="Bottoni/creagruppoassstat.png">
 				<img alt="" name=Registraassociazione src="Bottoni/Registraassociazionestat.png">			
-			<tr class=associazione><td><input value=bananaass>
-
-			<tr class=gruppo><td><input value=bananagruppo>
+			<tr class=associazione><td class=profilo>
+				<ol class=dati>
+			   <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
+			   <li class=nome>adsi
+			   <li> Camaiore
+			   <li> qwe
+			   <li> licdssdfenza 
+				</ol>
+				<ol class=log>
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+				</ol>
+				<ol class=center>
+				  <li><img src="" width=40 height=40>
+						<p class=progresslbl style="left:50px;">500</p>
+						<progress title=825 value=.75></progress>
+						<p class=progresslbl style="right:50px;">1000</p>
+						<img src="" width=40 height=40><br>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<h2 class=descrProf> Descrizione </h2>
+						<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
+				 </ol>
+			<tr class=gruppo><td class=profilo>
+				<ol class=dati>
+			   <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
+			   <li class=nome>dfdsfdsf
+			   <li> Camaiore
+			   <li> qwe
+			   <li> licdssdfenza 
+				</ol>
+				<ol class=log>
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+				</ol>
+				<ol class=center>
+				  <li><img src="" width=40 height=40>
+						<p class=progresslbl style="left:50px;">500</p>
+						<progress title=825 value=.75></progress>
+						<p class=progresslbl style="right:50px;">1000</p>
+						<img src="" width=40 height=40><br>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<h2 class=descrProf> Descrizione </h2>
+						<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
+				 </ol>
 			<tr class=ricerca><td><form action="javascript:void(0);">
 			  <input type=search value=bananaricerca list=previousResearches><input type=submit value=cerca></form>
 			
