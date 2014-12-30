@@ -35,7 +35,7 @@ margin-top:50px;
 }
 
 .registered a { text-decoration:none; }
-.registered { display:none !important;}
+.unregistered { display:none !important;}
 
 .bottoni img {cursor:pointer;}
 
@@ -173,21 +173,22 @@ table.tab {width:100%;}
 .tab ol.comandi li[contenteditable=true] {border:2px dashed;padding:6px;}
  
 
-#profilo {white-space: normal;}
-#profilo ol {margin:8px; width:180px;}
-#descrProf { padding-top: 10px; font-variant:small-caps;}
-#dati { float:left;}
-#log { float:right;}
-#log li {text-align:left; font: bold 11px georgia;}
-#profilo .foto {width:180px; height:180px;}
-#profilo .center { width:calc(100% - 450px); min-width: 200px;}
-#profilo textarea {
+.profilo {white-space: normal;}
+.profilo ol {margin:8px; width:180px;}
+.descrProf { padding-top: 10px; font-variant:small-caps;}
+.dati { float:left;}
+.log { float:right;}
+.log li {text-align:left; font: bold 11px georgia;}
+.profilo .foto {width:180px; height:180px;}
+.profilo .center { width:calc(100% - 450px); min-width: 200px;}
+.profilo textarea {
  width:100%;
  height:200px;
  background: #fae2c9;
  color:#997f64; 
 	text-shadow: 0 0 0.083em #997f64;
 }
+.tab .tr {display:none;}
 
 progress { color: #005826; } /* IE10 */
 progress::-moz-progress-bar { background: #005826; } /* Firefox */
@@ -236,6 +237,16 @@ progress {
 #registrazione h2 {margin:54px 0 24px;}
 #registrazione textarea {font:11px georgia}
 #registrazione img { vertical-align: middle; margin:5px;}
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
 h1 {
  padding-top: 33px;
