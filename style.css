@@ -8,8 +8,12 @@
    -moz-box-sizing: border-box;
         box-sizing: border-box;
 word-wrap:break-word;
-white-space: normal;
 }
+
+.FlyOut li>ul, .FlyOut.OnlyClick li:not(.click)>ul {display: none; list-style-type: none; white-space: nowrap;}
+.FlyOut li:hover>ul, .FlyOut li.click>ul {position: absolute; display: inline;}
+.DropDown>li, .DropDown>li:hover>ul , .DropDown>li.click>ul {display: block; float: left;}
+.DropDown>li {position:relative;}
 
 html, body { background-color:#fae2c9;}
 textarea {resize: none;}
@@ -173,7 +177,7 @@ table.tab {width:100%;}
 .tab ol.comandi li[contenteditable=true] {border:2px dashed;padding:6px;}
  
 
-.profilo {white-space: normal;}
+.profilo {white-space: normal !important;}
 .profilo ol {margin:8px; width:180px;}
 .descrProf { padding-top: 10px; font-variant:small-caps;}
 .dati { float:left;}
@@ -230,6 +234,7 @@ progress {
 #contatti td {float:left;}
 #contatti .nick {  font: bold 12px georgia;}
 #contatti .location {  font: bold 10px georgia;}
+#contatti .bottoni {margin-left:18px; margin-top:10px;}
 #contatti .bottoni>li>img {height:20px; width:24px;}
 #contatti .associazioni {color:#997f64;}
 
@@ -348,12 +353,6 @@ font: bold 16px georgia;
 font-variant: small-caps; 
 text-align:center;
 }
-
-.FlyOut li>ul, .FlyOut.OnlyClick li:not(.click)>ul {display: none; list-style-type: none; white-space: nowrap;}
-.FlyOut li:hover>ul, .FlyOut li.click>ul {position: absolute; display: inline;}
-.DropDown>li, .DropDown>li:hover>ul , .DropDown>li.click>ul {display: block; float: left;}
-.DropDown>li {position:relative;}
-
 
 #bacheca .bubble {top:calc(100% + 22px);}
 
