@@ -55,7 +55,7 @@ include('php/fb-login.php'); ?> <?php include('php/g-login.php');
    <ul class=scheda id=contatti> 
 		<li> <table class=tab>
 		 <caption>
-			<ol class=comandi><li>Tutti<li>Amici<li>Associazioni<li>+</ol>		 
+			<ol class=comandi><li>Tutti<li>Amici<li>Associazioni<li>Gruppi<li>+</ol>		 
      <tbody>
 			<tr class="amici ass2">
 				<td><img class=fotoCont width=60 height=60 src=foto.jpg>
@@ -64,7 +64,6 @@ include('php/fb-login.php'); ?> <?php include('php/g-login.php');
 				<td class=asd>
 				 <ol class="FlyOut DropDown bottoni">
 					<li><img alt="" title=profilo name=prof1 src="Bottoni/prof1stat.png">
-					<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
 					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
 					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
 				</ol>		
@@ -75,7 +74,6 @@ include('php/fb-login.php'); ?> <?php include('php/g-login.php');
 				<td class=asd>
 				 <ol class="FlyOut DropDown bottoni">
 					<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
-					<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
 					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
 					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
 				</ol>			
@@ -86,7 +84,6 @@ include('php/fb-login.php'); ?> <?php include('php/g-login.php');
 				<td class=asd>
 				 <ol class="FlyOut DropDown bottoni">
 					<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
-					<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
 					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
 					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
 				</ol>		
@@ -97,7 +94,6 @@ include('php/fb-login.php'); ?> <?php include('php/g-login.php');
 				<td class=asd>
 				 <ol class="FlyOut DropDown bottoni">
 					<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
-					<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
 					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
 					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
 				</ol>		
@@ -108,7 +104,6 @@ include('php/fb-login.php'); ?> <?php include('php/g-login.php');
 				<td class=asd>
 				 <ol class="FlyOut DropDown bottoni">
 					<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
-					<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
 					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
 					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
 				</ol>		
@@ -123,9 +118,9 @@ include('php/fb-login.php'); ?> <?php include('php/g-login.php');
    <ul class=scheda id=gruppi> 
 		<li> <table class=tab>
 		 <caption>
-			<ol class=comandi><li>nuovo</ol>		 
+			<ol class=comandi><li>Inizio</ol>		 
      <tbody>	
-			<tr class=nuovo>
+			<tr class=inizio>
 				<td class=bottoni>
 				<img alt="" name=ricerca src="Bottoni/ricercastat.png">
 				<img alt="" name=creagruppoass src="Bottoni/creagruppoassstat.png">
