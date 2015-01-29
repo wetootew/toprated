@@ -5,7 +5,6 @@ include('db.php');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require_once __DIR__ . '/vendor/autoload.php';
-include('php/fb-login.php'); ?> <?php include('php/g-login.php');
 ?>-->
 <title>Boh</title>
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -207,8 +206,8 @@ include('php/fb-login.php'); ?> <?php include('php/g-login.php');
  
  <div class="login unregistered">
   <p> Sei registrato? </p>
-  <input type=text name=usr placeholder=Username><br>
-  <input type=password name=pwd placeholder=Password ><br>
+  
+<?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?>
   <img alt="" src="bottoni/login.png">
  </div>
  <ul id=titoletto class="center unregistered FlyOut DropDown OnlyClick bottoni">
