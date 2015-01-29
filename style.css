@@ -39,7 +39,7 @@ margin-top:50px;
 }
 
 .registered a { text-decoration:none; }
-.unregistered { display:none !important;}
+.registered { display:none !important;}
 
 .bottoni img {cursor:pointer;}
 
