@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <!--<?php 
 session_start(); 
-include('db.php'); 
+include('php/db.php'); 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require_once __DIR__ . '/vendor/autoload.php';
@@ -13,7 +13,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 <div id=topbar>
  <img alt="" width=190 height=85 id=logo src="logo.png">
- <ul class="registered center FlyOut DropDown bottoni">
+ <ul class="registered center FlyOut DropDown bottoni stillWithClick">
   <li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
 	 <ul class="scheda profilo">
 		<li><ol class=dati contenteditable="true">
@@ -109,7 +109,20 @@ require_once __DIR__ . '/vendor/autoload.php';
 		</table>
 	 </ul> 
 	<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
-   <ul class=scheda id=messaggi> <li>21212121212122121</ul> 
+      <ul class=scheda id=messaggi> <li><ol class=stillWithClick>
+	    <li> peppino
+		<ul class=bubble><li> chat con peppino</ul> 
+	    <li> peppina
+		<ul class=bubble><li> chat con peppina</ul> 
+	    <li> peppine
+		<ul class=bubble><li> chat con peppine</ul> 
+	    <li> peppini
+		<ul class=bubble><li> chat con peppini</ul> 
+	    <li> peppinu
+		<ul class=bubble><li> chat con peppini</ul>   
+	  
+	  </ol>
+	  </ul> 
 	<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
    <ul class=scheda id=eventi> <li>21212121212122121</ul> 
 	 
@@ -206,9 +219,7 @@ require_once __DIR__ . '/vendor/autoload.php';
  
  <div class="login unregistered">
   <p> Sei registrato? </p>
-  
-<?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?>
-  <img alt="" src="bottoni/login.png">
+  <?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?>
  </div>
  <ul id=titoletto class="center unregistered FlyOut DropDown OnlyClick bottoni">
   <li><img alt="" name=Registrati src="Bottoni/Registratistat.png" height="82" width="215"><br>Scopri tutti i vantaggi per utenti ed associazioni! 
