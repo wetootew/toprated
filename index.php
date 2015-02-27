@@ -5,6 +5,7 @@ include('php/db.php');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require_once __DIR__ . '/vendor/autoload.php';
+include('php/fb-login.php'); ?> <?php include('php/g-login.php');
 ?>-->
 <title>Boh</title>
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -62,7 +63,8 @@ require_once __DIR__ . '/vendor/autoload.php';
 				<td class=location>Camayork
 				<td class=asd>
 				 <ol class="FlyOut DropDown bottoni">
-					<li><img alt="" title=profilo name=prof1 src="Bottoni/prof1stat.png">
+					<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
+					<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
 					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
 					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
 				</ol>		
@@ -73,6 +75,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 				<td class=asd>
 				 <ol class="FlyOut DropDown bottoni">
 					<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
+					<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
 					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
 					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
 				</ol>			
@@ -83,6 +86,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 				<td class=asd>
 				 <ol class="FlyOut DropDown bottoni">
 					<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
+					<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
 					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
 					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
 				</ol>		
@@ -103,6 +107,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 				<td class=asd>
 				 <ol class="FlyOut DropDown bottoni">
 					<li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
+					<li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
 					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
 					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
 				</ol>		
@@ -124,7 +129,20 @@ require_once __DIR__ . '/vendor/autoload.php';
 	  </ol>
 	  </ul> 
 	<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
-   <ul class=scheda id=eventi> <li>21212121212122121</ul> 
+    <ul class=scheda id=notifiche> <li>
+	  <table>
+	  <thead><tr><th>
+				<ul class=filtri>
+					<li><a href=#><img alt=zona width=70 height=70 src=foto.jpg></a>
+					<li><a href=#><img alt=utenti width=70 height=70 src=foto.jpg></a>
+					<li><a href=#><img alt=assoc width=70 height=70 src=foto.jpg></a>
+					<li><a href=#><img alt=gruppi width=70 height=70 src=foto.jpg></a>
+	  <tbody>
+		<tr><td><img alt=img width=30 height=30 src=foto.jpg> Prime asdfgdasdasdasdasd da sdasdasdasd adfsdasddasdgadfg agadsf gdfgadgadfgadfgadfgdfg
+		<tr><td><img alt=img width=30 height=30 src=foto.jpg> Prime asdfg adfsgadfg agadsf gdfgadgadfgadfgadfgdfg
+		<tr><td><img alt=img width=30 height=30 src=foto.jpg> Prime asdasddasdasdsadasdasdasdsadfg adfsgadfg agadsf gdfgadgadfgadfgadfgdfg
+	</table>
+	</ul> 
 	 
 	<li><img alt="" src="Bottoni/associaz1disatt.png">	
    <ul class=scheda id=gruppi> 
@@ -219,7 +237,9 @@ require_once __DIR__ . '/vendor/autoload.php';
  
  <div class="login unregistered">
   <p> Sei registrato? </p>
-  <?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?>
+  <input type=text name=usr placeholder=Username><br>
+  <input type=password name=pwd placeholder=Password ><br>
+  <img alt="" src="bottoni/login.png">
  </div>
  <ul id=titoletto class="center unregistered FlyOut DropDown OnlyClick bottoni">
   <li><img alt="" name=Registrati src="Bottoni/Registratistat.png" height="82" width="215"><br>Scopri tutti i vantaggi per utenti ed associazioni! 
