@@ -22,12 +22,13 @@ textarea {resize: none;}
  background-color:#005826;
  color:#fae2c9;
  text-align:center;
- height: 105px;
+ height: 98px;
  position:fixed;
  width:100%;
  min-width:920px;
 z-index: 1;
-border-bottom: #754814 solid 5px;
+box-shadow:  0 3px 8px 5px #005826;
+/* border-bottom: #754814 solid 5px; */
 }
 
 #logo { float:left; position:absolute; left:calc(2% + 5px);top:7px;}
@@ -234,10 +235,10 @@ progress {
 #contatti td {float:left;}
 #contatti .nick {  font: bold 12px georgia;}
 #contatti .location {  font: bold 10px georgia;}
-#contatti .bottoni {margin-left:18px; margin-top:10px;}
+#contatti .bottoni {margin-left:4px; margin-top:10px;}
+#contatti .associazioni .bottoni {margin-left:18px;}
 #contatti .bottoni>li>img {height:20px; width:24px;}
 #contatti .associazioni {color:#997f64;}
-
 
 
 #messaggi ol {cursor:pointer;height:100%; overflow-y:auto; overflow-x:visible; width:100px; }
@@ -247,6 +248,18 @@ progress {
 #messaggi ol { direction: rtl; padding-top:10px;} 
 
 #messaggi .nick {  font: bold 12px georgia;}
+
+
+#notifiche table {padding-top:10px;}
+#notifiche tr, #notifiche th, #notifiche td, #notifiche thead ul {display: block;}
+#notifiche thead {float: left; width:25%;}
+#notifiche tbody {float: right; width:75%;}
+#notifiche td {width:100%;overflow:hidden;text-overflow:ellipsis;text-align:left;}
+
+#notifiche .filtri ul { list-style-type: none;}
+#notifiche thead li {margin:auto;}
+
+
 
 
 #registrazione>span {display:block; width:50%; float:left;}
@@ -274,8 +287,8 @@ h3 {font:bolder 12px georgia; margin:24px 0 3px;}
 
 #page .comandi{ text-align:center; width:100%;}
 
-#sponsor { left:0; margin-left:2%; margin-top: 10px;}
-#board { right:0; margin-right:2%; margin-top: 10px;}
+#sponsor { left:0; margin-left:2%; margin-top: 20px;}
+#board { right:0; margin-right:2%; margin-top: 20px;}
 aside {
  top:0;
  bottom:0;
@@ -303,7 +316,7 @@ aside {
  }
  
 #bacheca td:first-child  {width:100%;}
-#bacheca th, td {display:block;}
+#bacheca th, #bacheca td {display:block;}
 #bacheca  td {padding:2px;}
 
 #bacheca * { text-shadow: 0 0 0.083em #997f64;}
