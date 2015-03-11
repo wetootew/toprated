@@ -63,14 +63,14 @@ margin-top:50px;
 
 .rigadimensione {height:2px;}
 
-#topbar .scheda {
+.scheda {
  left:0;
  width:calc(96% - 480px);
  overflow: auto;
- margin-left:calc(2% + 240px);
+ margin-left:calc(2% + 240px) !important;
  margin-top:55px;
- position:fixed;
- height:calc(100% - 200px);
+ position:fixed !important;
+ height:calc(100% - 200px) !important;
  color: #005826;
  font: bold 14px georgia;
 background: #fae2c9;
@@ -78,6 +78,7 @@ background: #fae2c9;
 -moz-border-radius: 15px;
 border-radius: 15px;
 border: #754814 solid 5px;
+min-width:640px;
 }
 
 #topbar .registered.DropDown>li:hover { z-index: 2;}
@@ -108,15 +109,10 @@ top: calc(100% - 11px);
 left: 13px;
 }
 
-.scheda>li:first-child {min-width:640px; height:100%;}
+.scheda>li:first-child {height:100%;}
 .scheda ol  {list-style-type: none;}
-.scheda ol.comandi {
- overflow-x:auto; 
- max-width:805px; 
- width:100%; 
- text-align:left;
- white-space: nowrap;
-}
+
+.oscuramento {z-index:5;top:90px;box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.30);}
 
 .help:hover {color:#997f64; text-shadow: 0 0 0.3em #997f64;}
 .help {
@@ -143,7 +139,15 @@ list-style-type: decimal;
 margin:10px;
 }
 
-.tab {white-space: normal;}
+
+.tab {
+    border-collapse: collapse;
+	table-layout:fixed;
+	width:100%;
+	white-space:normal;
+}
+.tab caption {display: block; width: 100%;}
+
 .tab ol.comandi>li, .tab ol.comandi {
  transform:rotateX(180deg);
  -ms-transform:rotateX(180deg); /* IE 9 */
@@ -169,12 +173,15 @@ width: 100%;
 height:calc(100% - 2px);
 }
 
-.oscuramento {z-index:5;top:90px;box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.30);}
+.tab ol.comandi {
+ overflow-x:auto; 
+ width:100%; 
+ text-align:left;
+ white-space: nowrap;
+}
  
 .tab ol.comandi li:hover {color:#997f64; text-shadow: 0 0 0.3em #997f64;}
 .tab ol.comandi li.active {color:#997f64; text-shadow: 0 0 0.3em #997f64; border-bottom: #fae2c9 2px solid;}
-
-table.tab {width:100%;}
 .tab ol.comandi li[contenteditable=true] {border:2px dashed;padding:6px;}
  
 
@@ -188,12 +195,12 @@ table.tab {width:100%;}
 .profilo .center { width:calc(100% - 450px); min-width: 200px;}
 .profilo textarea {
  width:100%;
- height:200px;
+ height:100px;
  background: #fae2c9;
  color:#997f64; 
 	text-shadow: 0 0 0.083em #997f64;
 }
-.tab .tr {display:none;}
+/*.tab .tr {display:none;} /* perché?!?*/
 
 progress { color: #005826; } /* IE10 */
 progress::-moz-progress-bar { background: #005826; } /* Firefox */
@@ -250,11 +257,18 @@ progress {
 #messaggi .nick {  font: bold 12px georgia;}
 
 
-#notifiche table {padding-top:10px;}
+#notifiche table {padding-top:10px;width:500px!important;}
 #notifiche tr, #notifiche th, #notifiche td, #notifiche thead ul {display: block;}
 #notifiche thead {float: left; width:25%;}
 #notifiche tbody {float: right; width:75%;}
-#notifiche td {width:100%;overflow:hidden;text-overflow:ellipsis;text-align:left;}
+#notifiche td {
+width:100%;
+overflow:hidden;
+text-overflow:ellipsis;
+text-align:left;
+}
+#notifiche img {vertical-align: middle;}
+
 
 #notifiche .filtri ul { list-style-type: none;}
 #notifiche thead li {margin:auto;}
@@ -298,7 +312,7 @@ aside {
  border-radius:20px 20px 0 0;
  color:#fae2c9;
  background-color:#005826;
- text-align:center; 
+ text-align:center;
 }
 
 #bacheca { 
@@ -361,6 +375,19 @@ aside {
 .descrizione { height: 45px; text-align:justify; font: 12px georgia;}
 .visite { padding: 10px 0 10px 0;}
 .nomedata {float:right; font: italic 12px georgia;}
+.fotopost {margin-left:-2px;}
+.periodo {text-align:center; font: 12px georgia; width:100%;}
+.titolopost {
+width:100%; 
+font: bold 16px georgia; 
+font-variant: small-caps; 
+text-align:center;
+}
+
+.voto {float:right; padding-top:10px;}
+.descrizione { height: 45px; text-align:justify; font: 12px georgia;}
+.visite { padding: 10px 0 10px 0;}
+.scheda .nomedata {position:absolute;bottom:0; float:none; font: italic 12px georgia;}
 .fotopost {margin-left:-2px;}
 .periodo {text-align:center; font: 12px georgia; width:100%;}
 .titolopost {
@@ -435,18 +462,6 @@ font: 12px georgia;
 border-width: 0 0 0 5px;
  }
  
-#messaggi .bubble2 {
- width:calc(96% - 588px);
- margin-left:calc(2% + 340px);
- left:0;
- top:128px;
- overflow: auto;
- position:fixed;
- height:calc(100% - 240px);
- color: #005826;
- }
- 
- 
 #messaggi ol>li:hover:after, #messaggi ol>li.click:after 
 {
 content: '';
@@ -514,3 +529,8 @@ left: -2px;
 #bacheca .freccia{background: #997f64;}
 #bacheca .freccia:after {border-color: #997f64 transparent;}
 #bacheca .freccia:before {border-color: #997f64 transparent;}
+
+
+/* iniziale - senza sostenitori e community board */
+aside {display: none;}
+#bacheca {max-width:1200px;}
