@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <!--<?php 
 session_start(); 
-include('php/db.php'); 
+include('php/user.php'); 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require_once __DIR__ . '/vendor/autoload.php';
@@ -55,9 +55,9 @@ include('php/fb-login.php'); ?> <?php include('php/g-login.php');
    <ul class=scheda id=contatti> 
 		<li> <table class=tab>
 		 <caption>
-			<ol class=comandi><li>Tutti<li>Amici<li>Associazioni<li>Gruppi<li>+</ol>		 
+			<ol class=comandi><li>Tutti<li>Seguiti<li>Followers<li>+</ol>		 
      <tbody>
-			<tr class="amici ass2">
+			<tr class="seguiti followers">
 				<td><img class=fotoCont width=60 height=60 src=foto.jpg>
 				<td class=nick>Mario Rossi
 				<td class=location>Camayork
@@ -68,7 +68,7 @@ include('php/fb-login.php'); ?> <?php include('php/g-login.php');
 					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
 					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
 				</ol>		
-			<tr class=amici>
+			<tr class=followers>
 				<td><img class=fotoCont width=60 height=60 src=foto.jpg>
 				<td class=nick>Mario Verdi
 				<td class=location>Camayork
@@ -79,7 +79,7 @@ include('php/fb-login.php'); ?> <?php include('php/g-login.php');
 					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
 					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
 				</ol>			
-			<tr class="amici ass1">
+			<tr class="seguiti followers">
 				<td><img class=fotoCont width=60 height=60 src=foto.jpg>
 				<td class=nick>Mario Bianchi
 				<td class=location>Camayork	
@@ -90,7 +90,7 @@ include('php/fb-login.php'); ?> <?php include('php/g-login.php');
 					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
 					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
 				</ol>		
-			<tr class=associazioni>
+			<tr class=seguiti>
 				<td><img class=fotoCont width=60 height=60 src=foto.jpg>
 				<td class=nick>Ass. Mario Bianchi
 				<td class=location>Camayork	
@@ -100,7 +100,7 @@ include('php/fb-login.php'); ?> <?php include('php/g-login.php');
 					<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
 					<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
 				</ol>		
-			<tr class="amici ass2">
+			<tr class="seguiti ass2">
 				<td><img class=fotoCont width=60 height=60 src=foto.jpg>
 				<td class=nick>Mario Bianchi
 				<td class=location>Camayork
@@ -236,10 +236,7 @@ include('php/fb-login.php'); ?> <?php include('php/g-login.php');
  <img alt="" width=200 height=80 class=registered id=spaziodx src="logo.jpg">
  
  <div class="login unregistered">
-  <p> Sei registrato? </p>
-  <input type=text name=usr placeholder=Username><br>
-  <input type=password name=pwd placeholder=Password ><br>
-  <img alt="" src="bottoni/login.png">
+  <?php include('php/fb-login.php'); ?> <?php include('php/g-login.php'); ?>
  </div>
  <ul id=titoletto class="center unregistered FlyOut DropDown OnlyClick bottoni">
   <li><img alt="" name=Registrati src="Bottoni/Registratistat.png" height="82" width="215"><br>Scopri tutti i vantaggi per utenti ed associazioni! 
