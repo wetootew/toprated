@@ -10,21 +10,24 @@ function loadVideo(id) {
 
 $( document ).ready(function() {
   $(".stillWithClick>li").on('click', function(event) {
-	  event.stopPropagation();
-		$(".stillWithClick>li").not($(this).parents()).removeClass('click');
+	event.stopPropagation();
+	if ($("#bacheca tr.scheda.oscuramento").length)
+		$("#bacheca tr.scheda").removeClass('scheda oscuramento')	
+	$(".stillWithClick>li").not($(this).parents()).removeClass('click');
     $(this).toggleClass("click");
   });
 	
   $("body").click(function(event) {
-	event.stopPropagation();
 	$(".stillWithClick>li").removeClass('click');
 	$(".temp").remove();	
     $("#bacheca tr.scheda").removeClass('scheda oscuramento')	
   });
 
   $("#bacheca tr").on('click', function(event) {
-	event.stopPropagation();
-	$(this).addClass('scheda oscuramento');
+	if(!$("#bacheca tr.scheda.oscuramento").length)
+		$(this).addClass('scheda oscuramento');	
+	if ($(this).is(".scheda") )
+		event.stopPropagation();
   });
 
   sortabledir = 1;
