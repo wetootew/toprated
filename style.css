@@ -64,21 +64,21 @@ margin-top:50px;
 .rigadimensione {height:2px;}
 
 .scheda {
- left:0;
- width:calc(96% - 480px);
- overflow: auto;
- margin-left:calc(2% + 240px) !important;
- margin-top:55px;
  position:fixed !important;
+ width:calc(96% - 480px) !important;
  height:calc(100% - 200px) !important;
+ margin-left:calc(2% + 240px) !important;
+ margin-top:55px !important;
+ left:0;
  color: #005826;
+ overflow: auto;
  font: bold 14px georgia;
-background: #fae2c9;
--webkit-border-radius: 15px;
--moz-border-radius: 15px;
-border-radius: 15px;
-border: #754814 solid 5px;
-min-width:640px;
+ background: #fae2c9;
+ -webkit-border-radius: 15px;
+ -moz-border-radius: 15px;
+ border-radius: 15px;
+ border: #754814 solid 5px;
+ min-width:640px;
 }
 
 #topbar .registered.DropDown>li:hover { z-index: 2;}
