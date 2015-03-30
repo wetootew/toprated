@@ -1,11 +1,11 @@
 <!DOCTYPE html> 
 <!--<?php 
 session_start(); 
-include('php/user.php'); 
+require_once __DIR__ . '/vendor/autoload.php';
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require_once __DIR__ . '/vendor/autoload.php';
-include('php/fb-login.php'); ?> <?php include('php/g-login.php');
+require_once('php/user.php'); 
+
 ?>-->
 <title>Boh</title>
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -132,19 +132,58 @@ include('php/fb-login.php'); ?> <?php include('php/g-login.php');
     <ul class=scheda id=notifiche> <li>
 	  <table>
 	  <thead><tr><th>
-				<ul class=filtri>
-					<li><a href=#><img alt=zona width=70 height=70 src=foto.jpg></a>
-					<li><a href=#><img alt=utenti width=70 height=70 src=foto.jpg></a>
-					<li><a href=#><img alt=assoc width=70 height=70 src=foto.jpg></a>
-					<li><a href=#><img alt=gruppi width=70 height=70 src=foto.jpg></a>
+				<ul class="filtri bottoni">
+					<li><a href=#><img alt=zona name=zona src="Bottoni/zonastat.png"></a>
+					<li><a href=#><img alt=utenti name=utenti src="Bottoni/utentistat.png"></a>
+					<li><a href=#><img alt=assoc name=associaz2 src="Bottoni/associaz2stat.png">	</a>
+					<li><a href=#><img alt=gruppi name=gruppoassociativo src="Bottoni/gruppoassociativostat.png">	</a>
 	  <tbody>
-		<tr><td><img alt=img width=30 height=30 src=foto.jpg> Prime asdfgdasdasdasdasd da sdasdasdasd adfsdasddasdgadfg agadsf gdfgadgadfgadfgadfgdfg
+		<tr><td><ul class="FlyOut stillWithClick OnlyClick"><li><img alt=img width=30 height=30 src=foto.jpg><ul class="scheda profilo">
+		<li><ol class=dati contenteditable="true">
+	   <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
+	   <li class=nome> Mario Rossi
+	   <li> Camaiore
+	   <li> idraulico
+	   <li> licenza media
+		 <li> interessi
+		 <li> gruppi
+		</ol>
+		<ol class=log>
+	   <li> 12/12/2112: ha partecipato a sdfg sdfs
+	   <li> 12/12/2112: ha partecipato a sdfg sdfs
+	   <li> 12/12/2112: ha partecipato a sdfg sdfs
+	   <li> 12/12/2112: ha partecipato a sdfg sdfs
+	   <li> 12/12/2112: ha partecipato a sdfg sdfs
+	   <li> 12/12/2112: ha partecipato a sdfg sdfs
+		</ol>
+		<ol class=center>
+		  <li><img src="" width=40 height=40>
+				<p class=progresslbl style="left:50px;">500</p>
+				<progress title=825 value=.75></progress>
+				<p class=progresslbl style="right:50px;">1000</p>
+				<img src="" width=40 height=40><br>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<h2 class=descrProf> Descrizione </h2>
+				<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
+		 </ol>
+
+
+
+		</ul></ul>
+
+
+		Prime asdfgdasdasdasdasd da sdasdasdasd adfsdasddasdgadfg agadsf gdfgadgadfgadfgadfgdfg
 		<tr><td><img alt=img width=30 height=30 src=foto.jpg> Prime asdfg adfsgadfg agadsf gdfgadgadfgadfgadfgdfg
 		<tr><td><img alt=img width=30 height=30 src=foto.jpg> Prime asdasddasdasdsadasdasdasdsadfg adfsgadfg agadsf gdfgadgadfgadfgadfgdfg
 	</table>
 	</ul> 
 	 
-	<li><img alt="" src="Bottoni/associaz1disatt.png">	
+	<li><img alt="" name=associaz1 src="Bottoni/associaz1stat.png">	
    <ul class=scheda id=gruppi> 
 		<li> <table class=tab>
 		 <caption>
