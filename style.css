@@ -15,21 +15,49 @@ word-wrap:break-word;
 .DropDown>li, .DropDown>li:hover>ul , .DropDown>li.click>ul {display: block; float: left;}
 .DropDown>li {position:relative;}
 
-html, body { background-color:#fae2c9;}
+html, body { background-image: url("Patternsocialseed/patternbacheca1.png");}
 textarea {resize: none;}
 
 #topbar {
- background-color:#005826;
- color:#fae2c9;
+ background-image: url("Patternsocialseed/patterntopbar2.png"); /* color:#005826; */
+ color:#FFFFFF;
  text-align:center;
- height: 98px;
+ height: 102px;
  position:fixed;
  width:100%;
  min-width:920px;
 z-index: 1;
-box-shadow:  0 3px 8px 5px #005826;
-/* border-bottom: #754814 solid 5px; */
+-webkit-box-shadow: 0 3px 8px 5px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0 3px 8px 5px rgba(50, 50, 50, 0.75);
+box-shadow:         0 3px 8px 5px rgba(50, 50, 50, 0.75);
 }
+
+/* FOLLIA DELIRANTE (ombra a scalare)
+.effect3
+{
+  position: relative;
+}
+.effect3:before
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+*/
 
 #logo { float:left; position:absolute; left:calc(2% + 5px);top:7px;}
 #titoletto { font-size:12px; margin-top:6px; position:absolute;}
@@ -48,6 +76,8 @@ margin-top:50px;
 
 .unregistered.center img { margin-top:-5px; margin-bottom: -3px; cursor: pointer;}
 
+
+ 
 .login * { margin: 2px;}
 .login  p { margin: 6px;}
 .login {
@@ -57,6 +87,7 @@ margin-top:50px;
 	text-align:center;
 	width:200px;
 }
+
 
 .comandi a { text-decoration: none;}
 .comandi * { vertical-align: middle;}
@@ -68,7 +99,7 @@ margin-top:50px;
  width:calc(96% - 480px) !important;
  height:calc(100% - 200px) !important;
  margin-left:calc(2% + 240px) !important;
- margin-top:55px !important;
+ margin-top:55px;
  left:0;
  color: #005826;
  overflow: auto;
@@ -79,6 +110,7 @@ margin-top:50px;
  border-radius: 15px;
  border: #754814 solid 5px;
  min-width:640px;
+ text-align:center;
 }
 
 #topbar .registered.DropDown>li:hover { z-index: 2;}
@@ -200,13 +232,12 @@ height:calc(100% - 2px);
  color:#997f64; 
 	text-shadow: 0 0 0.083em #997f64;
 }
-/*.tab .tr {display:none;} /* perché?!?*/
 
 progress { color: #005826; } /* IE10 */
 progress::-moz-progress-bar { background: #005826; } /* Firefox */
 progress::-webkit-progress-value { background: #005826; } /* Chrome */
 progress::-webkit-progress-bar { background: #fae2c9;} /* Chrome */
-progress {
+progress { vertical-align:bottom;
  width:calc(100% - 90px);
  height: 20px;
  border:1px solid;
@@ -270,9 +301,11 @@ text-align:left;
 #notifiche img {vertical-align: middle;}
 
 
+#notifiche .filtri img {width:70px; height:70px;}
 #notifiche .filtri ul { list-style-type: none;}
 #notifiche thead li {margin:auto;}
 
+#notifiche .scheda {margin-top:1px;z-index:100;}
 
 
 
@@ -316,7 +349,7 @@ aside {
 }
 
 #bacheca { 
- color:#997f64; 
+ color:#754814; 
  max-width:calc(96% - 400px); 
  }
 #bacheca tbody {display: inline-block;} 
@@ -324,18 +357,19 @@ aside {
  display:inline-block;
  width: 190px;
  height: 280px;
- margin: calc(1% + 3px) calc(1% + 3px) calc(1% + 3px) calc(1% + 3px); 
  border: 5px solid; 
  border-radius: 8px;
+ background-color:#fae2c9;
  }
+ #bacheca tbody tr:not(.scheda) { margin: calc(1% + 3px) calc(1% + 3px) calc(1% + 3px) calc(1% + 3px); } 
  
 #bacheca td:first-child  {width:100%;}
 #bacheca th, #bacheca td {display:block;}
 #bacheca  td {padding:2px;}
 
-#bacheca * { text-shadow: 0 0 0.083em #997f64;}
+#bacheca * { text-shadow: 0 0 0.083em #754814;}
 #bacheca .comandi ul { margin:3px;}
-#bacheca .comandi a { margin: 10px; font: bold 18px georgia; color:#997f64;}
+#bacheca .comandi a { margin: 10px; font: bold 18px georgia; color:#754814;}
 #bacheca .comandi a:hover, #bacheca .comandi li.click>a {
  color:#005826;
  text-shadow: 0 0 0.3em #005826; 
