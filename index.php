@@ -17,7 +17,8 @@ require_once('php/user.php');
  <ul class="registered center FlyOut DropDown bottoni stillWithClick">
   <li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
 	 <ul class="scheda profilo">
-		<li><ol class=dati contenteditable="true">
+		<li><h2 class=intestazione> Profilo utente</h2>
+		<ol class=dati contenteditable="true">
 	   <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
 	   <li class=nome> Mario Rossi
 	   <li> Camaiore
@@ -53,7 +54,8 @@ require_once('php/user.php');
 	
   <li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
    <ul class=scheda id=contatti> 
-		<li> <table class=tab>
+		<li><h2 class=intestazione> Contatti</h2>
+		<table class=tab>
 		 <caption>
 			<ol class=comandi><li>Tutti<li>Seguiti<li>Followers<li>+</ol>		 
      <tbody>
@@ -114,7 +116,9 @@ require_once('php/user.php');
 		</table>
 	 </ul> 
 	<li><img alt="" name=mess1 src="Bottoni/mess1stat.png">
-      <ul class=scheda id=messaggi> <li><ol class=stillWithClick>
+      <ul class=scheda id=messaggi>
+		<li><h2 class=intestazione>Messaggi</h2>
+		<ol class=stillWithClick>
 	    <li> peppino
 		<ul class=bubble><li> chat con peppino</ul> 
 	    <li> peppina
@@ -129,14 +133,16 @@ require_once('php/user.php');
 	  </ol>
 	  </ul> 
 	<li><img alt="" name=evento1 src="Bottoni/evento1stat.png"> 
-    <ul class=scheda id=notifiche> <li>
+    <ul class=scheda id=notifiche> 
+	 <li><h2 class=intestazione>Notifiche</h2>
 	  <table>
 	  <thead><tr><th>
 				<ul class="filtri bottoni">
-					<li><a href=#><img alt=zona name=zona src="Bottoni/zonastat.png"></a>
-					<li><a href=#><img alt=utenti name=utenti src="Bottoni/utentistat.png"></a>
-					<li><a href=#><img alt=assoc name=associaz2 src="Bottoni/associaz2stat.png">	</a>
-					<li><a href=#><img alt=gruppi name=gruppoassociativo src="Bottoni/gruppoassociativostat.png">	</a>
+					<li style="margin-top:25px; margin-bottom:25px;">Filtra
+					<li><a href=# class="tooltip"><img alt=zona name=zona2filtro src="Bottoni/zona2filtrostat.png"><span>Scegli le zone di interesse.</span></a>
+					<li><a href=# class="tooltip"><img alt=utenti name=cerchiefiltro src="Bottoni/cerchiefiltrostat.png"><span>Vedi notifiche degli utenti.</span></a>
+					<li><a href=# class="tooltip"><img alt=assoc name=assocfiltro src="Bottoni/assocfiltrostat.png"><span>Vedi notifiche delle associazioni.</span></a>
+					<li><a href=# class="tooltip"><img alt=gruppi name=gruppofiltro src="Bottoni/gruppofiltrostat.png"><span>Vedi notifiche dei gruppi associativi.</span></a>
 	  <tbody>
 		<tr><td><ul class="FlyOut stillWithClick OnlyClick"><li><img alt=img width=30 height=30 src=foto.jpg><ul class="scheda profilo">
 		<li><ol class=dati contenteditable="true">
@@ -185,15 +191,19 @@ require_once('php/user.php');
 	 
 	<li><img alt="" name=associaz1 src="Bottoni/associaz1stat.png">	
    <ul class=scheda id=gruppi> 
-		<li> <table class=tab>
+		<li><h2 class=intestazione>Gruppi</h2>
+		<table class=tab>
 		 <caption>
 			<ol class=comandi><li>Inizio</ol>		 
      <tbody>	
 			<tr class=inizio>
 				<td class=bottoni>
-				<img alt="" name=ricerca src="Bottoni/ricercastat.png">
-				<img alt="" name=creagruppoass src="Bottoni/creagruppoassstat.png">
-				<img alt="" name=Registraassociazione src="Bottoni/Registraassociazionestat.png">			
+				<img alt="cerca" width=120 height=120 name=ricerca src="Bottoni/ricercastat.png">
+				<p>Cerca utenti, gruppi associativi o associazioni.</p>
+				<img alt="gruppo" width=120 height=120 name=creagruppoass src="Bottoni/creagruppoassstat.png">
+				<p>Crea un gruppo associativo.</p>
+				<img alt="assoc." width=120 height=120 name=Registraassociazione src="Bottoni/Registraassociazionestat.png">
+				<p>Inserisci sul sito la tua associazione regolarmente costituita.</p>
 			<tr class=associazione><td class=profilo>
 				<ol class=dati>
 			   <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
