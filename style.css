@@ -71,13 +71,53 @@ margin-top:50px;
 .unregistered { display:none !important;}
 
 .bottoni img {cursor:pointer;}
+.bottoni p {font-size: 12px; color:#754814; text-shadow: 0 0 0.053em #754814;}
+.filtri li {font-size: 22px; color:#754814; text-shadow: 0 0 0.06em #754814;}
+
+.tooltip span {
+ font-size: 12px;
+ z-index:10;
+ display:inline; 
+ padding:10px;
+ margin-left:10px;
+ margin-top:18px;
+ width:250px; 
+ border-radius:10px;
+ box-shadow: 3px 3px 10px #4D4D4D;
+ position:absolute; 
+ color:#FFFFFF;
+ background:#64450D;
+ visibility:hidden;
+ opacity:0.1;
+}
+
+.tooltip:hover span{
+ visibility:visible;
+ -webkit-transition: all 1s ease 0.3s;
+ -moz-transition: all 1s ease 0.3s;
+ -ms-transition: all 1s ease 0.3s;
+ -o-transition: all 1s ease 0.3s;
+ transition: all 1s ease 0.3s;
+ opacity:0.9;
+}
+
+.tooltip span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -8px;
+  width: 0; 
+  height: 0;
+  border-right: 10px solid #64450D;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
 
 .registered.bottoni>li>img {margin:25px 5px 10px;height:50px;width:60px;}
 
 .unregistered.center img { margin-top:-5px; margin-bottom: -3px; cursor: pointer;}
 
-
- 
 .login * { margin: 2px;}
 .login  p { margin: 6px;}
 .login {
@@ -88,11 +128,20 @@ margin-top:50px;
 	width:200px;
 }
 
-
 .comandi a { text-decoration: none;}
 .comandi * { vertical-align: middle;}
 
-.rigadimensione {height:2px;}
+.rigastile {height:2px;}
+
+.scheda .intestazione {
+ width:100%; 
+ margin:0; 
+ color:#754814; 
+ text-shadow: 0 0 0.06em #754814;
+ border-bottom: 3px solid #005826;
+ font-size: 20px;
+ font-variant: small-caps;
+ }
 
 .scheda {
  position:fixed !important;
@@ -108,7 +157,7 @@ margin-top:50px;
  -webkit-border-radius: 15px;
  -moz-border-radius: 15px;
  border-radius: 15px;
- border: #754814 solid 5px;
+ border: #005826 solid 5px;
  min-width:640px;
  text-align:center;
 }
@@ -133,7 +182,7 @@ content: '';
 position: absolute;
 border-style: solid;
 border-width: 0 24px 67px;
-border-color: #754814 transparent;
+border-color: #005826 transparent;
 display: block;
 width: 0;
 z-index: 9;
@@ -170,7 +219,6 @@ list-style-type: decimal;
 #features li {
 margin:10px;
 }
-
 
 .tab {
     border-collapse: collapse;
@@ -279,7 +327,7 @@ progress { vertical-align:bottom;
 #contatti .associazioni {color:#997f64;}
 
 
-#messaggi ol {cursor:pointer;height:100%; overflow-y:auto; overflow-x:visible; width:100px; }
+#messaggi ol {cursor:pointer;height:calc(100% - 25px); overflow-y:auto; overflow-x:visible; width:100px; }
 #messaggi ol>li {margin: 8px 8px 8px 15px; text-align:left;}
 
 #messaggi ol>li{ direction: ltr; position:relative;}
@@ -302,7 +350,7 @@ text-align:left;
 
 
 #notifiche .filtri img {width:70px; height:70px;}
-#notifiche .filtri ul { list-style-type: none;}
+#notifiche .filtri li { list-style-type: none;}
 #notifiche thead li {margin:auto;}
 
 #notifiche .scheda {margin-top:1px;z-index:100;}
@@ -418,18 +466,29 @@ font-variant: small-caps;
 text-align:center;
 }
 
-.voto {float:right; padding-top:10px;}
-.descrizione { height: 45px; text-align:justify; font: 12px georgia;}
-.visite { padding: 10px 0 10px 0;}
-.scheda .nomedata {position:absolute;bottom:0; float:none; font: italic 12px georgia;}
-.fotopost {margin-left:-2px;}
-.periodo {text-align:center; font: 12px georgia; width:100%;}
-.titolopost {
-width:100%; 
+
+/* èingellès*//* èingellès*//* èingellès*//* èingellès*//* èingellès*/
+
+
+#bacheca .scheda td{position:absolute;}
+#bacheca .scheda .argomento {float:left; width:auto;}
+.scheda .voto {float:right; padding-top:10px;}
+.scheda .descrizione { height: 45px; text-align:justify; font: 12px georgia;}
+.scheda .visite { padding: 10px 0 10px 0;}
+.scheda .nomedata {float:right; font: italic 12px georgia;}
+.scheda .fotopost {margin-left:-2px;}
+.scheda .periodo {float:right;  width:auto;}
+.scheda .titolopost {
+display:inline-block;
+width:100px; margin:auto;
 font: bold 16px georgia; 
 font-variant: small-caps; 
 text-align:center;
 }
+
+
+.scheda .nomedata {position:absolute;bottom:0; float:none; font: italic 12px georgia;}
+
 
 .bachecaul li {padding-right:12px; margin: 5px 0 5px 0;}
 
@@ -488,10 +547,10 @@ font: 12px georgia;
  width:calc(96% - 588px);
  margin-left:calc(2% + 340px);
  left:0;
- top:125px;
+ top:150px;
  overflow: auto;
  position:fixed;
- height:calc(100% - 210px);
+ height:calc(100% - 235px);
  color: #005826;
 border-width: 0 0 0 5px;
  }
