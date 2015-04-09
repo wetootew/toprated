@@ -198,12 +198,9 @@ require_once('php/user.php');
      <tbody>	
 			<tr class=inizio>
 				<td class=bottoni>
-				<img alt="cerca" width=120 height=120 name=ricerca src="Bottoni/ricercastat.png">
-				<p>Cerca utenti, gruppi associativi o associazioni.</p>
-				<img alt="gruppo" width=120 height=120 name=creagruppoass src="Bottoni/creagruppoassstat.png">
-				<p>Crea un gruppo associativo.</p>
-				<img alt="assoc." width=120 height=120 name=Registraassociazione src="Bottoni/Registraassociazionestat.png">
-				<p>Inserisci sul sito la tua associazione regolarmente costituita.</p>
+				<a href=# class=tooltip><img alt="cerca" width=120 height=120 name=ricerca src="Bottoni/ricercastat.png"><span>Cerca utenti, gruppi associativi o associazioni.</span></a><br>
+				<a href=# class=tooltip><img alt="gruppo" width=120 height=120 name=creagruppoass src="Bottoni/creagruppoassstat.png"><span>Crea un gruppo associativo.</span></a><br>
+				<a href=# class=tooltip><img alt="assoc." width=120 height=120 name=Registraassociazione src="Bottoni/Registraassociazionestat.png"><span>Registra sul sito un'associazione gi&#224; costituita.</span></a>
 			<tr class=associazione><td class=profilo>
 				<ol class=dati>
 			   <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
