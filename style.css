@@ -32,33 +32,6 @@ z-index: 1;
 box-shadow:         0 3px 8px 5px rgba(50, 50, 50, 0.75);
 }
 
-/* FOLLIA DELIRANTE (ombra a scalare)
-.effect3
-{
-  position: relative;
-}
-.effect3:before
-{
-  z-index: -1;
-  position: absolute;
-  content: "";
-  bottom: 15px;
-  left: 10px;
-  width: 50%;
-  top: 80%;
-  max-width:300px;
-  background: #777;
-  -webkit-box-shadow: 0 15px 10px #777;
-  -moz-box-shadow: 0 15px 10px #777;
-  box-shadow: 0 15px 10px #777;
-  -webkit-transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg);
-  -o-transform: rotate(-3deg);
-  -ms-transform: rotate(-3deg);
-  transform: rotate(-3deg);
-}
-*/
-
 #logo { float:left; position:absolute; left:calc(2% + 5px);top:7px;}
 #titoletto { font-size:12px; margin-top:6px; position:absolute;}
 #spaziodx { float:right; position:absolute; right:2%;}
@@ -164,7 +137,7 @@ margin-top:50px;
  text-align:center;
 }
 
-#topbar .registered.DropDown>li:hover { z-index: 2;}
+#topbar .registered.DropDown>li:hover { z-index: 20;}
 
 #topbar .registered.DropDown>li:hover:after, #topbar .registered.DropDown>li.click:after {
 content: '';
@@ -197,13 +170,14 @@ left: 13px;
 
 .oscuramento {z-index:5;top:90px;box-shadow: 0px 0px 0px 1000px rgba(0,0,0,0.30);}
 
-.help:hover {color:#997f64; text-shadow: 0 0 0.3em #997f64;}
+.help:hover {color:#754814; text-shadow: 0 0 0.3em #754814;}
 .help {
   font: bolder 18px georgia; 
  cursor: pointer;
  position:absolute;
  bottom: 5px;
  right: 5px;
+ display:none;
 }
 
 .xClose {
@@ -262,14 +236,30 @@ height:calc(100% - 2px);
  white-space: nowrap;
 }
  
-.tab ol.comandi li:hover {color:#997f64; text-shadow: 0 0 0.3em #997f64;}
-.tab ol.comandi li.active {color:#997f64; text-shadow: 0 0 0.3em #997f64; border-bottom: #fae2c9 2px solid;}
+.tab ol.comandi li:hover {color:#754814; text-shadow: 0 0 0.3em #754814;}
+.tab ol.comandi li.active {color:#754814; text-shadow: 0 0 0.3em #754814; border-bottom: #fae2c9 2px solid;}
 .tab ol.comandi li[contenteditable=true] {border:2px dashed;padding:6px;}
  
 
 .profilo {white-space: normal !important;}
 .profilo ol {margin:8px; width:180px;}
 .descrProf { padding-top: 10px; font-variant:small-caps;}
+.faisapere::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #997f64;
+	opacity:0.6;
+}
+.faisapere:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #997f64;
+	opacity:0.6;
+}
+.faisapere::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #997f64;
+	opacity:0.6;
+}
+.faisapere:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #997f64;
+   	opacity:0.6;
+}
 .dati { float:left;}
 .log { float:right;}
 .log li {text-align:left; font: bold 11px georgia;}
@@ -279,8 +269,8 @@ height:calc(100% - 2px);
  width:100%;
  height:100px;
  background: #fae2c9;
- color:#997f64; 
-	text-shadow: 0 0 0.083em #997f64;
+ color:#754814; 
+	text-shadow: 0 0 0.083em #754814;
 }
 
 progress { color: #005826; } /* IE10 */
@@ -329,7 +319,7 @@ progress { vertical-align:bottom;
 #contatti .associazioni {color:#997f64;}
 
 
-#messaggi ol {cursor:pointer;height:calc(100% - 25px); overflow-y:auto; overflow-x:visible; width:100px; }
+#messaggi ol {cursor:pointer;height:calc(100% - 30px); overflow-y:auto; overflow-x:visible; width:100px; }
 #messaggi ol>li {margin: 8px 8px 8px 15px; text-align:left;}
 
 #messaggi ol>li{ direction: ltr; position:relative;}
@@ -354,9 +344,6 @@ text-align:left;
 #notifiche .filtri img {width:70px; height:70px;}
 #notifiche .filtri li { list-style-type: none;}
 #notifiche thead li {margin:auto;}
-
-#notifiche .scheda {margin-top:1px;z-index:100;}
-
 
 
 #registrazione>span {display:block; width:50%; float:left;}
@@ -411,8 +398,34 @@ aside {
  border-radius: 8px;
  background-color:#fae2c9;
  }
- #bacheca tbody tr:not(.scheda) { margin: calc(1% + 3px) calc(1% + 3px) calc(1% + 3px) calc(1% + 3px); } 
  
+ /* RISOLVERE TRANSITION BOX SHADOW BACHECA*/
+ 
+ #bacheca tbody tr:hover:not(.scheda) {
+ -webkit-transition: all 0.5s ease 0.1s;
+ -moz-transition: all 0.5s ease 0.1s;
+ -ms-transition: all 0.5s ease 0.1s;
+ -o-transition: all 0.5s ease 0.1s;
+ transition: all 0.5s ease 0.1s;
+ -webkit-box-shadow: 8px 8px 10px rgba(50, 50, 50, 0.6);
+ -moz-box-shadow:    8px 8px 10px rgba(50, 50, 50, 0.6);
+ box-shadow:         8px 8px 10px rgba(50, 50, 50, 0.6);
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+	  -moz-transform: translateY(-8px);
+}
+
+#bacheca tbody tr:not(.scheda) { 
+ margin: 1%;
+ cursor:pointer; 
+ -webkit-transition: box-shadow 0.5s, transform 0.5s;
+ -moz-transition: box-shadow 0.5s, transform 0.5s;
+ -ms-transition: box-shadow 0.5s, transform 0.5s;
+ -o-transition: box-shadow 0.5s, transform 0.5s;
+ transition: box-shadow 0.5s, transform 0.5s;
+ transform:none;
+} 
+
 #bacheca td:first-child  {width:100%;}
 #bacheca th, #bacheca td {display:block;}
 #bacheca  td {padding:2px;}
@@ -442,9 +455,6 @@ aside {
  zoom:1;
 *display:inline;
 }
- 
-
-
 
 #bacheca .argomento { font: bold 14px georgia; text-align:center; }
 #bacheca .salutepost { color: #46B505; text-shadow: 0 0 0.09em #46B505;}
@@ -455,6 +465,7 @@ aside {
 #bacheca .intrattenimentopost { color: #00B1FC; text-shadow: 0 0 0.09em #00B1FC;}
 #bacheca .gastronomiapost { color: #BA3902; text-shadow: 0 0 0.09em #BA3902;}
 #bacheca .socialepost { color: #FFFFFF; text-shadow: 0 0 0.09em #FFFFFF;}
+#bacheca .luogo { display:none;}
 .voto {float:right; padding-top:10px;}
 .descrizione { height: 45px; text-align:justify; font: 12px georgia;}
 .visite { padding: 10px 0 10px 0;}
@@ -468,12 +479,19 @@ font-variant: small-caps;
 text-align:center;
 }
 
-
-/* èingellès*//* èingellès*//* èingellès*//* èingellès*//* èingellès*/
-
-
 #bacheca .scheda td{position:absolute;}
-#bacheca .scheda .argomento {float:left; width:auto;}
+#bacheca .scheda .titolopost {top:10px; font-size:20px; color:#754814;}
+#bacheca .scheda .argomento {text-align:initial;}
+#bacheca .scheda .periodo {text-align:right;} 
+#bacheca .scheda .fotopost {margin-top:50px; width:360px; height:180px;}
+#bacheca .scheda .descrizione {top:50%;}
+#bacheca .scheda .nomedata {bottom:0; right:0;}
+#bacheca .scheda .luogo { display:block;bottom:0; left:0;}
+
+/* discorso voto apprezzamento dell'iniziativa ecc.*/
+#bacheca .scheda .voto, #bacheca .scheda .visite {display:none;}
+
+/*
 .scheda .voto {float:right; padding-top:10px;}
 .scheda .descrizione { height: 45px; text-align:justify; font: 12px georgia;}
 .scheda .visite { padding: 10px 0 10px 0;}
@@ -487,10 +505,8 @@ font: bold 16px georgia;
 font-variant: small-caps; 
 text-align:center;
 }
-
-
 .scheda .nomedata {position:absolute;bottom:0; float:none; font: italic 12px georgia;}
-
+*/
 
 .bachecaul li {padding-right:12px; margin: 5px 0 5px 0;}
 
@@ -547,12 +563,13 @@ font: 12px georgia;
 
 #messaggi .bubble {
  width:calc(96% - 588px);
+ min-width:500px;
  margin-left:calc(2% + 340px);
  left:0;
- top:150px;
+ top:152px;
  overflow: auto;
  position:fixed;
- height:calc(100% - 235px);
+ height:calc(100% - 237px);
  color: #005826;
 border-width: 0 0 0 5px;
  }
