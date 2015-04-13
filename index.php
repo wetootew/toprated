@@ -48,7 +48,7 @@ require_once('php/user.php');
 				<img src="" width=40 height=25>
 				<img src="" width=40 height=25>
 				<h2 class=descrProf> Descrizione </h2>
-				<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
+				<textarea class=faisapere placeholder="Fai sapere qualcosa di te..."></textarea>
 		 </ol>
 	</ul> 
 	
