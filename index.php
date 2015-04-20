@@ -144,26 +144,29 @@ require_once('php/user.php');
 					<li><a href=# class="tooltip"><img alt=assoc name=assocfiltro src="Bottoni/assocfiltrostat.png"><span>Vedi notifiche delle associazioni.</span></a>
 					<li><a href=# class="tooltip"><img alt=gruppi name=gruppofiltro src="Bottoni/gruppofiltrostat.png"><span>Vedi notifiche dei gruppi associativi.</span></a>
 	  <tbody>
-		<tr><td><ul class="FlyOut stillWithClick OnlyClick"><li><img alt=img width=30 height=30 src=foto.jpg><ul class="scheda profilo">
-		<li><ol class=dati contenteditable="true">
-	   <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
-	   <li class=nome> Mario Rossi
-	   <li> Camaiore
-	   <li> idraulico
-	   <li> licenza media
-		 <li> interessi
-		 <li> gruppi
-		</ol>
-		<ol class=log>
-	   <li> 12/12/2112: ha partecipato a sdfg sdfs
-	   <li> 12/12/2112: ha partecipato a sdfg sdfs
-	   <li> 12/12/2112: ha partecipato a sdfg sdfs
-	   <li> 12/12/2112: ha partecipato a sdfg sdfs
-	   <li> 12/12/2112: ha partecipato a sdfg sdfs
-	   <li> 12/12/2112: ha partecipato a sdfg sdfs
-		</ol>
-		<ol class=center>
-		  <li><img src="" width=40 height=40>
+		<tr>
+		 <td>
+		  <ul class="FlyOut DropDown stillWithClick OnlyClick">
+		   <li><img alt=img width=30 height=30 src=foto.jpg>
+		    <ul class="scheda profilo chiudi">
+		     <li><ol class=dati contenteditable="true">
+			  <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
+	          <li class=nome> Mario Rossi
+	          <li> Camaiore
+	          <li> idraulico
+	          <li> licenza media
+		      <li> interessi
+		      <li> gruppi
+		     </ol>
+		     <ol class=log>
+	          <li> 12/12/2112: ha partecipato a sdfg sdfs
+	          <li> 12/12/2112: ha partecipato a sdfg sdfs
+	          <li> 12/12/2112: ha partecipato a sdfg sdfs
+	          <li> 12/12/2112: ha partecipato a sdfg sdfs
+	          <li> 12/12/2112: ha partecipato a sdfg sdfs
+		     </ol>
+		     <ol class=center>
+		      <li><img src="" width=40 height=40>
 				<p class=progresslbl style="left:50px;">500</p>
 				<progress title=825 value=.75></progress>
 				<p class=progresslbl style="right:50px;">1000</p>
@@ -176,16 +179,187 @@ require_once('php/user.php');
 				<img src="" width=40 height=25>
 				<h2 class=descrProf> Descrizione </h2>
 				<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
-		 </ol>
+		     </ol>
+  		    </ul>
+			<li>asdasdasdasdasdasdasdasdasdasdasdasdasda a sdasd
+			<ul class="scheda profilo chiudi"><li>
+				<ol class=dati>
+			   <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
+			   <li class=nome>adsi
+			   <li> Camaiore
+			   <li> qwe
+			   <li> licdssdfenza 
+				</ol>
+				<ol class=log>
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+				</ol>
+				<ol class=center>
+				  <li><img src="" width=40 height=40>
+						<p class=progresslbl style="left:50px;">500</p>
+						<progress title=825 value=.75></progress>
+						<p class=progresslbl style="right:50px;">1000</p>
+						<img src="" width=40 height=40><br>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<h2 class=descrProf> Descrizione </h2>
+						<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
+				 </ol>
+			
+		  </ul>
+		 </ul>		
 
-
-
-		</ul></ul>
-
-
-		Prime asdfgdasdasdasdasd da sdasdasdasd adfsdasddasdgadfg agadsf gdfgadgadfgadfgadfgdfg
-		<tr><td><img alt=img width=30 height=30 src=foto.jpg> Prime asdfg adfsgadfg agadsf gdfgadgadfgadfgadfgdfg
-		<tr><td><img alt=img width=30 height=30 src=foto.jpg> Prime asdasddasdasdsadasdasdasdsadfg adfsgadfg agadsf gdfgadgadfgadfgadfgdfg
+		<tr><td>
+		
+				  <ul class="FlyOut DropDown stillWithClick OnlyClick">
+		   <li><img alt=img width=30 height=30 src=foto.jpg>
+		    <ul class="scheda profilo chiudi">
+		     <li><ol class=dati contenteditable="true">
+			  <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
+	          <li class=nome> Mario Rossi
+	          <li> Camaiore
+	          <li> idraulico
+	          <li> licenza media
+		      <li> interessi
+		      <li> gruppi
+		     </ol>
+		     <ol class=log>
+	          <li> 12/12/2112: ha partecipato a sdfg sdfs
+	          <li> 12/12/2112: ha partecipato a sdfg sdfs
+	          <li> 12/12/2112: ha partecipato a sdfg sdfs
+	          <li> 12/12/2112: ha partecipato a sdfg sdfs
+	          <li> 12/12/2112: ha partecipato a sdfg sdfs
+		     </ol>
+		     <ol class=center>
+		      <li><img src="" width=40 height=40>
+				<p class=progresslbl style="left:50px;">500</p>
+				<progress title=825 value=.75></progress>
+				<p class=progresslbl style="right:50px;">1000</p>
+				<img src="" width=40 height=40><br>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<h2 class=descrProf> Descrizione </h2>
+				<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
+		     </ol>
+  		    </ul>
+			<li>asdasdasdasdasdasdasdasdasdasdasdasdasda a sdasd
+			<ul class="scheda profilo chiudi"><li>
+				<ol class=dati>
+			   <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
+			   <li class=nome>adsi
+			   <li> Camaiore
+			   <li> qwe
+			   <li> licdssdfenza 
+				</ol>
+				<ol class=log>
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+				</ol>
+				<ol class=center>
+				  <li><img src="" width=40 height=40>
+						<p class=progresslbl style="left:50px;">500</p>
+						<progress title=825 value=.75></progress>
+						<p class=progresslbl style="right:50px;">1000</p>
+						<img src="" width=40 height=40><br>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<h2 class=descrProf> Descrizione </h2>
+						<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
+				 </ol>
+			
+		  </ul>
+		 </ul>
+		<tr><td>
+				  <ul class="FlyOut DropDown stillWithClick OnlyClick">
+		   <li><img alt=img width=30 height=30 src=foto.jpg>
+		    <ul class="scheda profilo chiudi">
+		     <li><ol class=dati contenteditable="true">
+			  <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
+	          <li class=nome> Mario Rossi
+	          <li> Camaiore
+	          <li> idraulico
+	          <li> licenza media
+		      <li> interessi
+		      <li> gruppi
+		     </ol>
+		     <ol class=log>
+	          <li> 12/12/2112: ha partecipato a sdfg sdfs
+	          <li> 12/12/2112: ha partecipato a sdfg sdfs
+	          <li> 12/12/2112: ha partecipato a sdfg sdfs
+	          <li> 12/12/2112: ha partecipato a sdfg sdfs
+	          <li> 12/12/2112: ha partecipato a sdfg sdfs
+		     </ol>
+		     <ol class=center>
+		      <li><img src="" width=40 height=40>
+				<p class=progresslbl style="left:50px;">500</p>
+				<progress title=825 value=.75></progress>
+				<p class=progresslbl style="right:50px;">1000</p>
+				<img src="" width=40 height=40><br>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<img src="" width=40 height=25>
+				<h2 class=descrProf> Descrizione </h2>
+				<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
+		     </ol>
+  		    </ul>
+			<li>asdasdasdasdasdasdasdasdasdasdasdasdasda a sdasd
+			<ul class="scheda profilo chiudi"><li>
+				<ol class=dati>
+			   <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
+			   <li class=nome>adsi
+			   <li> Camaiore
+			   <li> qwe
+			   <li> licdssdfenza 
+				</ol>
+				<ol class=log>
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+			   <li> 12/12/2112: ha partecipato a sdfg sdfs
+				</ol>
+				<ol class=center>
+				  <li><img src="" width=40 height=40>
+						<p class=progresslbl style="left:50px;">500</p>
+						<progress title=825 value=.75></progress>
+						<p class=progresslbl style="right:50px;">1000</p>
+						<img src="" width=40 height=40><br>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<img src="" width=40 height=25>
+						<h2 class=descrProf> Descrizione </h2>
+						<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
+				 </ol>
+			
+		  </ul>
+		 </ul>
 	</table>
 	</ul> 
 	 
