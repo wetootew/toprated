@@ -84,7 +84,7 @@ $( document ).ready(function() {
   });
 		
 	$(".scheda.chiudi").each(function(e) {
-		$(this).append('<div class=xClose>X</div>')
+		$(this).append('<div class=xClose onclick="event.stopPropagation();$($(this).closest(\'.click\')[0]).removeClass()">X</div>')
   });
 	
 	
