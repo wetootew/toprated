@@ -35,8 +35,8 @@
 	<td class=visite>235 <img alt="" width=20 height=13 src=pics/visualverde.png>
 	<td class=voto><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png><img alt="" width=16 height=13 src=pics/stellavoto.png>
 	<td class=nomedata>Organizzatore - 12/12/12
-	<td class=luogo><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m8!1m3!1d11506.505130295578!2d10.262051096020445!3d43.86357410272004!3m2!1i1024!2i768!4f13.1!4m7!1i0!3e6!4m0!4m3!3m2!1d43.8608048!2d10.2708487!5e0!3m2!1sit!2sit!4v1428956089348" width="300" height="200" frameborder="0" style="border:0"></iframe>
-
+	<td class=luogo contenteditable=true>via marco polo 118 viareggio
+	
 <tr><td class="argomento ambientepost">Ambiente
 	<td class=titolopost><a>Titolo del post</a>
 	<td class=periodo> 01/01/01 - 02/02/02
