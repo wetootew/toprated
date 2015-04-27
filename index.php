@@ -1,30 +1,24 @@
 <!DOCTYPE html> 
-<!--<?php 
+<?php 
 session_start(); 
 require_once __DIR__ . '/vendor/autoload.php';
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require_once('php/user.php'); 
 
-?>-->
-<title>Boh</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-<script src="script.js" type="text/javascript"></script>
-
-<div id=topbar>
- <img alt="" width=190 height=85 id=logo src="logo.png">
- <ul class="registered center FlyOut DropDown bottoni stillWithClick">
-  <li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
-	 <ul class="scheda profilo">
+function profilo($class ="",$id = 1) { 
+$user = new dbobj('user',$id);
+?>
+<ul class="scheda profilo <?php echo $class ?> ">
+	
 		<li><h2 class=intestazione> Profilo utente</h2>
 		<ol class=dati contenteditable="true">
-	   <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
-	   <li class=nome> Mario Rossi
-	   <li> Camaiore
-	   <li> idraulico
-	   <li> licenza media
-		 <li> interessi
+	   <li><img class=foto style=margin:auto; src=<?php echo $user->img; ?>  width=280 height=280>
+	   <li class=nome> <?php echo $user->name; ?>
+	   <li> <?php echo $user->place; ?>
+	   <li> <?php echo $user->job; ?>
+	   <li> <?php echo $user->grad; ?>
+		 <li> <?php echo $user->interests; ?>
 		 <li> gruppi
 		</ol>
 		<ol class=log>
@@ -48,9 +42,23 @@ require_once('php/user.php');
 				<img src="" width=40 height=25>
 				<img src="" width=40 height=25>
 				<h2 class=descrProf> Descrizione </h2>
-				<textarea class=faisapere placeholder="Fai sapere qualcosa di te..."></textarea>
+				<textarea class=faisapere placeholder="Fai sapere qualcosa di te..."><?php echo $user->descr; ?></textarea>
 		 </ol>
-	</ul> 
+	</ul> 	
+<?php 
+}
+
+?>
+<title>Boh</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="script.js" type="text/javascript"></script>
+
+<div id=topbar>
+ <img alt="" width=190 height=85 id=logo src="logo.png">
+ <ul class="registered center FlyOut DropDown bottoni stillWithClick">
+  <li><img alt="" name=prof1 src="Bottoni/prof1stat.png">
+	 <?php profilo() ?>
 	
   <li><img alt="" name=contatti1 src="Bottoni/contatti1stat.png">
    <ul class=scheda id=contatti> 
@@ -148,39 +156,7 @@ require_once('php/user.php');
 		 <td>
 		  <ul class="FlyOut DropDown stillWithClick OnlyClick">
 		   <li><img alt=img width=30 height=30 src=foto.jpg>
-		    <ul class="scheda profilo chiudi">
-		     <li><ol class=dati contenteditable="true">
-			  <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
-	          <li class=nome> Mario Rossi
-	          <li> Camaiore
-	          <li> idraulico
-	          <li> licenza media
-		      <li> interessi
-		      <li> gruppi
-		     </ol>
-		     <ol class=log>
-	          <li> 12/12/2112: ha partecipato a sdfg sdfs
-	          <li> 12/12/2112: ha partecipato a sdfg sdfs
-	          <li> 12/12/2112: ha partecipato a sdfg sdfs
-	          <li> 12/12/2112: ha partecipato a sdfg sdfs
-	          <li> 12/12/2112: ha partecipato a sdfg sdfs
-		     </ol>
-		     <ol class=center>
-		      <li><img src="" width=40 height=40>
-				<p class=progresslbl style="left:50px;">500</p>
-				<progress title=825 value=.75></progress>
-				<p class=progresslbl style="right:50px;">1000</p>
-				<img src="" width=40 height=40><br>
-				<img src="" width=40 height=25>
-				<img src="" width=40 height=25>
-				<img src="" width=40 height=25>
-				<img src="" width=40 height=25>
-				<img src="" width=40 height=25>
-				<img src="" width=40 height=25>
-				<h2 class=descrProf> Descrizione </h2>
-				<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
-		     </ol>
-  		    </ul>
+			<?php profilo("chiudi") ?>
 			<li>asdasdasdasdasdasdasdasdasdasdasdasdasda a sdasd
 			<ul class="scheda profilo chiudi"><li>
 				<ol class=dati>
@@ -220,40 +196,8 @@ require_once('php/user.php');
 		<tr><td>
 		
 				  <ul class="FlyOut DropDown stillWithClick OnlyClick">
-		   <li><img alt=img width=30 height=30 src=foto.jpg>
-		    <ul class="scheda profilo chiudi">
-		     <li><ol class=dati contenteditable="true">
-			  <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
-	          <li class=nome> Mario Rossi
-	          <li> Camaiore
-	          <li> idraulico
-	          <li> licenza media
-		      <li> interessi
-		      <li> gruppi
-		     </ol>
-		     <ol class=log>
-	          <li> 12/12/2112: ha partecipato a sdfg sdfs
-	          <li> 12/12/2112: ha partecipato a sdfg sdfs
-	          <li> 12/12/2112: ha partecipato a sdfg sdfs
-	          <li> 12/12/2112: ha partecipato a sdfg sdfs
-	          <li> 12/12/2112: ha partecipato a sdfg sdfs
-		     </ol>
-		     <ol class=center>
-		      <li><img src="" width=40 height=40>
-				<p class=progresslbl style="left:50px;">500</p>
-				<progress title=825 value=.75></progress>
-				<p class=progresslbl style="right:50px;">1000</p>
-				<img src="" width=40 height=40><br>
-				<img src="" width=40 height=25>
-				<img src="" width=40 height=25>
-				<img src="" width=40 height=25>
-				<img src="" width=40 height=25>
-				<img src="" width=40 height=25>
-				<img src="" width=40 height=25>
-				<h2 class=descrProf> Descrizione </h2>
-				<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
-		     </ol>
-  		    </ul>
+		   <li><img alt=img width=30 height=30 src=foto.jpg>		    
+			<?php profilo("chiudi") ?>
 			<li>asdasdasdasdasdasdasdasdasdasdasdasdasda a sdasd
 			<ul class="scheda profilo chiudi"><li>
 				<ol class=dati>
@@ -290,41 +234,9 @@ require_once('php/user.php');
 		  </ul>
 		 </ul>
 		<tr><td>
-				  <ul class="FlyOut DropDown stillWithClick OnlyClick">
-		   <li><img alt=img width=30 height=30 src=foto.jpg>
-		    <ul class="scheda profilo chiudi">
-		     <li><ol class=dati contenteditable="true">
-			  <li><img class=foto style=margin:auto; src=barba.jpg  width=280 height=280>
-	          <li class=nome> Mario Rossi
-	          <li> Camaiore
-	          <li> idraulico
-	          <li> licenza media
-		      <li> interessi
-		      <li> gruppi
-		     </ol>
-		     <ol class=log>
-	          <li> 12/12/2112: ha partecipato a sdfg sdfs
-	          <li> 12/12/2112: ha partecipato a sdfg sdfs
-	          <li> 12/12/2112: ha partecipato a sdfg sdfs
-	          <li> 12/12/2112: ha partecipato a sdfg sdfs
-	          <li> 12/12/2112: ha partecipato a sdfg sdfs
-		     </ol>
-		     <ol class=center>
-		      <li><img src="" width=40 height=40>
-				<p class=progresslbl style="left:50px;">500</p>
-				<progress title=825 value=.75></progress>
-				<p class=progresslbl style="right:50px;">1000</p>
-				<img src="" width=40 height=40><br>
-				<img src="" width=40 height=25>
-				<img src="" width=40 height=25>
-				<img src="" width=40 height=25>
-				<img src="" width=40 height=25>
-				<img src="" width=40 height=25>
-				<img src="" width=40 height=25>
-				<h2 class=descrProf> Descrizione </h2>
-				<textarea placeholder="Fai sapere qualcosa di te..."></textarea>
-		     </ol>
-  		    </ul>
+		   <ul class="FlyOut DropDown stillWithClick OnlyClick">
+		   <li><img alt=img width=30 height=30 src=foto.jpg>		    
+			<?php profilo("chiudi") ?>
 			<li>asdasdasdasdasdasdasdasdasdasdasdasdasda a sdasd
 			<ul class="scheda profilo chiudi"><li>
 				<ol class=dati>
