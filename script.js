@@ -30,6 +30,15 @@ $( document ).ready(function() {
 		event.stopPropagation();
   });
 
+  $("#bacheca tr").on('click','.luogo:not([contenteditable=true])', function(e) {
+	var url = "https://www.google.it/maps/place/" +this.innerHTML.split(" ").join("+");
+	window.open(url, "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=50, left=200, width=800, height=600");
+  });
+
+  $("#bacheca tr").on('keypress', ".luogo[contenteditable=true]", function(e) {
+	if(e.keyCode==13) $(this).attr('contenteditable',false);
+	});
+
   sortabledir = 1;
   $(".sortable").each(function (i,e) {$(e).find('th').click(function() {
      var b = $(e).find('tbody')[0], l = b.rows.length, c = this.cellIndex, a = [], f, t;
